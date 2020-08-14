@@ -2604,12 +2604,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2692,12 +2686,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -9722,7 +9710,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "v-main",
-        { staticClass: "mt-n15 pt-0", style: _vm.theme },
+        { staticClass: "mt-n15 py-0", style: _vm.theme },
         [
           _c(
             "v-container",
@@ -9732,7 +9720,9 @@ var render = function() {
           )
         ],
         1
-      )
+      ),
+      _vm._v(" "),
+      _c("v-footer", { attrs: { app: "" } })
     ],
     1
   )
@@ -10141,7 +10131,7 @@ var render = function() {
       _c(
         "v-card",
         {
-          staticClass: "ma-0 py-12 grey lighten-3",
+          staticClass: "ma-0 pt-12 grey lighten-3",
           attrs: { width: "100%", "min-height": _vm.screenHeight, tile: "" }
         },
         [
@@ -10574,34 +10564,9 @@ var render = function() {
         "v-card",
         { staticClass: "mx-auto", attrs: { "max-width": "344" } },
         [
-          _c(
-            "v-img",
-            { attrs: { src: "./assets/card-sm-bg.webp", height: "200px" } },
-            [
-              _c(
-                "v-row",
-                {
-                  staticClass: "lightbox white--text pa-2 fill-height",
-                  attrs: { align: "center" }
-                },
-                [
-                  _c(
-                    "v-col",
-                    [
-                      _c(
-                        "v-icon",
-                        { staticClass: "theme--dark", attrs: { size: "150" } },
-                        [_vm._v("mdi-desktop-mac-dashboard")]
-                      )
-                    ],
-                    1
-                  )
-                ],
-                1
-              )
-            ],
-            1
-          ),
+          _c("v-img", {
+            attrs: { src: "./assets/desktop.webp", height: "200px" }
+          }),
           _vm._v(" "),
           _c("v-card-title", [_vm._v("Десктопные приложения")]),
           _vm._v(" "),
@@ -10725,40 +10690,13 @@ var render = function() {
         "v-card",
         { staticClass: "mx-auto", attrs: { "max-width": "344" } },
         [
-          _c(
-            "v-img",
-            {
-              attrs: {
-                src:
-                  "https://images.unsplash.com/photo-1416339442236-8ceb164046f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1892&q=80",
-                height: "200px"
-              }
-            },
-            [
-              _c(
-                "v-row",
-                {
-                  staticClass: "lightbox white--text pa-2 fill-height",
-                  attrs: { align: "center" }
-                },
-                [
-                  _c(
-                    "v-col",
-                    [
-                      _c(
-                        "v-icon",
-                        { staticClass: "theme--dark", attrs: { size: "150" } },
-                        [_vm._v("mdi-animation")]
-                      )
-                    ],
-                    1
-                  )
-                ],
-                1
-              )
-            ],
-            1
-          ),
+          _c("v-img", {
+            attrs: {
+              src:
+                "https://images.unsplash.com/photo-1416339442236-8ceb164046f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1892&q=80",
+              height: "200px"
+            }
+          }),
           _vm._v(" "),
           _c("v-card-title", [_vm._v("HTML5-анимация:")]),
           _vm._v(" "),
@@ -10882,34 +10820,9 @@ var render = function() {
         "v-card",
         { staticClass: "mx-auto", attrs: { "max-width": "344" } },
         [
-          _c(
-            "v-img",
-            { attrs: { src: "./assets/card-sm-bg.webp", height: "200px" } },
-            [
-              _c(
-                "v-row",
-                {
-                  staticClass: "lightbox white--text pa-2 fill-height",
-                  attrs: { align: "center" }
-                },
-                [
-                  _c(
-                    "v-col",
-                    [
-                      _c(
-                        "v-icon",
-                        { staticClass: "theme--dark", attrs: { size: "150" } },
-                        [_vm._v("mdi-application")]
-                      )
-                    ],
-                    1
-                  )
-                ],
-                1
-              )
-            ],
-            1
-          ),
+          _c("v-img", {
+            attrs: { src: "./assets/website.webp", height: "200px" }
+          }),
           _vm._v(" "),
           _c("v-card-title", [_vm._v("Сайты: от визитки до магазина")]),
           _vm._v(" "),

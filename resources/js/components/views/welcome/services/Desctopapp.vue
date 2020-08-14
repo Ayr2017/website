@@ -1,13 +1,7 @@
 <template>
   <v-col>
     <v-card class="mx-auto" max-width="344">
-      <v-img src="./assets/card-sm-bg.webp" height="200px">
-        <v-row align="center" class="lightbox white--text pa-2 fill-height">
-          <v-col>
-            <v-icon size="150" class="theme--dark">mdi-desktop-mac-dashboard</v-icon>
-          </v-col>
-        </v-row>
-      </v-img>
+      <v-img src="./assets/desktop.webp" height="200px"></v-img>
 
       <v-card-title>Десктопные приложения</v-card-title>
 

@@ -1,6 +1,6 @@
 <template>
   <v-row tile>
-    <v-card class="ma-0 py-12 grey lighten-3" width="100%" :min-height="screenHeight" tile>
+    <v-card class="ma-0 pt-12 grey lighten-3" width="100%" :min-height="screenHeight" tile>
       <v-row align="center" justify="center" tile class="mx-0">
         <v-theme-provider light>
           <v-col class="text-center" cols="12">

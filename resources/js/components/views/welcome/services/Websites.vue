@@ -1,13 +1,7 @@
 <template>
   <v-col>
     <v-card class="mx-auto" max-width="344">
-      <v-img src="./assets/card-sm-bg.webp" height="200px">
-        <v-row align="center" class="lightbox white--text pa-2 fill-height">
-          <v-col>
-            <v-icon size="150" class="theme--dark">mdi-application</v-icon>
-          </v-col>
-        </v-row>
-      </v-img>
+      <v-img src="./assets/website.webp" height="200px"></v-img>
 
       <v-card-title>Сайты: от визитки до магазина</v-card-title>
 

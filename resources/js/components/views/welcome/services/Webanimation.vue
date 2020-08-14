@@ -5,11 +5,11 @@
         src="https://images.unsplash.com/photo-1416339442236-8ceb164046f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1892&q=80"
         height="200px"
       >
-      <v-row align="center" class="lightbox white--text pa-2 fill-height">
+      <!-- <v-row align="center" class="lightbox white--text pa-2 fill-height">
           <v-col>
             <v-icon size="150" class="theme--dark">mdi-animation</v-icon>
           </v-col>
-        </v-row>
+        </v-row> -->
       </v-img>
 
       <v-card-title>HTML5-анимация:</v-card-title>
