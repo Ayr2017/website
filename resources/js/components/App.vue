@@ -99,7 +99,9 @@ const { template } = require("lodash");
       </v-container>
     </v-main>
 
-    <v-footer app></v-footer>
+    <v-footer app color="blue-grey darken-4" dark>
+      <p class="align-center justify-center text-caption">All rights reserved &copy;</p>
+    </v-footer>
   </v-app>
 </template>
 
