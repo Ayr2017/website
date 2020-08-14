@@ -2022,6 +2022,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
 
 
 
@@ -9722,7 +9724,15 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _c("v-footer", { attrs: { app: "" } })
+      _c(
+        "v-footer",
+        { attrs: { app: "", color: "blue-grey darken-4", dark: "" } },
+        [
+          _c("p", { staticClass: "align-center justify-center text-caption" }, [
+            _vm._v("All rights reserved ©")
+          ])
+        ]
+      )
     ],
     1
   )
