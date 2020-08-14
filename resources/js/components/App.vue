@@ -67,8 +67,8 @@ const { template } = require("lodash");
     </transition>
 
     <v-app-bar app flat :color="appBarColor">
-      <v-btn class="ma-2" icon fab @click="showNavDrawer=!showNavDrawer" dark>
-        <v-icon>fa fa-bars</v-icon>
+      <v-btn class="ma-2" @click="showNavDrawer=!showNavDrawer" dark>
+        <v-icon>mdi-menu</v-icon>
       </v-btn>
 
       <div class="display-1 font-weight-medium mr-0 ml-4 mr-md-4 v-sheet logo-text">Cripto</div>
