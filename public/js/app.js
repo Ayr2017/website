@@ -10065,7 +10065,11 @@ var render = function() {
                   }),
                   _vm._v(" "),
                   _c("v-file-input", {
-                    attrs: { multiple: "", label: "Прикрепить файл" }
+                    attrs: {
+                      multiple: "",
+                      label: "Прикрепить файл",
+                      "prepend-icon": "mdi-paperclip"
+                    }
                   }),
                   _vm._v(" "),
                   _c("v-textarea", {

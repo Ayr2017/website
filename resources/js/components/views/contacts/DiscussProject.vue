@@ -7,7 +7,7 @@
           <v-text-field label="Ваше имя" single-line></v-text-field>
           <v-text-field label="Телефон" single-line></v-text-field>
           <v-text-field label="Email" single-line></v-text-field>
-          <v-file-input multiple label="Прикрепить файл"></v-file-input>
+          <v-file-input multiple label="Прикрепить файл" prepend-icon="mdi-paperclip"></v-file-input>
           <v-textarea
           name="input-7-1"
           label="Опишите подробнее"
