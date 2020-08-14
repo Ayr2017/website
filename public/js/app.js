@@ -9651,14 +9651,14 @@ var render = function() {
             "v-btn",
             {
               staticClass: "ma-2",
-              attrs: { icon: "", fab: "", dark: "" },
+              attrs: { dark: "" },
               on: {
                 click: function($event) {
                   _vm.showNavDrawer = !_vm.showNavDrawer
                 }
               }
             },
-            [_c("v-icon", [_vm._v("fa fa-bars")])],
+            [_c("v-icon", [_vm._v("mdi-menu")])],
             1
           ),
           _vm._v(" "),
