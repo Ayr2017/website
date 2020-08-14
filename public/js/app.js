@@ -9651,7 +9651,7 @@ var render = function() {
             "v-btn",
             {
               staticClass: "ma-2",
-              attrs: { dark: "" },
+              attrs: { icon: "", fab: "", dark: "" },
               on: {
                 click: function($event) {
                   _vm.showNavDrawer = !_vm.showNavDrawer

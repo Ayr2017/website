@@ -67,7 +67,7 @@ const { template } = require("lodash");
     </transition>
 
     <v-app-bar app flat :color="appBarColor">
-      <v-btn class="ma-2" @click="showNavDrawer=!showNavDrawer" dark>
+      <v-btn class="ma-2" icon fab @click="showNavDrawer=!showNavDrawer" dark>
         <v-icon>mdi-menu</v-icon>
       </v-btn>
 
