@@ -19,7 +19,7 @@
       <v-row class="mx-0">
         <v-parallax
           dark
-          src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+          src="./assets/advantage.webp"
         >
           <v-row align="center" justify="center" tile>
             <v-theme-provider dark>
@@ -31,7 +31,7 @@
 
                 <transition name="slideUp" tag="ul" class="list-group">
 
-                  <v-list three-line="true" class="mx-0 px-0" color="#fff1" disabled v-if="servicePoint_1">
+                  <v-list three-line class="mx-0 px-0" color="#fff1" disabled v-if="servicePoint_1">
                     <v-list-item-group color="primary">
                       <v-list-item class="mx-md-15 px-md-15">
                         <v-list-item-avatar>
@@ -109,7 +109,6 @@ export default {
   methods: {
     showServicePoint(isVisible, entry, n) {
       if (isVisible) {
-        console.log(n);
         switch (n) {
           case 1:
             this.servicePoint_1 = true;
