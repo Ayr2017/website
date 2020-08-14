@@ -100,7 +100,9 @@ const { template } = require("lodash");
     </v-main>
 
     <v-footer app color="blue-grey darken-4" dark>
-      <p class="align-center justify-center text-caption">All rights reserved &copy;</p>
+      <p class="align-center justify-center text-caption">
+        All rights reserved &copy;
+      </p>
     </v-footer>
   </v-app>
 </template>
@@ -138,7 +140,7 @@ export default {
           return "display-3";
       }
     },
-    iconsResize(){
+    iconsResize() {
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
           this.setIconsSize("medium");
@@ -156,11 +158,11 @@ export default {
           this.setIconsSize("x-large");
           break;
       }
-    }
+    },
   },
   watch: {
-    headerType(){},
-    iconsResize(){},
+    headerType() {},
+    iconsResize() {},
   },
   mounted() {
     console.log("App");
@@ -208,5 +210,4 @@ export default {
   transform: translateX(10px);
   opacity: 0;
 }
-
 </style>

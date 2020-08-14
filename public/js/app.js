@@ -2024,6 +2024,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
 
 
 
@@ -2762,7 +2764,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.logo-text[data-v-332fccf4] {\r\n  font-family: \"Segoe UI\", Tahoma, Geneva, Verdana, sans-serif;\r\n  font-size: 2rem;\r\n  background-color: dimgrey;\r\n  color: antiquewhite;\r\n  padding: 0 10px;\n}\r\n\r\n/* Анимации появления и исчезновения могут иметь */\r\n/* различные продолжительности и динамику.       */\n.slide-fade-enter-active[data-v-332fccf4] {\r\n  transition: all 0.3s ease;\n}\n.slide-fade-leave-active[data-v-332fccf4] {\r\n  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);\n}\n.slide-fade-enter[data-v-332fccf4], .slide-fade-leave-to[data-v-332fccf4]\r\n/* .slide-fade-leave-active до версии 2.1.8 */ {\r\n  transform: translateX(10px);\r\n  opacity: 0;\n}\r\n\r\n", ""]);
+exports.push([module.i, "\n.logo-text[data-v-332fccf4] {\r\n  font-family: \"Segoe UI\", Tahoma, Geneva, Verdana, sans-serif;\r\n  font-size: 2rem;\r\n  background-color: dimgrey;\r\n  color: antiquewhite;\r\n  padding: 0 10px;\n}\r\n\r\n/* Анимации появления и исчезновения могут иметь */\r\n/* различные продолжительности и динамику.       */\n.slide-fade-enter-active[data-v-332fccf4] {\r\n  transition: all 0.3s ease;\n}\n.slide-fade-leave-active[data-v-332fccf4] {\r\n  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);\n}\n.slide-fade-enter[data-v-332fccf4], .slide-fade-leave-to[data-v-332fccf4]\r\n/* .slide-fade-leave-active до версии 2.1.8 */ {\r\n  transform: translateX(10px);\r\n  opacity: 0;\n}\r\n", ""]);
 
 // exports
 
@@ -9729,7 +9731,7 @@ var render = function() {
         { attrs: { app: "", color: "blue-grey darken-4", dark: "" } },
         [
           _c("p", { staticClass: "align-center justify-center text-caption" }, [
-            _vm._v("All rights reserved ©")
+            _vm._v("\n      All rights reserved ©\n    ")
           ])
         ]
       )
