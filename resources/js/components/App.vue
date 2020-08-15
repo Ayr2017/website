@@ -1,7 +1,7 @@
 const { template } = require("lodash");
 
 <template>
-  <v-app>
+  <v-app >
     <transition name="slide-fade">
       <v-navigation-drawer app dark color="#68686a" v-model="showNavDrawer" v-if="showNavDrawer">
         <v-list dense rounded>
@@ -91,7 +91,7 @@ const { template } = require("lodash");
     </v-app-bar>
 
     <!-- Sizes your content based upon application components -->
-    <v-main :style="theme" class="mt-n15 py-0">
+    <v-main :style="theme" class="mt-n15 py-0" @scroll="">
       <!-- Provides the application the proper gutter -->
       <v-container fluid :style="theme">
         <!-- If using vue-router -->
@@ -99,7 +99,7 @@ const { template } = require("lodash");
       </v-container>
     </v-main>
 
-    <v-footer app color="blue-grey darken-4" dark>
+    <v-footer app color="blue-grey darken-4 justify-center text-caption" dark>
       <p class="align-center justify-center text-caption">
         All rights reserved &copy;
       </p>

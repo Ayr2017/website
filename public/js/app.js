@@ -9714,7 +9714,11 @@ var render = function() {
       _vm._v(" "),
       _c(
         "v-main",
-        { staticClass: "mt-n15 py-0", style: _vm.theme },
+        {
+          staticClass: "mt-n15 py-0",
+          style: _vm.theme,
+          on: { scroll: function($event) {} }
+        },
         [
           _c(
             "v-container",
@@ -9728,7 +9732,13 @@ var render = function() {
       _vm._v(" "),
       _c(
         "v-footer",
-        { attrs: { app: "", color: "blue-grey darken-4", dark: "" } },
+        {
+          attrs: {
+            app: "",
+            color: "blue-grey darken-4 justify-center text-caption",
+            dark: ""
+          }
+        },
         [
           _c("p", { staticClass: "align-center justify-center text-caption" }, [
             _vm._v("\n      All rights reserved ©\n    ")
