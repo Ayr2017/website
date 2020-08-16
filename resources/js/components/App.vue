@@ -15,7 +15,7 @@ const { template } = require("lodash");
             </v-list-item-content>
           </v-list-item>
 
-          <v-list-item link>
+          <v-list-item link to="/websites">
             <v-list-item-icon>
               <v-icon>mdi-web</v-icon>
             </v-list-item-icon>
@@ -43,7 +43,7 @@ const { template } = require("lodash");
             </v-list-item-content>
           </v-list-item>
           <!-- Обсудить проект -->
-          <v-list-item link>
+          <v-list-item link to="/contacts">
             <v-list-item-icon>
               <v-icon>mdi-human-greeting-proximity</v-icon>
             </v-list-item-icon>
@@ -83,7 +83,7 @@ const { template } = require("lodash");
         dark
         tile
         color="deep-orange accent-4"
-        class="mx-auto"
+        class="mx-auto mx-md-5"
         href="tel:+79047165279"
       >+79047165279</v-btn>
 
@@ -129,6 +129,7 @@ export default {
       return { background: "#ebedec" };
     },
     headerType() {
+      // console.log(this.$vuetify.breakpoint.name);
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
           this.setSubheaderSize("display-1");

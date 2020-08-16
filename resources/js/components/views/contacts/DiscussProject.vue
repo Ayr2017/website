@@ -1,5 +1,5 @@
 <template>
-  <v-col cols="md-6 sm-12 xs-12">
+  <v-col cols=" xs-12 sm-12  md-6">
     <div :class="[subheaderSize, 'font-weight-thin mb-10 elev-1 text--secondary'] ">Обсудить проект</div>
     <v-card outlined color="#fff5">
       <v-form ref="form" @submit.prevent="submit">

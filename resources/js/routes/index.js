@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 
 import Welcome from '../components/views/Welcome.vue';
 import Contacts from '../components/views/Contacts.vue';
+import Websites from '../components/views/Websites.vue';
 
 Vue.use(VueRouter);
 
@@ -11,6 +12,11 @@ const routes = [
         path: '/',
         name:'welcome',
         component: Welcome
+    },
+    {
+        path: '/websites',
+        name:'websites',
+        component: Websites
     },
     {
         path: '/contacts',
