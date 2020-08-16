@@ -71925,6 +71925,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store */ "./resources/js/store/index.js");
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 /* harmony import */ var vue_observe_visibility__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-observe-visibility */ "./node_modules/vue-observe-visibility/dist/vue-observe-visibility.esm.js");
+/* harmony import */ var _components_App_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/App.vue */ "./resources/js/components/App.vue");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -71951,8 +71952,9 @@ Vue.use(vue_observe_visibility__WEBPACK_IMPORTED_MODULE_4__["default"]);
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+// Vue.component('app', require('./components/App.vue').default);
 
-Vue.component('app', __webpack_require__(/*! ./components/App.vue */ "./resources/js/components/App.vue")["default"]);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -71969,8 +71971,10 @@ var app = new Vue({
   router: _routes__WEBPACK_IMPORTED_MODULE_1__["default"],
   store: _store__WEBPACK_IMPORTED_MODULE_2__["default"],
   gsap: gsap__WEBPACK_IMPORTED_MODULE_3__["default"],
-  VueObserveVisibility: vue_observe_visibility__WEBPACK_IMPORTED_MODULE_4__["default"] // render: h => h(App),    
-
+  VueObserveVisibility: vue_observe_visibility__WEBPACK_IMPORTED_MODULE_4__["default"],
+  render: function render(h) {
+    return h(_components_App_vue__WEBPACK_IMPORTED_MODULE_5__["default"]);
+  }
 });
 
 /***/ }),
