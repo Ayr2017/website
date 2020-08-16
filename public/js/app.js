@@ -10701,7 +10701,10 @@ var render = function() {
                                                 "v-list-item",
                                                 {
                                                   staticClass:
-                                                    "mx-md-15 px-md-15"
+                                                    "mx-md-15 px-md-15",
+                                                  attrs: {
+                                                    "aria-label": "element"
+                                                  }
                                                 },
                                                 [
                                                   _c(
@@ -10755,7 +10758,10 @@ var render = function() {
                                                 "v-list-item",
                                                 {
                                                   staticClass:
-                                                    "mx-md-15 px-md-15"
+                                                    "mx-md-15 px-md-15",
+                                                  attrs: {
+                                                    "aria-label": "element"
+                                                  }
                                                 },
                                                 [
                                                   _c(
@@ -10809,7 +10815,10 @@ var render = function() {
                                                 "v-list-item",
                                                 {
                                                   staticClass:
-                                                    "mx-md-15 px-md-15"
+                                                    "mx-md-15 px-md-15",
+                                                  attrs: {
+                                                    "aria-label": "element"
+                                                  }
                                                 },
                                                 [
                                                   _c(
