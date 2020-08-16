@@ -10,7 +10,7 @@
             <v-theme-provider dark>
           <v-col class="text-center" cols="12">
             <h1 class="display-4 font-weight-thin mb-4">Вам нужен сайт?</h1>
-            <h4 class="subheading">Вы зашли туда, куда надо!</h4>
+            <h4 class="subheading text-h6 font-weight-light">Вы зашли туда, куда надо!</h4>
             <v-btn
                     class="align-self-end mt-10"
                     fab
@@ -42,3 +42,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.subheading{
+  letter-spacing: 2px !important;
+}
+</style>
