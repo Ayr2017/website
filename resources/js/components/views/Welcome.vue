@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <TopCard />
-    <Services id="services"/>
+    <Services />
   </v-app>
 </template>
 

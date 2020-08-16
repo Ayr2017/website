@@ -2562,13 +2562,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -2667,7 +2660,18 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     screenHeight: function screenHeight() {
+      if (this.$vuetify.breakpoint.name === 'xs') {
+        return window.screen.height + 56;
+      }
+
       return window.screen.height;
+    },
+    innerHeight: function innerHeight() {
+      if (this.$vuetify.breakpoint.name === 'xs') {
+        return window.innerHeight + 56;
+      }
+
+      return window.innerHeight + 56;
     }
   },
   mounted: function mounted() {}
@@ -2932,7 +2936,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n.v-parallax[data-v-34e4a017] {\r\n  width: 100% !important;\n}\n.elev-1[data-v-34e4a017] {\r\n  text-shadow: 2px 2px 6px #aaa5;\n}\r\n", ""]);
+exports.push([module.i, "\n.v-parallax[data-v-34e4a017] {\r\n  width: 100% !important;\n}\n.elev-1[data-v-34e4a017] {\r\n  text-shadow: 2px 2px 6px rgb(68, 68, 68);\n}\r\n", ""]);
 
 // exports
 
@@ -10076,11 +10080,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "v-app",
-    [_c("TopCard"), _vm._v(" "), _c("Services", { attrs: { id: "services" } })],
-    1
-  )
+  return _c("v-app", [_c("TopCard"), _vm._v(" "), _c("Services")], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -10577,14 +10577,19 @@ var render = function() {
         "v-card",
         {
           staticClass: "ma-0 pt-12 grey lighten-3",
-          attrs: { width: "100%", "min-height": _vm.screenHeight, tile: "" }
+          attrs: { width: "100%", tile: "" }
         },
         [
           _c(
             "v-row",
             {
               staticClass: "mx-0",
-              attrs: { align: "center", justify: "center", tile: "" }
+              attrs: {
+                align: "center",
+                justify: "center",
+                tile: "",
+                "min-height": _vm.screenHeight
+              }
             },
             [
               _c(
@@ -10596,10 +10601,11 @@ var render = function() {
                     { staticClass: "text-center", attrs: { cols: "12" } },
                     [
                       _c(
-                        "h1",
+                        "h2",
                         {
                           staticClass: "display-2 font-weight-thin mb-4",
-                          staticStyle: { color: "#333" }
+                          staticStyle: { color: "#333" },
+                          attrs: { id: "services-title" }
                         },
                         [_vm._v("Услуги, которые Вы можете заказать")]
                       ),
@@ -10627,7 +10633,7 @@ var render = function() {
           _vm._v(" "),
           _c(
             "v-row",
-            { staticClass: "mx-0" },
+            { staticClass: "mx-0 ", attrs: { align: "stretch" } },
             [
               _c(
                 "v-parallax",
@@ -10644,12 +10650,12 @@ var render = function() {
                           _c(
                             "v-col",
                             {
-                              staticClass: "text-center mx-0 px-0",
+                              staticClass: "text-center mx-0 px-0 my-10",
                               attrs: { cols: "12" }
                             },
                             [
                               _c(
-                                "div",
+                                "v-alert",
                                 {
                                   directives: [
                                     {
@@ -10666,10 +10672,15 @@ var render = function() {
                                         "(isVisible, entry, n)=>showServicePoint(isVisible, entry, 1)"
                                     }
                                   ],
-                                  class: [
-                                    _vm.headerType,
-                                    "font-weight-regular mb-10 elev-1"
-                                  ]
+                                  class: [_vm.headerType],
+                                  attrs: {
+                                    fluid: "",
+                                    flat: "",
+                                    tile: "",
+                                    color: "#263238aa",
+                                    dark: "",
+                                    dense: ""
+                                  }
                                 },
                                 [_vm._v("В чём преимущество?")]
                               ),
@@ -10688,7 +10699,7 @@ var render = function() {
                                           staticClass: "mx-0 px-0",
                                           attrs: {
                                             "three-line": "",
-                                            color: "#fff1",
+                                            color: "#263238aa",
                                             disabled: ""
                                           }
                                         },
@@ -10928,7 +10939,7 @@ var render = function() {
             "v-parallax",
             {
               attrs: {
-                height: _vm.screenHeight,
+                height: _vm.innerHeight,
                 dark: "",
                 src: "./assets/welcome-top.webp"
               }
@@ -10972,7 +10983,7 @@ var render = function() {
                               },
                               on: {
                                 click: function($event) {
-                                  return _vm.$vuetify.goTo("#services")
+                                  return _vm.$vuetify.goTo("#services-title")
                                 }
                               }
                             },
