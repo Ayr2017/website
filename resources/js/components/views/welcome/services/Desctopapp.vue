@@ -14,7 +14,7 @@
 
         <v-spacer></v-spacer>
 
-        <v-btn icon @click="show = !show">
+        <v-btn icon @click="show = !show" aria-label="more">
           <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
         </v-btn>
       </v-card-actions>
@@ -25,7 +25,7 @@
 
           <v-card-text>
             <p>Десктопные приложения - приложения, которые запускаются на компьютере и могут работать не подключаясь к интернету.</p>
-            <v-btn tile outlined>Подробнее</v-btn>
+            <v-btn tile outlined aria-label="more">Подробнее</v-btn>
           </v-card-text>
         </div>
       </v-expand-transition>

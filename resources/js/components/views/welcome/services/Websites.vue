@@ -12,7 +12,7 @@
 
         <v-spacer></v-spacer>
 
-        <v-btn icon @click="show = !show">
+        <v-btn icon @click="show = !show" aria-label="more">
           <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
         </v-btn>
       </v-card-actions>
@@ -23,7 +23,7 @@
 
           <v-card-text>
             <p>Сайты-визитки, одностраничные landing-page, корпоративные сайты, сайты парсеры, магазины и многое другое, что связано с Web!</p>
-            <v-btn tile outlined to="/websites">Подробнее</v-btn>
+            <v-btn tile outlined to="/websites" aria-label="more">Подробнее</v-btn>
           </v-card-text>
         </div>
       </v-expand-transition>

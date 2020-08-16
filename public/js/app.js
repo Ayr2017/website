@@ -2659,9 +2659,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2954,7 +2951,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n.subheading[data-v-24a861dc]{\r\n  letter-spacing: 2px !important;\n}\r\n", ""]);
+exports.push([module.i, "\n.subheading[data-v-24a861dc] {\r\n  letter-spacing: 2px !important;\n}\r\n", ""]);
 
 // exports
 
@@ -9814,7 +9811,7 @@ var render = function() {
             "v-btn",
             {
               staticClass: "ma-xs-1 ma-sm-2",
-              attrs: { icon: "", fab: "", dark: "" },
+              attrs: { "aria-label": "menu", icon: "", fab: "", dark: "" },
               on: {
                 click: function($event) {
                   _vm.showNavDrawer = !_vm.showNavDrawer
@@ -10959,7 +10956,11 @@ var render = function() {
                             "v-btn",
                             {
                               staticClass: "align-self-end mt-10",
-                              attrs: { fab: "", outlined: "" },
+                              attrs: {
+                                "aria-label": "services",
+                                fab: "",
+                                outlined: ""
+                              },
                               on: {
                                 click: function($event) {
                                   return _vm.$vuetify.goTo("#services")
@@ -11050,7 +11051,7 @@ var render = function() {
               _c(
                 "v-btn",
                 {
-                  attrs: { icon: "" },
+                  attrs: { icon: "", "aria-label": "more" },
                   on: {
                     click: function($event) {
                       _vm.show = !_vm.show
@@ -11095,9 +11096,13 @@ var render = function() {
                       )
                     ]),
                     _vm._v(" "),
-                    _c("v-btn", { attrs: { tile: "", outlined: "" } }, [
-                      _vm._v("Подробнее")
-                    ])
+                    _c(
+                      "v-btn",
+                      {
+                        attrs: { tile: "", outlined: "", "aria-label": "more" }
+                      },
+                      [_vm._v("Подробнее")]
+                    )
                   ],
                   1
                 )
@@ -11178,7 +11183,7 @@ var render = function() {
               _c(
                 "v-btn",
                 {
-                  attrs: { icon: "" },
+                  attrs: { icon: "", "aria-label": "more" },
                   on: {
                     click: function($event) {
                       _vm.show = !_vm.show
@@ -11223,9 +11228,13 @@ var render = function() {
                       )
                     ]),
                     _vm._v(" "),
-                    _c("v-btn", { attrs: { tile: "", outlined: "" } }, [
-                      _vm._v("Подробнее")
-                    ])
+                    _c(
+                      "v-btn",
+                      {
+                        attrs: { tile: "", outlined: "", "aria-label": "more" }
+                      },
+                      [_vm._v("Подробнее")]
+                    )
                   ],
                   1
                 )
@@ -11289,7 +11298,7 @@ var render = function() {
               _c(
                 "v-btn",
                 {
-                  attrs: { icon: "" },
+                  attrs: { icon: "", "aria-label": "more" },
                   on: {
                     click: function($event) {
                       _vm.show = !_vm.show
@@ -11336,7 +11345,14 @@ var render = function() {
                     _vm._v(" "),
                     _c(
                       "v-btn",
-                      { attrs: { tile: "", outlined: "", to: "/websites" } },
+                      {
+                        attrs: {
+                          tile: "",
+                          outlined: "",
+                          to: "/websites",
+                          "aria-label": "more"
+                        }
+                      },
                       [_vm._v("Подробнее")]
                     )
                   ],
