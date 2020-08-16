@@ -11,7 +11,7 @@
             >Услуги, которые Вы можете заказать</h2>
             <v-row>
               <Websites />
-              <Desctopapp />
+              <Desktopapp />
               <Webanimation />
             </v-row>
           </v-col>
@@ -22,7 +22,7 @@
           <v-row align="center" justify="center" tile>
             <v-theme-provider dark>
               <v-col class="text-center mx-0 px-0 my-10" cols="12">
-                <v-alert :class="[headerType,] " fluid flat tile color="#263238aa" dark dense v-observe-visibility="(isVisible, entry, n)=>showServicePoint(isVisible, entry, 1)">В чём преимущество?</v-alert>
+                <v-alert :class="[headerType,'text-weight-thin'] " fluid flat tile color="#263238aa" dark dense v-observe-visibility="(isVisible, entry, n)=>showServicePoint(isVisible, entry, 1)"><p>В чём преимущество?</p></v-alert>
                 <transition name="slideUp" tag="ul" class="list-group">
                   <v-list three-line class="mx-0 px-0" color="#263238aa" disabled v-if="servicePoint_1">
                     <v-list-item-group color="primary">
@@ -71,12 +71,12 @@
 
 <script>
 import Websites from "./services/Websites.vue";
-import Desctopapp from "./services/Desctopapp.vue";
+import Desktopapp from "./services/Desktopapp.vue";
 import Webanimation from "./services/Webanimation.vue";
 export default {
   components: {
     Websites,
-    Desctopapp,
+    Desktopapp,
     Webanimation,
   },
   data: () => ({
