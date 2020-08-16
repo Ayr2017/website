@@ -33,7 +33,7 @@
 
                   <v-list three-line class="mx-0 px-0" color="#fff1" disabled v-if="servicePoint_1">
                     <v-list-item-group color="primary">
-                      <v-list-item class="mx-md-15 px-md-15">
+                      <v-list-item class="mx-md-15 px-md-15" aria-label="element">
                         <v-list-item-avatar>
                           <v-icon dark>mdi-currency-usd</v-icon>
                         </v-list-item-avatar>
@@ -42,7 +42,7 @@
                           <v-list-item-subtitle v-html="'Работа выполняется без посредников'"></v-list-item-subtitle>
                         </v-list-item-content>
                       </v-list-item>
-                      <v-list-item class="mx-md-15 px-md-15">
+                      <v-list-item class="mx-md-15 px-md-15" aria-label="element">
                         <v-list-item-avatar>
                           <v-icon dark>mdi-face-agent</v-icon>
                         </v-list-item-avatar>
@@ -53,7 +53,7 @@
                           ></v-list-item-subtitle>
                         </v-list-item-content>
                       </v-list-item>
-                      <v-list-item class="mx-md-15 px-md-15">
+                      <v-list-item class="mx-md-15 px-md-15" aria-label="element">
                         <v-list-item-avatar>
                           <v-icon dark>mdi-sale</v-icon>
                         </v-list-item-avatar>
