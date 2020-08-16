@@ -9770,7 +9770,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "v-main",
-        { staticClass: "mt-n15 pb-0", style: _vm.theme },
+        { staticClass: "mt-n15 py-0", style: _vm.theme },
         [
           _c(
             "v-container",
