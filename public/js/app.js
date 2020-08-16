@@ -10668,7 +10668,7 @@ var render = function() {
                                   ],
                                   class: [
                                     _vm.headerType,
-                                    "font-weight-thin mb-10 elev-1"
+                                    "font-weight-light mb-10 elev-1"
                                   ]
                                 },
                                 [_vm._v("В чём преимущество?")]
@@ -10953,7 +10953,7 @@ var render = function() {
                           ),
                           _vm._v(" "),
                           _c(
-                            "h4",
+                            "p",
                             {
                               staticClass:
                                 "subheading text-h6 font-weight-light"
