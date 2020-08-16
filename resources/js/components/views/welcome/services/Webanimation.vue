@@ -23,7 +23,7 @@
 
         <v-spacer></v-spacer>
 
-        <v-btn icon @click="show = !show">
+        <v-btn icon @click="show = !show" aria-label="more">
           <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
         </v-btn>
       </v-card-actions>
@@ -34,7 +34,7 @@
 
           <v-card-text>
             <p>HTML5-анимация используется сложных визуальных эффектов.Вызывает эмоции у посетиителей, мотивирует их на действия.</p>
-            <v-btn tile outlined >Подробнее</v-btn>
+            <v-btn tile outlined aria-label="more">Подробнее</v-btn>
           </v-card-text>
         </div>
       </v-expand-transition>
