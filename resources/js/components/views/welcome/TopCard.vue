@@ -14,7 +14,7 @@
                 outlined
                 @click="$vuetify.goTo('#services-title')"
               >
-                <v-icon>mdi-chevron-double-down</v-icon>
+                <v-icon id="iconTo">mdi-chevron-double-down</v-icon>
               </v-btn>
             </v-col>
           </v-theme-provider>
@@ -25,6 +25,7 @@
 </template>
 
 <script>
+import gsap from 'gsap'
 export default {
   data: () => ({
     sticky: false,
@@ -41,9 +42,17 @@ export default {
         return window.innerHeight+56;
       }
       return window.innerHeight+56;
-    }
+    },
+
   },
-  mounted() {},
+  mounted() {
+    this.iconOpacityAnimation();
+  },
+  methods:{
+    iconOpacityAnimation(){
+      gsap.fromTo('#iconTo',{opacity:1},{opacity:0.5, duration: 0.6, repeat:-1}).yoyo(true)
+    }
+  }
 };
 </script>
 
