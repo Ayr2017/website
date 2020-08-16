@@ -29,7 +29,9 @@ Vue.use(VueObserveVisibility)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('app', require('./components/App.vue').default);
+
+// Vue.component('app', require('./components/App.vue').default);
+import App from './components/App.vue'
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -47,6 +49,6 @@ const app = new Vue({
     router,
     store,
     gsap,
-    VueObserveVisibility
-    // render: h => h(App),    
+    VueObserveVisibility,
+    render: h => h(App),    
 });
