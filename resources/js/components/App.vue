@@ -15,7 +15,7 @@ const { template } = require("lodash");
             </v-list-item-content>
           </v-list-item>
 
-          <v-list-item link>
+          <v-list-item link to="/websites">
             <v-list-item-icon>
               <v-icon>mdi-web</v-icon>
             </v-list-item-icon>
@@ -43,7 +43,7 @@ const { template } = require("lodash");
             </v-list-item-content>
           </v-list-item>
           <!-- Обсудить проект -->
-          <v-list-item link>
+          <v-list-item link to="/contacts">
             <v-list-item-icon>
               <v-icon>mdi-human-greeting-proximity</v-icon>
             </v-list-item-icon>

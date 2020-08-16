@@ -23,7 +23,7 @@
 
           <v-card-text>
             <p>Сайты-визитки, одностраничные landing-page, корпоративные сайты, сайты парсеры, магазины и многое другое, что связано с Web!</p>
-            <v-btn tile outlined >Подробнее</v-btn>
+            <v-btn tile outlined to="/websites">Подробнее</v-btn>
           </v-card-text>
         </div>
       </v-expand-transition>
