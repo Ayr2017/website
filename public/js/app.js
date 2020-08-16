@@ -10668,7 +10668,7 @@ var render = function() {
                                   ],
                                   class: [
                                     _vm.headerType,
-                                    "font-weight-light mb-10 elev-1"
+                                    "font-weight-regular mb-10 elev-1"
                                   ]
                                 },
                                 [_vm._v("В чём преимущество?")]
