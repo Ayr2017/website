@@ -19,7 +19,6 @@
     <!-- Scrollmagic -->
     <!-- <script async src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script async src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script> -->
-    @preload
 </head>
 
 <body>
