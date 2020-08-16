@@ -91,7 +91,7 @@ const { template } = require("lodash");
     </v-app-bar>
 
     <!-- Sizes your content based upon application components -->
-    <v-main :style="theme" class="mt-n15 pb-0">
+    <v-main :style="theme" class="mt-n15 py-0">
       <!-- Provides the application the proper gutter -->
       <v-container fluid :style="theme" class="pb-0">
         <!-- If using vue-router -->
