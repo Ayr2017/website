@@ -67,11 +67,11 @@ const { template } = require("lodash");
     </transition>
 
     <v-app-bar app flat :color="appBarColor">
-      <v-btn class="ma-2" icon fab @click="showNavDrawer=!showNavDrawer" dark>
+      <v-btn class="ma-xs-1 ma-sm-2" icon fab @click="showNavDrawer=!showNavDrawer" dark>
         <v-icon>mdi-menu</v-icon>
       </v-btn>
 
-      <div class="display-1 font-weight-medium mr-0 ml-4 mr-md-4 v-sheet logo-text">Cripto</div>
+      <div class="display-1 font-weight-medium mx-auto v-sheet logo-text">Cripto</div>
       <v-spacer></v-spacer>
       <div class="row hidden-sm-and-down" group>
         <VSBtn :title="'Разработка сайтов'" :dark="true" to="/"></VSBtn>
@@ -83,7 +83,7 @@ const { template } = require("lodash");
         dark
         tile
         color="deep-orange accent-4"
-        class="mx-5"
+        class="mx-auto"
         href="tel:+79047165279"
       >+79047165279</v-btn>
 
@@ -91,19 +91,21 @@ const { template } = require("lodash");
     </v-app-bar>
 
     <!-- Sizes your content based upon application components -->
-    <v-main :style="theme" class="mt-n15 py-0">
+    <v-main :style="theme" class="mt-n15 pb-0">
       <!-- Provides the application the proper gutter -->
-      <v-container fluid :style="theme">
+      <v-container fluid :style="theme" class="pb-0">
         <!-- If using vue-router -->
         <router-view :style="theme"></router-view>
       </v-container>
     </v-main>
 
-    <v-footer app color="blue-grey darken-4 justify-center text-caption" dark>
+<transition name="fade" tag="div" >
+    <v-footer app color="blue-grey darken-4 justify-center text-caption" dark v-if="footer">
       <p class="align-center justify-center text-caption">
         All rights reserved &copy;
       </p>
     </v-footer>
+</transition>
   </v-app>
 </template>
 
@@ -120,6 +122,7 @@ export default {
     topButtonModel: null,
     appBarColor: "#aaaa",
     showNavDrawer: false,
+    footer: false
   }),
   computed: {
     theme: () => {
@@ -176,6 +179,7 @@ export default {
   methods: {
     ...mapMutations(["setSubheaderSize", "setIconsSize"]),
     handleScroll(event) {
+      this.scrollBottom();
       let scrollTop = event.target.scrollingElement.scrollTop;
       if (scrollTop) {
         this.appBarColor = "#cac2c4";
@@ -184,6 +188,9 @@ export default {
       }
       //   console.log(event.target.scrollingElement.scrollTop);
     },
+    scrollBottom(){
+      this.footer = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop) + window.innerHeight === document.documentElement.offsetHeight
+    }
   },
 };
 </script>

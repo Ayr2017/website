@@ -2026,6 +2026,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
 
 
 
@@ -2037,7 +2039,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     return {
       topButtonModel: null,
       appBarColor: "#aaaa",
-      showNavDrawer: false
+      showNavDrawer: false,
+      footer: false
     };
   },
   computed: {
@@ -2102,6 +2105,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   methods: _objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_2__["mapMutations"])(["setSubheaderSize", "setIconsSize"])), {}, {
     handleScroll: function handleScroll(event) {
+      this.scrollBottom();
       var scrollTop = event.target.scrollingElement.scrollTop;
 
       if (scrollTop) {
@@ -2110,6 +2114,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         this.appBarColor = "#aaaa";
       } //   console.log(event.target.scrollingElement.scrollTop);
 
+    },
+    scrollBottom: function scrollBottom() {
+      this.footer = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop) + window.innerHeight === document.documentElement.offsetHeight;
     }
   })
 });
@@ -9699,7 +9706,7 @@ var render = function() {
           _c(
             "v-btn",
             {
-              staticClass: "ma-2",
+              staticClass: "ma-xs-1 ma-sm-2",
               attrs: { icon: "", fab: "", dark: "" },
               on: {
                 click: function($event) {
@@ -9715,7 +9722,7 @@ var render = function() {
             "div",
             {
               staticClass:
-                "display-1 font-weight-medium mr-0 ml-4 mr-md-4 v-sheet logo-text"
+                "display-1 font-weight-medium mx-auto v-sheet logo-text"
             },
             [_vm._v("Cripto")]
           ),
@@ -9742,7 +9749,7 @@ var render = function() {
           _c(
             "v-btn",
             {
-              staticClass: "mx-5",
+              staticClass: "mx-auto",
               attrs: {
                 dark: "",
                 tile: "",
@@ -9763,11 +9770,11 @@ var render = function() {
       _vm._v(" "),
       _c(
         "v-main",
-        { staticClass: "mt-n15 py-0", style: _vm.theme },
+        { staticClass: "mt-n15 pb-0", style: _vm.theme },
         [
           _c(
             "v-container",
-            { style: _vm.theme, attrs: { fluid: "" } },
+            { staticClass: "pb-0", style: _vm.theme, attrs: { fluid: "" } },
             [_c("router-view", { style: _vm.theme })],
             1
           )
@@ -9776,19 +9783,30 @@ var render = function() {
       ),
       _vm._v(" "),
       _c(
-        "v-footer",
-        {
-          attrs: {
-            app: "",
-            color: "blue-grey darken-4 justify-center text-caption",
-            dark: ""
-          }
-        },
+        "transition",
+        { attrs: { name: "fade", tag: "div" } },
         [
-          _c("p", { staticClass: "align-center justify-center text-caption" }, [
-            _vm._v("\n      All rights reserved ©\n    ")
-          ])
-        ]
+          _vm.footer
+            ? _c(
+                "v-footer",
+                {
+                  attrs: {
+                    app: "",
+                    color: "blue-grey darken-4 justify-center text-caption",
+                    dark: ""
+                  }
+                },
+                [
+                  _c(
+                    "p",
+                    { staticClass: "align-center justify-center text-caption" },
+                    [_vm._v("\n        All rights reserved ©\n      ")]
+                  )
+                ]
+              )
+            : _vm._e()
+        ],
+        1
       )
     ],
     1
@@ -10842,7 +10860,7 @@ var render = function() {
                   [
                     _c("p", [
                       _vm._v(
-                        "HTML5-анимация используется для создания сложных визуальных эффектов. Она вызывает эмоции у посетиителей, мотивирует их на действия."
+                        "HTML5-анимация используется сложных визуальных эффектов.Вызывает эмоции у посетиителей, мотивирует их на действия."
                       )
                     ]),
                     _vm._v(" "),
@@ -10956,7 +10974,6 @@ var render = function() {
                         "Сайты-визитки, одностраничные landing-page, корпоративные сайты, сайты парсеры, магазины и многое другое, что связано с Web!"
                       )
                     ]),
-                    _c("br"),
                     _vm._v(" "),
                     _c("v-btn", { attrs: { tile: "", outlined: "" } }, [
                       _vm._v("Подробнее")
