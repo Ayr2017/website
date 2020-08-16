@@ -83,7 +83,7 @@ const { template } = require("lodash");
         dark
         tile
         color="deep-orange accent-4"
-        class="mx-auto"
+        class="mx-auto mx-md-5"
         href="tel:+79047165279"
       >+79047165279</v-btn>
 
@@ -129,6 +129,7 @@ export default {
       return { background: "#ebedec" };
     },
     headerType() {
+      // console.log(this.$vuetify.breakpoint.name);
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
           this.setSubheaderSize("display-1");

@@ -1,5 +1,5 @@
 <template>
-  <v-col cols="md-6 xs-12">
+  <v-col cols="xs-12  sm-12 md-6 ">
     <div :class="[subheaderSize, 'font-weight-thin mb-10 elev-1 text--secondary'] ">Контакты</div>
     <v-card outlined color="#fff5">
       <v-list-item  class="text-md-h5 text-sm-h5 text-xs-overline">
@@ -27,13 +27,6 @@
                 </v-list-item-content>
       </v-list-item>-->
       <v-card-actions></v-card-actions>
-      <!-- <v-expand-transition>
-                <div v-show="true">
-                  <v-divider></v-divider>
-
-                  <v-card-text>I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.</v-card-text>
-                </div>
-      </v-expand-transition>-->
     </v-card>
   </v-col>
 </template>
