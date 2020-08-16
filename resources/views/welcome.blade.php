@@ -11,7 +11,7 @@
     <!-- Fonts -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet"> -->
 
-    <link rel="preload" as="style" href="{{ asset('css/app.css') }}" media="none" onload="if(media!='all')media='all'">
+    <link rel="stylesheet"  href="{{ asset('css/app.css') }}" media="none" onload="if(media!='all')media='all'">
     <!-- <link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css"> -->
 
     <!-- CSRF Token -->
@@ -19,7 +19,7 @@
     <!-- Scrollmagic -->
     <!-- <script async src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script async src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script> -->
-
+    @preload
 </head>
 
 <body>
