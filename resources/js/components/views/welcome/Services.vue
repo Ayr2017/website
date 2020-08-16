@@ -25,7 +25,7 @@
             <v-theme-provider dark>
               <v-col class="text-center mx-0 px-0" cols="12">
                 <div
-                  :class="[headerType, 'font-weight-thin mb-10 elev-1'] "
+                  :class="[headerType, 'font-weight-light mb-10 elev-1'] "
                   v-observe-visibility="(isVisible, entry, n)=>showServicePoint(isVisible, entry, 1)"
                 >В чём преимущество?</div>
 
