@@ -54,4 +54,7 @@ export default {
 .v-image__image{
   filter:blur(5)
 }
+.v-card__title{
+  word-break: normal !important;
+}
 </style>

@@ -100,9 +100,9 @@ const { template } = require("lodash");
     </v-main>
 
 <transition name="fade" tag="div" >
-    <v-footer ref="footer" app color="blue-grey darken-4 justify-center text-caption" dark v-if="footer">
+    <v-footer ref="footer" app color="blue-grey darken-4 justify-center text-caption align-center" dark v-if="footer">
       <p class="align-center justify-center text-caption text-weight-thin" color="blue-grey lighten-4">
-        All rights reserved &copy;
+        All rights reserved &copy; 2020
       </p>
     </v-footer>
 </transition>

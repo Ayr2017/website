@@ -148,6 +148,7 @@ export default {
 .elev-1 {
   text-shadow: 2px 2px 6px rgb(68, 68, 68);
 }
+
 .v-list-item__subtitle {
   -webkit-line-clamp: unset !important;
 }
