@@ -90,18 +90,25 @@ class MailController extends Controller
         $userdescription = $request->userdescription;
         $to      = 'ayrat.2013@ya.ru';
         $subject = $request->username;
-        $message = "Имя:  $subject , телефон: $useremail, email: $useremail, \r\n".
+        $message = "Имя:  $subject , \r\n телефон: $useremail, \r\n email: $useremail, \r\n".
         "Описание: $userdescription \r\n" ;
-        
+
         $headers = 'From: webmaster@example.com' . "\r\n" .
         'Reply-To: webmaster@example.com' . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
 
-        mail($to, $subject, $message, $headers);
+        $result = mail($to, $subject, $message, $headers);
+        if($result) {
+            return 'ok';
+        } else {
+            $errorMessage = error_get_last()['message'];
+            return json_encode(['error_message' => $errorMessage]);
+        }
+
         // Mail::send(['text'=>'mail'],['name','USERNAME'], function($message){
         //     $message->to('ayrat.2013@ya.ru', 'TO Ayrat')->subject('Trest email');
         //     $message->from('ayrat.2013@yandex.ru', 'FomMe');
         // });
-        return $request->userfile;
+        
     }
 }
