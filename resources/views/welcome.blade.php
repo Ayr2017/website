@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Разработка сайтов, десктопных приложений и веб-анимации">
     <meta property="og:description" content="Разработка сайтов, десктопных приложений и веб-анимации">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
 
     <title>Crypto-Systems</title>
 
