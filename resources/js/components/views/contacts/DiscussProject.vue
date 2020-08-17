@@ -59,6 +59,7 @@ export default {
     useremail_rule: [(v) => v.length <= 25 && v.length > 10 || "Max 25 characters"],
     userdescription_rule: [(v) => v.length <= 1000 && v.length > 10 || "Max 1000 characters"],
     // userfile_rule: [(v) => (v ? true : false)],
+    
     buttonClass: "grey darken-4",
     buttonText: "Отправить?",
     buttonPadding: "",

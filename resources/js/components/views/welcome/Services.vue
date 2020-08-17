@@ -22,7 +22,7 @@
         
           <v-row align="center" justify="center" tile >
             <v-theme-provider dark >
-              <v-col class="text-center mx-0 px-0 my-10" cols="12" v-elresize @elresize="test">
+              <v-col class="text-center mx-0 px-0 my-10" cols="12" v-elresize @elresize="setParallaxHeightValue">
                 
                 <div class="row align-center justify-center " fluid flat tile style="background-color:#263238aa" dark dense v-observe-visibility="(isVisible, entry, n)=>showServicePoint(isVisible, entry, 1)"><p :class="[subheaderSize,'text-weight-thin '] ">В чём преимущество?</p></div>
                 <transition name="slideUp" tag="ul" class="list-group">
@@ -123,8 +123,7 @@ export default {
         }
       }
     },
-    test(event){
-      console.log(window)
+    setParallaxHeightValue(event){
       this.parallaxHeight = event.target.offsetHeight+56;
     }
   },
