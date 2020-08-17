@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Разработка сайтов, десктопных приложений и веб-анимации">
+    <meta property="og:description" content="Разработка сайтов, десктопных приложений и веб-анимации">
 
     <title>Crypto-Systems</title>
 
