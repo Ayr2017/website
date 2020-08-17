@@ -84,9 +84,15 @@ class MailController extends Controller
     }
 
     public function send(Request $request){
+        $userphone = $request->userphone;
+        $useremail = $request->useremail;
+        $userfile = $request->userfile;
+        $userdescription = $request->userdescription;
         $to      = 'ayrat.2013@ya.ru';
-        $subject = 'the subject';
-        $message = 'hello';
+        $subject = $request->username;
+        $message = "Имя:  $subject , телефон: $useremail, email: $useremail, \r\n".
+        "Описание: $userdescription \r\n" ;
+        
         $headers = 'From: webmaster@example.com' . "\r\n" .
         'Reply-To: webmaster@example.com' . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
