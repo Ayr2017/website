@@ -24,7 +24,7 @@ const { template } = require("lodash");
               <v-list-item-title>Веб-сайты</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
-          <v-list-item link>
+          <v-list-item link to="/desktopapp">
             <v-list-item-icon>
               <v-icon>mdi-laptop</v-icon>
             </v-list-item-icon>
@@ -33,7 +33,7 @@ const { template } = require("lodash");
               <v-list-item-title>Десктопные приложения</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
-          <v-list-item link>
+          <v-list-item link to="/webanimation">
             <v-list-item-icon>
               <v-icon>mdi-flag</v-icon>
             </v-list-item-icon>

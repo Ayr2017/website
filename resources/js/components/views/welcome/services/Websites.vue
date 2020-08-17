@@ -8,7 +8,7 @@
       <v-card-subtitle>Всё вкючено от 5 000 рублей</v-card-subtitle>
 
       <v-card-actions>
-        <v-btn color="purple" text>Заказать</v-btn>
+        <v-btn color="purple" text to="/contacts">Заказать</v-btn>
 
         <v-spacer></v-spacer>
 

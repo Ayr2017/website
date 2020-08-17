@@ -4,6 +4,8 @@ import VueRouter from 'vue-router';
 import Welcome from '../components/views/Welcome.vue';
 import Contacts from '../components/views/Contacts.vue';
 import Websites from '../components/views/Websites.vue';
+import Desktopapp from '../components/views/Desktopapp.vue';
+import Webanimation from '../components/views/Webanimation.vue';
 
 Vue.use(VueRouter);
 
@@ -17,6 +19,16 @@ const routes = [
         path: '/websites',
         name:'websites',
         component: Websites
+    },
+    {
+        path: '/desktopapp',
+        name:'desktopapp',
+        component: Desktopapp
+    },
+    {
+        path: '/webanimation',
+        name:'webanimation',
+        component: Webanimation
     },
     {
         path: '/contacts',

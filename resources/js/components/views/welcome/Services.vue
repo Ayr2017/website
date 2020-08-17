@@ -44,7 +44,7 @@
                         </v-list-item-avatar>
                         <v-list-item-content class="text-start">
                           <v-list-item-title v-html="'Дешевле на 50%'"></v-list-item-title>
-                          <v-list-item-subtitle v-html="'Работа выполняется без посредников'"></v-list-item-subtitle>
+                          <v-list-item-subtitle v-html="'Работа выполняется без посредников.'"></v-list-item-subtitle>
                         </v-list-item-content>
                       </v-list-item>
                       <v-list-item class="mx-md-15 px-md-15" aria-label="element">
@@ -54,7 +54,7 @@
                         <v-list-item-content class="text-start">
                           <v-list-item-title v-html="'Поддержка после сдачи работы'"></v-list-item-title>
                           <v-list-item-subtitle
-                            v-html="'В течении гарантийного срока выполняется бесплатное обслуживание'"
+                            v-html="'В течении гарантийного срока выполняется бесплатное обслуживание.'"
                           ></v-list-item-subtitle>
                         </v-list-item-content>
                       </v-list-item>
@@ -65,21 +65,11 @@
                         <v-list-item-content class="text-start">
                           <v-list-item-title v-html="'Гибкая система скидок и рассрочки'"></v-list-item-title>
                           <v-list-item-subtitle
-                            v-html="'Расплатиться полностью можно в течение года и более'"
+                            v-html="'Расплатиться полностью можно в течение года и более.'"
                           ></v-list-item-subtitle>
                         </v-list-item-content>
                       </v-list-item>
-                      <v-list-item class="mx-md-15 px-md-15" aria-label="element">
-                        <v-list-item-avatar>
-                          <v-icon dark>mdi-sale</v-icon>
-                        </v-list-item-avatar>
-                        <v-list-item-content class="text-start">
-                          <v-list-item-title v-html="'Гибкая система скидок и рассрочки'"></v-list-item-title>
-                          <v-list-item-subtitle
-                            v-html="'Расплатиться полностью можно в течение года и более'"
-                          ></v-list-item-subtitle>
-                        </v-list-item-content>
-                      </v-list-item>
+                      
                       
                     </v-list-item-group>
                   </v-list>

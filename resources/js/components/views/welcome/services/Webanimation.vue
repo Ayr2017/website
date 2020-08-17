@@ -17,9 +17,9 @@
       <v-card-subtitle>От 5 000 рублей</v-card-subtitle>
 
       <v-card-actions>
-        <v-btn text @click="show = !show">Подробнее</v-btn>
+        <!-- <v-btn text @click="show = !show">Подробнее</v-btn> -->
 
-        <v-btn color="purple" text>Заказать</v-btn>
+        <v-btn color="purple" text to="/contacts">Заказать</v-btn>
 
         <v-spacer></v-spacer>
 
