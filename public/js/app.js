@@ -2358,7 +2358,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -2392,11 +2394,82 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(["subheaderSize"])),
+  data: function data() {
+    return {
+      username: "",
+      userphone: "",
+      useremail: "",
+      userdescription: "",
+      userfile: null,
+      username_rule: [function (v) {
+        return v.length <= 25 || "Max 25 characters";
+      }],
+      userphone_rule: [function (v) {
+        return v.length <= 11 || "Max 11 characters";
+      }],
+      useremail_rule: [function (v) {
+        return v.length <= 25 || "Max 25 characters";
+      }],
+      userdescription_rule: [function (v) {
+        return v.length <= 1000 || "Max 1000 characters";
+      }],
+      userfile_rule: [function (v) {
+        return v ? true : false;
+      }],
+      buttonClass: "grey darken-4",
+      buttonText: "Отправить?",
+      buttonPadding: ""
+    };
+  },
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapGetters"])(["subheaderSize"])),
   mounted: function mounted() {},
-  methods: {}
+  methods: {
+    activateButton: function activateButton() {
+      this.buttonClass = "green darken-4 ";
+      this.buttonText = "Да!!!";
+      this.buttonPadding = "px-12";
+    },
+    passivateButton: function passivateButton(that) {
+      this.buttonClass = "grey darken-4", this.buttonText = "Отправить?";
+      this.buttonPadding = "";
+    },
+    sendMessage: function sendMessage() {
+      var data = new FormData();
+      var config = {
+        header: {
+          "Content-Type": "multipart/form-data"
+        }
+      };
+      data.append("username", this.username);
+      data.append("userphone", this.userphone);
+      data.append("useremail", this.useremail);
+      data.append("userdescription", this.userdescription);
+      data.append("userfile", this.userfile);
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("./message", data, config).then(function (response) {
+        return console.log(response);
+      })["catch"](function (e) {
+        return console.error(e);
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -10428,22 +10501,55 @@ var render = function() {
                 },
                 [
                   _c("v-text-field", {
-                    attrs: { label: "Ваше имя", "single-line": "" }
+                    attrs: {
+                      label: "Ваше имя",
+                      clearable: "",
+                      rules: _vm.username_rule
+                    },
+                    model: {
+                      value: _vm.username,
+                      callback: function($$v) {
+                        _vm.username = $$v
+                      },
+                      expression: "username"
+                    }
                   }),
                   _vm._v(" "),
                   _c("v-text-field", {
-                    attrs: { label: "Телефон", "single-line": "" }
+                    attrs: { label: "Телефон", rules: _vm.userphone_rule },
+                    model: {
+                      value: _vm.userphone,
+                      callback: function($$v) {
+                        _vm.userphone = $$v
+                      },
+                      expression: "userphone"
+                    }
                   }),
                   _vm._v(" "),
                   _c("v-text-field", {
-                    attrs: { label: "Email", "single-line": "" }
+                    attrs: { label: "E-mail", rules: _vm.useremail_rule },
+                    model: {
+                      value: _vm.useremail,
+                      callback: function($$v) {
+                        _vm.useremail = $$v
+                      },
+                      expression: "useremail"
+                    }
                   }),
                   _vm._v(" "),
                   _c("v-file-input", {
                     attrs: {
-                      multiple: "",
                       label: "Прикрепить файл",
-                      "prepend-icon": "mdi-paperclip"
+                      "prepend-icon": "mdi-paperclip",
+                      clearable: "",
+                      rules: _vm.userfile_rule
+                    },
+                    model: {
+                      value: _vm.userfile,
+                      callback: function($$v) {
+                        _vm.userfile = $$v
+                      },
+                      expression: "userfile"
                     }
                   }),
                   _vm._v(" "),
@@ -10451,7 +10557,15 @@ var render = function() {
                     attrs: {
                       name: "input-7-1",
                       label: "Опишите подробнее",
-                      hint: "Всё что поможет лучшему пониманию"
+                      hint: "Всё что поможет лучшему пониманию",
+                      clearable: ""
+                    },
+                    model: {
+                      value: _vm.userdescription,
+                      callback: function($$v) {
+                        _vm.userdescription = $$v
+                      },
+                      expression: "userdescription"
                     }
                   }),
                   _vm._v(" "),
@@ -10462,14 +10576,21 @@ var render = function() {
                       _c(
                         "v-btn",
                         {
-                          staticClass: "mx-auto",
+                          class: [_vm.buttonPadding, "mx-auto"],
                           attrs: {
                             tile: "",
                             outlined: "",
-                            color: "grey darken-4"
+                            color: _vm.buttonClass
+                          },
+                          on: {
+                            mouseenter: _vm.activateButton,
+                            mouseleave: function($event) {
+                              return _vm.passivateButton(this)
+                            },
+                            click: _vm.sendMessage
                           }
                         },
-                        [_vm._v("Отправит")]
+                        [_vm._v(_vm._s(_vm.buttonText))]
                       )
                     ],
                     1
