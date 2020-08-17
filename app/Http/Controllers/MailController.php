@@ -84,10 +84,18 @@ class MailController extends Controller
     }
 
     public function send(Request $request){
-        Mail::send(['text'=>'mail'],['name','USERNAME'], function($message){
-            $message->to('ayrat.2013@ya.ru', 'TO Ayrat')->subject('Trest email');
-            $message->from('ayrat.2013@yandex.ru', 'FomMe');
-        });
+        $to      = 'ayrat.2013@ya.ru';
+        $subject = 'the subject';
+        $message = 'hello';
+        $headers = 'From: webmaster@example.com' . "\r\n" .
+        'Reply-To: webmaster@example.com' . "\r\n" .
+        'X-Mailer: PHP/' . phpversion();
+
+        mail($to, $subject, $message, $headers);
+        // Mail::send(['text'=>'mail'],['name','USERNAME'], function($message){
+        //     $message->to('ayrat.2013@ya.ru', 'TO Ayrat')->subject('Trest email');
+        //     $message->from('ayrat.2013@yandex.ru', 'FomMe');
+        // });
         return $request->userfile;
     }
 }
