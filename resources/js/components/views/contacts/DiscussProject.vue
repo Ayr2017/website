@@ -7,13 +7,13 @@
           <v-text-field label="Ваше имя" clearable v-model="username" :rules="username_rule"></v-text-field>
           <v-text-field label="Телефон" v-model="userphone" :rules="userphone_rule"></v-text-field>
           <v-text-field label="E-mail" v-model="useremail" :rules="useremail_rule"></v-text-field>
-          <v-file-input
+          <!-- <v-file-input
             label="Прикрепить файл"
             prepend-icon="mdi-paperclip"
             v-model="userfile"
             clearable
             :rules="userfile_rule"
-          ></v-file-input>
+          ></v-file-input> -->
           <v-textarea
             name="input-7-1"
             label="Опишите подробнее"
@@ -21,6 +21,7 @@
             v-model="userdescription"
             clearable
           ></v-textarea>
+          <v-switch v-model="agree" class="ma-2" label="На всё согласен"></v-switch>
           <v-flex class="text-center">
             <v-btn
               tile
@@ -30,6 +31,7 @@
               @mouseenter="activateButton"
               @mouseleave="passivateButton(this)"
               @click="sendMessage"
+              :disabled="!agree"
             >{{buttonText}}</v-btn>
           </v-flex>
         </v-col>
@@ -50,12 +52,13 @@ export default {
     useremail: "",
     userdescription: "",
     userfile: null,
+    agree: true,
 
-    username_rule: [(v) => v.length <= 25 || "Max 25 characters"],
-    userphone_rule: [(v) => v.length <= 11 || "Max 11 characters"],
-    useremail_rule: [(v) => v.length <= 25 || "Max 25 characters"],
-    userdescription_rule: [(v) => v.length <= 1000 || "Max 1000 characters"],
-    userfile_rule: [(v) => (v ? true : false)],
+    username_rule: [(v) => v.length <= 25 && v.length > 10 || "Max 25 characters"],
+    userphone_rule: [(v) => v.length <= 11 && v.length > 10 || "Max 11 characters"],
+    useremail_rule: [(v) => v.length <= 25 && v.length > 10 || "Max 25 characters"],
+    userdescription_rule: [(v) => v.length <= 1000 && v.length > 10 || "Max 1000 characters"],
+    // userfile_rule: [(v) => (v ? true : false)],
     buttonClass: "grey darken-4",
     buttonText: "Отправить?",
     buttonPadding: "",
@@ -85,7 +88,7 @@ export default {
       data.append("userphone", this.userphone);
       data.append("useremail", this.useremail);
       data.append("userdescription", this.userdescription);
-      data.append("userfile", this.userfile);
+      // data.append("userfile", this.userfile);
       axios
         .post("./message", 
           data,

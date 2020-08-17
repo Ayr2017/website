@@ -2409,6 +2409,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2419,21 +2421,20 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       useremail: "",
       userdescription: "",
       userfile: null,
+      agree: true,
       username_rule: [function (v) {
-        return v.length <= 25 || "Max 25 characters";
+        return v.length <= 25 && v.length > 10 || "Max 25 characters";
       }],
       userphone_rule: [function (v) {
-        return v.length <= 11 || "Max 11 characters";
+        return v.length <= 11 && v.length > 10 || "Max 11 characters";
       }],
       useremail_rule: [function (v) {
-        return v.length <= 25 || "Max 25 characters";
+        return v.length <= 25 && v.length > 10 || "Max 25 characters";
       }],
       userdescription_rule: [function (v) {
-        return v.length <= 1000 || "Max 1000 characters";
+        return v.length <= 1000 && v.length > 10 || "Max 1000 characters";
       }],
-      userfile_rule: [function (v) {
-        return v ? true : false;
-      }],
+      // userfile_rule: [(v) => (v ? true : false)],
       buttonClass: "grey darken-4",
       buttonText: "Отправить?",
       buttonPadding: ""
@@ -2461,8 +2462,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       data.append("username", this.username);
       data.append("userphone", this.userphone);
       data.append("useremail", this.useremail);
-      data.append("userdescription", this.userdescription);
-      data.append("userfile", this.userfile);
+      data.append("userdescription", this.userdescription); // data.append("userfile", this.userfile);
+
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("./message", data, config).then(function (response) {
         return console.log(response);
       })["catch"](function (e) {
@@ -10537,22 +10538,6 @@ var render = function() {
                     }
                   }),
                   _vm._v(" "),
-                  _c("v-file-input", {
-                    attrs: {
-                      label: "Прикрепить файл",
-                      "prepend-icon": "mdi-paperclip",
-                      clearable: "",
-                      rules: _vm.userfile_rule
-                    },
-                    model: {
-                      value: _vm.userfile,
-                      callback: function($$v) {
-                        _vm.userfile = $$v
-                      },
-                      expression: "userfile"
-                    }
-                  }),
-                  _vm._v(" "),
                   _c("v-textarea", {
                     attrs: {
                       name: "input-7-1",
@@ -10569,6 +10554,18 @@ var render = function() {
                     }
                   }),
                   _vm._v(" "),
+                  _c("v-switch", {
+                    staticClass: "ma-2",
+                    attrs: { label: "На всё согласен" },
+                    model: {
+                      value: _vm.agree,
+                      callback: function($$v) {
+                        _vm.agree = $$v
+                      },
+                      expression: "agree"
+                    }
+                  }),
+                  _vm._v(" "),
                   _c(
                     "v-flex",
                     { staticClass: "text-center" },
@@ -10580,7 +10577,8 @@ var render = function() {
                           attrs: {
                             tile: "",
                             outlined: "",
-                            color: _vm.buttonClass
+                            color: _vm.buttonClass,
+                            disabled: !_vm.agree
                           },
                           on: {
                             mouseenter: _vm.activateButton,

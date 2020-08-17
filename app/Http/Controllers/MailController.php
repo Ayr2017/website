@@ -90,7 +90,7 @@ class MailController extends Controller
         $userdescription = $request->userdescription;
         $to      = 'ayrat.2013@ya.ru';
         $subject = $request->username;
-        $message = "Имя:  $subject , \r\n телефон: $useremail, \r\n email: $useremail, \r\n".
+        $message = "Имя:  $subject , \r\n"."телефон: $userphone, \r\n"."email: $useremail, \r\n".
         "Описание: $userdescription \r\n" ;
 
         $headers = 'From: webmaster@example.com' . "\r\n" .
@@ -104,11 +104,6 @@ class MailController extends Controller
             $errorMessage = error_get_last()['message'];
             return json_encode(['error_message' => $errorMessage]);
         }
-
-        // Mail::send(['text'=>'mail'],['name','USERNAME'], function($message){
-        //     $message->to('ayrat.2013@ya.ru', 'TO Ayrat')->subject('Trest email');
-        //     $message->from('ayrat.2013@yandex.ru', 'FomMe');
-        // });
         
     }
 }

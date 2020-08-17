@@ -3,7 +3,7 @@
     <div :class="[subheaderSize, 'font-weight-thin mb-10 elev-1 text--secondary'] ">Контакты</div>
     <v-card outlined color="#fff5">
       <v-list-item  class="text-md-h5 text-sm-h5 text-xs-overline">
-        <v-icon  :size="iconsSize">mdi-phone</v-icon>Телефон:
+        <v-icon  :size="iconsSize" >mdi-phone</v-icon>Телефон:
         <v-btn text large href="tel:+79047165279">
           <span class="text-md-h5 text-sm-h5 text-xs-overline">+79047165279</span>
         </v-btn>
