@@ -18,14 +18,26 @@
         </v-theme-provider>
       </v-row>
       <v-row class="mx-0 " align="stretch">
-        <v-parallax dark src="./assets/advantage.webp" >
-          <v-row align="center" justify="center" tile>
-            <v-theme-provider dark>
-              <v-col class="text-center mx-0 px-0 my-10" cols="12">
-                <v-alert :class="[headerType,'text-weight-thin'] " fluid flat tile color="#263238aa" dark dense v-observe-visibility="(isVisible, entry, n)=>showServicePoint(isVisible, entry, 1)"><p>В чём преимущество?</p></v-alert>
+        <v-parallax dark src="./assets/advantage.webp" jumbotron :height="parallaxHeight">
+        
+          <v-row align="center" justify="center" tile >
+            <v-theme-provider dark >
+              <v-col class="text-center mx-0 px-0 my-10" cols="12" v-elresize @elresize="test">
+                
+                <div class="row align-center justify-center " fluid flat tile style="background-color:#263238aa" dark dense v-observe-visibility="(isVisible, entry, n)=>showServicePoint(isVisible, entry, 1)"><p :class="[subheaderSize,'text-weight-thin '] ">В чём преимущество?</p></div>
                 <transition name="slideUp" tag="ul" class="list-group">
+                  
                   <v-list three-line class="mx-0 px-0" color="#263238aa" disabled v-if="servicePoint_1">
                     <v-list-item-group color="primary">
+                      <v-list-item class="mx-md-15 px-md-15" aria-label="reptiloids">
+                        <v-list-item-avatar>
+                          <v-icon dark>mdi-delta</v-icon>
+                        </v-list-item-avatar>
+                        <v-list-item-content class="text-start">
+                          <v-list-item-title v-html="'Контроль и размах'"></v-list-item-title>
+                          <v-list-item-subtitle v-html="'Работа выполняется потомственными рептилоидами под зорким контролем иллюминатов.'"></v-list-item-subtitle>
+                        </v-list-item-content>
+                      </v-list-item>
                       <v-list-item class="mx-md-15 px-md-15" aria-label="element">
                         <v-list-item-avatar>
                           <v-icon dark>mdi-currency-usd</v-icon>
@@ -57,6 +69,18 @@
                           ></v-list-item-subtitle>
                         </v-list-item-content>
                       </v-list-item>
+                      <v-list-item class="mx-md-15 px-md-15" aria-label="element">
+                        <v-list-item-avatar>
+                          <v-icon dark>mdi-sale</v-icon>
+                        </v-list-item-avatar>
+                        <v-list-item-content class="text-start">
+                          <v-list-item-title v-html="'Гибкая система скидок и рассрочки'"></v-list-item-title>
+                          <v-list-item-subtitle
+                            v-html="'Расплатиться полностью можно в течение года и более'"
+                          ></v-list-item-subtitle>
+                        </v-list-item-content>
+                      </v-list-item>
+                      
                     </v-list-item-group>
                   </v-list>
                 </transition>
@@ -73,6 +97,8 @@
 import Websites from "./services/Websites.vue";
 import Desktopapp from "./services/Desktopapp.vue";
 import Webanimation from "./services/Webanimation.vue";
+
+import { mapState, mapGetters, mapActions, mapMutations } from "vuex";
 export default {
   components: {
     Websites,
@@ -83,20 +109,12 @@ export default {
     servicePoint_1: false,
     servicePoint_2: false,
     servicePoint_3: false,
+    parallaxHeight: 500,
   }),
   computed: {
+      ...mapGetters(["subheaderSize"]),
     screenHeight() {
       return window.screen.height;
-    },
-    headerType() {
-      switch (this.$vuetify.breakpoint.name) {
-        case "xs":
-          return "display-1";
-        case "md":
-        case "lg":
-        case "xl":
-          return "display-4";
-      }
     },
   },
   methods: {
@@ -115,6 +133,10 @@ export default {
         }
       }
     },
+    test(event){
+      console.log(window)
+      this.parallaxHeight = event.target.offsetHeight+56;
+    }
   },
 };
 </script>
@@ -125,5 +147,11 @@ export default {
 }
 .elev-1 {
   text-shadow: 2px 2px 6px rgb(68, 68, 68);
+}
+.v-list-item__subtitle {
+  -webkit-line-clamp: unset !important;
+}
+.v-list-item__title{
+  white-space: normal !important;
 }
 </style>
