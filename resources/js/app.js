@@ -13,10 +13,13 @@ import router from './routes';
 import store from './store';
 import gsap from "gsap";
 import VueObserveVisibility from 'vue-observe-visibility';
+import * as ElResize from 'vue-element-resize-event';
+
 
 
 Vue.use(Vuetify);
 Vue.use(VueObserveVisibility)
+Vue.use(ElResize)
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -30,8 +33,8 @@ Vue.use(VueObserveVisibility)
 
 // Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
-// Vue.component('app', require('./components/App.vue').default);
-import App from './components/App.vue'
+Vue.component('app', require('./components/App.vue').default);
+// import App from './components/App.vue'
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -49,6 +52,7 @@ const app = new Vue({
     router,
     store,
     gsap,
+    ElResize,
     VueObserveVisibility,
-    render: h => h(App),    
+    // render: h => h(App),    
 });
