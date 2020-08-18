@@ -6,6 +6,7 @@ import Contacts from '../components/views/Contacts.vue';
 import Websites from '../components/views/Websites.vue';
 import Desktopapp from '../components/views/Desktopapp.vue';
 import Webanimation from '../components/views/Webanimation.vue';
+import Allservices from '../components/views/Allservices.vue';
 
 Vue.use(VueRouter);
 
@@ -19,6 +20,11 @@ const routes = [
         path: '/websites',
         name:'websites',
         component: Websites
+    },
+    {
+        path: '/allservices',
+        name:'allservices',
+        component: Allservices
     },
     {
         path: '/desktopapp',

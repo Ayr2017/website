@@ -34,7 +34,7 @@
 
           <v-card-text>
             <p>HTML5-анимация используется сложных визуальных эффектов.Вызывает эмоции у посетиителей, мотивирует их на действия.</p>
-            <v-btn tile outlined aria-label="more">Подробнее</v-btn>
+            <div class="d-flex"><v-btn class="mx-auto" tile outlined aria-label="more" to="/webanimation">Подробнее</v-btn></div>
           </v-card-text>
         </div>
       </v-expand-transition>

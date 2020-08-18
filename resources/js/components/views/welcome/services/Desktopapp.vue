@@ -24,8 +24,8 @@
           <v-divider></v-divider>
 
           <v-card-text>
-            <p>Десктопные приложения - приложения, которые запускаются на компьютере и могут работать не подключаясь к интернету.</p>
-            <v-btn tile outlined aria-label="more">Подробнее</v-btn>
+            <p >Десктопные приложения - приложения, которые запускаются на компьютере и могут работать не подключаясь к интернету.</p>
+            <div class="d-flex"><v-btn class="mx-auto" tile outlined aria-label="more" to="/desktopapp">Подробнее</v-btn></div>
           </v-card-text>
         </div>
       </v-expand-transition>

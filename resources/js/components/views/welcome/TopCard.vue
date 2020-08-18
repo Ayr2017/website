@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-card class="ma-0" width="100%" tile>
+    <v-card class="ma-0 mt-xs-3" width="100%" tile>
       <v-parallax :height="innerHeight" dark src="./assets/welcome-top.webp">
         <v-row align="center" justify="center">
           <v-theme-provider dark>

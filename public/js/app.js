@@ -2028,6 +2028,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
 
 
 
@@ -2180,6 +2182,49 @@ __webpack_require__.r(__webpack_exports__);
         width: 0
       }).duration(0.4).delay(0.1);
     }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/views/Allservices.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/views/Allservices.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _welcome_services_Websites_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./welcome/services/Websites.vue */ "./resources/js/components/views/welcome/services/Websites.vue");
+/* harmony import */ var _welcome_services_Desktopapp_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./welcome/services/Desktopapp.vue */ "./resources/js/components/views/welcome/services/Desktopapp.vue");
+/* harmony import */ var _welcome_services_Webanimation_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./welcome/services/Webanimation.vue */ "./resources/js/components/views/welcome/services/Webanimation.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    Websites: _welcome_services_Websites_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Desktopapp: _welcome_services_Desktopapp_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    Webanimation: _welcome_services_Webanimation_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
+  },
+  computed: {},
+  mounted: function mounted() {
+    console.log("Contacts mounted");
   }
 });
 
@@ -9975,6 +10020,29 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "v-list-item",
+                        { attrs: { link: "", to: "/allservices" } },
+                        [
+                          _c(
+                            "v-list-item-icon",
+                            [
+                              _c("v-icon", [
+                                _vm._v("mdi-google-circles-extended")
+                              ])
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-list-item-content",
+                            [_c("v-list-item-title", [_vm._v("Все услуги")])],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-list-item",
                         { attrs: { link: "", to: "/websites" } },
                         [
                           _c(
@@ -10056,28 +10124,9 @@ var render = function() {
                             "v-list-item-content",
                             [
                               _c("v-list-item-title", [
-                                _vm._v("Обсудить проект")
+                                _vm._v("Обсудить / Контакты")
                               ])
                             ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-list-item",
-                        { attrs: { link: "", to: "/contacts" } },
-                        [
-                          _c(
-                            "v-list-item-icon",
-                            [_c("v-icon", [_vm._v("mdi-account-box")])],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-list-item-content",
-                            [_c("v-list-item-title", [_vm._v("Контакты")])],
                             1
                           )
                         ],
@@ -10129,12 +10178,16 @@ var render = function() {
             { staticClass: "row hidden-sm-and-down", attrs: { group: "" } },
             [
               _c("VSBtn", {
-                attrs: { title: "Разработка сайтов", dark: true, to: "/" }
+                attrs: {
+                  title: "Разработка сайтов",
+                  dark: true,
+                  to: "/websites"
+                }
               }),
               _vm._v(" "),
-              _c("VSBtn", { attrs: { title: "Продвижение", dark: true } }),
-              _vm._v(" "),
-              _c("VSBtn", { attrs: { title: "Услуги", dark: true } })
+              _c("VSBtn", {
+                attrs: { title: "Все услуги", dark: true, to: "/allservices" }
+              })
             ],
             1
           ),
@@ -10257,6 +10310,60 @@ var render = function() {
       ),
       _vm._v(" "),
       _c("div", { staticClass: "btn__styler" })
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/views/Allservices.vue?vue&type=template&id=40b43103&":
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/views/Allservices.vue?vue&type=template&id=40b43103& ***!
+  \********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-app",
+    { staticClass: "pt-15 mt-15" },
+    [
+      _c(
+        "v-row",
+        [
+          _c(
+            "v-col",
+            { attrs: { cols: "md-12 xs-12 sm-12 lg-12" } },
+            [
+              _c(
+                "v-row",
+                [
+                  _c("Websites"),
+                  _vm._v(" "),
+                  _c("Desktopapp"),
+                  _vm._v(" "),
+                  _c("Webanimation")
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
     ],
     1
   )
@@ -11456,7 +11563,7 @@ var render = function() {
     [
       _c(
         "v-card",
-        { staticClass: "ma-0", attrs: { width: "100%", tile: "" } },
+        { staticClass: "ma-0 mt-xs-3", attrs: { width: "100%", tile: "" } },
         [
           _c(
             "v-parallax",
@@ -11630,25 +11737,34 @@ var render = function() {
               [
                 _c("v-divider"),
                 _vm._v(" "),
-                _c(
-                  "v-card-text",
-                  [
-                    _c("p", [
-                      _vm._v(
-                        "Десктопные приложения - приложения, которые запускаются на компьютере и могут работать не подключаясь к интернету."
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "v-btn",
-                      {
-                        attrs: { tile: "", outlined: "", "aria-label": "more" }
-                      },
-                      [_vm._v("Подробнее")]
+                _c("v-card-text", [
+                  _c("p", [
+                    _vm._v(
+                      "Десктопные приложения - приложения, которые запускаются на компьютере и могут работать не подключаясь к интернету."
                     )
-                  ],
-                  1
-                )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "d-flex" },
+                    [
+                      _c(
+                        "v-btn",
+                        {
+                          staticClass: "mx-auto",
+                          attrs: {
+                            tile: "",
+                            outlined: "",
+                            "aria-label": "more",
+                            to: "/desktopapp"
+                          }
+                        },
+                        [_vm._v("Подробнее")]
+                      )
+                    ],
+                    1
+                  )
+                ])
               ],
               1
             )
@@ -11751,25 +11867,34 @@ var render = function() {
               [
                 _c("v-divider"),
                 _vm._v(" "),
-                _c(
-                  "v-card-text",
-                  [
-                    _c("p", [
-                      _vm._v(
-                        "HTML5-анимация используется сложных визуальных эффектов.Вызывает эмоции у посетиителей, мотивирует их на действия."
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "v-btn",
-                      {
-                        attrs: { tile: "", outlined: "", "aria-label": "more" }
-                      },
-                      [_vm._v("Подробнее")]
+                _c("v-card-text", [
+                  _c("p", [
+                    _vm._v(
+                      "HTML5-анимация используется сложных визуальных эффектов.Вызывает эмоции у посетиителей, мотивирует их на действия."
                     )
-                  ],
-                  1
-                )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "d-flex" },
+                    [
+                      _c(
+                        "v-btn",
+                        {
+                          staticClass: "mx-auto",
+                          attrs: {
+                            tile: "",
+                            outlined: "",
+                            "aria-label": "more",
+                            to: "/webanimation"
+                          }
+                        },
+                        [_vm._v("Подробнее")]
+                      )
+                    ],
+                    1
+                  )
+                ])
               ],
               1
             )
@@ -11868,30 +11993,34 @@ var render = function() {
               [
                 _c("v-divider"),
                 _vm._v(" "),
-                _c(
-                  "v-card-text",
-                  [
-                    _c("p", [
-                      _vm._v(
-                        "Сайты-визитки, одностраничные landing-page, корпоративные сайты, сайты парсеры, магазины и многое другое, что связано с Web!"
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "v-btn",
-                      {
-                        attrs: {
-                          tile: "",
-                          outlined: "",
-                          to: "/websites",
-                          "aria-label": "more"
-                        }
-                      },
-                      [_vm._v("Подробнее")]
+                _c("v-card-text", [
+                  _c("p", [
+                    _vm._v(
+                      "Сайты-визитки, одностраничные landing-page, корпоративные сайты, сайты парсеры, магазины и многое другое, что связано с Web!"
                     )
-                  ],
-                  1
-                )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "d-flex" },
+                    [
+                      _c(
+                        "v-btn",
+                        {
+                          staticClass: "mx-auto",
+                          attrs: {
+                            tile: "",
+                            outlined: "",
+                            "aria-label": "more",
+                            to: "/websites"
+                          }
+                        },
+                        [_vm._v("Подробнее")]
+                      )
+                    ],
+                    1
+                  )
+                ])
               ],
               1
             )
@@ -72705,6 +72834,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/views/Allservices.vue":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/views/Allservices.vue ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Allservices_vue_vue_type_template_id_40b43103___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Allservices.vue?vue&type=template&id=40b43103& */ "./resources/js/components/views/Allservices.vue?vue&type=template&id=40b43103&");
+/* harmony import */ var _Allservices_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Allservices.vue?vue&type=script&lang=js& */ "./resources/js/components/views/Allservices.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Allservices_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Allservices_vue_vue_type_template_id_40b43103___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Allservices_vue_vue_type_template_id_40b43103___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/views/Allservices.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/views/Allservices.vue?vue&type=script&lang=js&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/views/Allservices.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Allservices_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Allservices.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/views/Allservices.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Allservices_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/views/Allservices.vue?vue&type=template&id=40b43103&":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/views/Allservices.vue?vue&type=template&id=40b43103& ***!
+  \**************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Allservices_vue_vue_type_template_id_40b43103___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./Allservices.vue?vue&type=template&id=40b43103& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/views/Allservices.vue?vue&type=template&id=40b43103&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Allservices_vue_vue_type_template_id_40b43103___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Allservices_vue_vue_type_template_id_40b43103___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/views/Contacts.vue":
 /*!****************************************************!*\
   !*** ./resources/js/components/views/Contacts.vue ***!
@@ -73727,6 +73925,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_views_Websites_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/views/Websites.vue */ "./resources/js/components/views/Websites.vue");
 /* harmony import */ var _components_views_Desktopapp_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/views/Desktopapp.vue */ "./resources/js/components/views/Desktopapp.vue");
 /* harmony import */ var _components_views_Webanimation_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/views/Webanimation.vue */ "./resources/js/components/views/Webanimation.vue");
+/* harmony import */ var _components_views_Allservices_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/views/Allservices.vue */ "./resources/js/components/views/Allservices.vue");
+
 
 
 
@@ -73743,6 +73943,10 @@ var routes = [{
   path: '/websites',
   name: 'websites',
   component: _components_views_Websites_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
+}, {
+  path: '/allservices',
+  name: 'allservices',
+  component: _components_views_Allservices_vue__WEBPACK_IMPORTED_MODULE_7__["default"]
 }, {
   path: '/desktopapp',
   name: 'desktopapp',

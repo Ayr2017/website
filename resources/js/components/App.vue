@@ -14,16 +14,28 @@ const { template } = require("lodash");
               <v-list-item-title>Главная</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
+           <!-- Все услуги -->
+          <v-list-item link to="/allservices">
+            <v-list-item-icon >
+              <v-icon>mdi-google-circles-extended</v-icon>
+            </v-list-item-icon>
 
+            <v-list-item-content>
+              <v-list-item-title>Все услуги</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+
+          <!-- Веб-сайты -->
           <v-list-item link to="/websites">
             <v-list-item-icon>
-              <v-icon>mdi-web</v-icon>
+              <v-icon >mdi-web</v-icon>
             </v-list-item-icon>
 
             <v-list-item-content>
               <v-list-item-title>Веб-сайты</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
+         
           <v-list-item link to="/desktopapp">
             <v-list-item-icon>
               <v-icon>mdi-laptop</v-icon>
@@ -49,17 +61,7 @@ const { template } = require("lodash");
             </v-list-item-icon>
 
             <v-list-item-content>
-              <v-list-item-title>Обсудить проект</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-          <!-- Контакты -->
-          <v-list-item link to="/contacts">
-            <v-list-item-icon>
-              <v-icon>mdi-account-box</v-icon>
-            </v-list-item-icon>
-
-            <v-list-item-content>
-              <v-list-item-title>Контакты</v-list-item-title>
+              <v-list-item-title>Обсудить / Контакты</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list>
@@ -74,9 +76,9 @@ const { template } = require("lodash");
       <div class="display-1 font-weight-medium mx-auto v-sheet logo-text">Cripto</div>
       <v-spacer></v-spacer>
       <div class="row hidden-sm-and-down" group>
-        <VSBtn :title="'Разработка сайтов'" :dark="true" to="/"></VSBtn>
-        <VSBtn :title="'Продвижение'" :dark="true"></VSBtn>
-        <VSBtn :title="'Услуги'" :dark="true"></VSBtn>
+        <VSBtn :title="'Разработка сайтов'" :dark="true" to="/websites"></VSBtn>
+        <!-- <VSBtn :title="'Продвижение'" :dark="true"></VSBtn> -->
+        <VSBtn :title="'Все услуги'" :dark="true" to="/allservices"></VSBtn>
       </div>
       <v-spacer></v-spacer>
       <v-btn
