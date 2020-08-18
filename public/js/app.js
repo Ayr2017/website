@@ -2118,6 +2118,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
     scrollBottom: function scrollBottom() {
       this.footer = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop) + window.innerHeight === document.documentElement.offsetHeight;
+    },
+    scrollEvent: function scrollEvent(e) {
+      console.log(e);
     }
   })
 });
@@ -2769,8 +2772,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
       }
     },
-    test: function test(event) {
-      console.log(window);
+    setParallaxHeightValue: function setParallaxHeightValue(event) {
       this.parallaxHeight = event.target.offsetHeight + 56;
     }
   }
@@ -11105,7 +11107,7 @@ var render = function() {
                               ],
                               staticClass: "text-center mx-0 px-0 my-10",
                               attrs: { cols: "12" },
-                              on: { elresize: _vm.test }
+                              on: { elresize: _vm.setParallaxHeightValue }
                             },
                             [
                               _c(

@@ -91,7 +91,7 @@ const { template } = require("lodash");
     </v-app-bar>
 
     <!-- Sizes your content based upon application components -->
-    <v-main :style="theme" class="mt-n15 py-0">
+    <v-main :style="theme" class="mt-n15 py-0" >
       <!-- Provides the application the proper gutter -->
       <v-container fluid :style="theme" class="pb-0">
         <!-- If using vue-router -->
@@ -191,6 +191,9 @@ export default {
     },
     scrollBottom(){
       this.footer = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop) + window.innerHeight === document.documentElement.offsetHeight
+    },
+    scrollEvent(e){
+      console.log(e);
     }
   },
 };
