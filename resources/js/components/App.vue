@@ -80,7 +80,14 @@ const { template } = require("lodash");
         <v-icon>mdi-menu</v-icon>
       </v-btn>
 
-      <div class="display-1 font-weight-medium mx-auto v-sheet logo-text">Cripto</div>
+      <!-- <div class="display-1 font-weight-medium mx-auto v-sheet logo-text">Cripto</div> -->
+      <router-link to="/">
+      <div class="display-1 font-weight-medium mx-auto v-sheet logo-text" @mouseenter="shuffleLogo" @mouseleave="sortLogo">
+        <transition-group name="list-complete" tag="span">
+          <span v-for="item in items" v-bind:key="item" class="list-complete-item">{{ item }}</span>
+        </transition-group>
+      </div>
+      </router-link>
       <v-spacer></v-spacer>
       <div class="row hidden-sm-and-down" group>
         <VSBtn :title="'Разработка сайтов'" :dark="true" to="/websites"></VSBtn>
@@ -104,7 +111,7 @@ const { template } = require("lodash");
       <!-- Provides the application the proper gutter -->
       <v-container fluid :style="theme" class="pb-0">
         <!-- If using vue-router -->
-          <router-view :style="theme"></router-view>
+        <router-view :style="theme"></router-view>
       </v-container>
     </v-main>
 
@@ -129,6 +136,7 @@ const { template } = require("lodash");
 import VSBtn from "./elements/VSBtn.vue";
 import { TimelineLite } from "gsap";
 import { mapState, mapGetters, mapActions, mapMutations } from "vuex";
+import _ from 'lodash';
 
 export default {
   components: {
@@ -139,6 +147,7 @@ export default {
     appBarColor: "#aaaa",
     showNavDrawer: false,
     footer: false,
+    items: ["C","r","y","p","t","o"],
   }),
   computed: {
     theme: () => {
@@ -218,6 +227,18 @@ export default {
     scrollEvent(e) {
       console.log(e);
     },
+    randomIndex: function () {
+      return Math.floor(Math.random() * this.items.length);
+    },
+    shuffleLogo: function () {
+      this.items = _.shuffle(this.items);
+    },
+    sortLogo:function(){
+      this.items = ["C","r","y","p","t","o"]
+    },
+    goToHome(){
+      this.$router.push({ path: '/' })
+    }
   },
 };
 </script>
@@ -243,5 +264,19 @@ export default {
 /* .slide-fade-leave-active до версии 2.1.8 */ {
   transform: translateX(10px);
   opacity: 0;
+}
+
+.list-complete-item {
+  transition: all 1s;
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-complete-enter, .list-complete-leave-to
+/* .list-complete-leave-active до версии 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.list-complete-leave-active {
+  position: absolute;
 }
 </style>
