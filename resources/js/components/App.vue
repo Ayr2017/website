@@ -1,7 +1,7 @@
 const { template } = require("lodash");
 
 <template>
-  <v-app >
+  <v-app>
     <transition name="slide-fade">
       <v-navigation-drawer app dark color="#68686a" v-model="showNavDrawer" v-if="showNavDrawer">
         <v-list dense rounded>
@@ -14,9 +14,9 @@ const { template } = require("lodash");
               <v-list-item-title>Главная</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
-           <!-- Все услуги -->
+          <!-- Все услуги -->
           <v-list-item link to="/allservices">
-            <v-list-item-icon >
+            <v-list-item-icon>
               <v-icon>mdi-google-circles-extended</v-icon>
             </v-list-item-icon>
 
@@ -28,14 +28,14 @@ const { template } = require("lodash");
           <!-- Веб-сайты -->
           <v-list-item link to="/websites">
             <v-list-item-icon>
-              <v-icon >mdi-web</v-icon>
+              <v-icon>mdi-web</v-icon>
             </v-list-item-icon>
 
             <v-list-item-content>
               <v-list-item-title>Веб-сайты</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
-         
+
           <v-list-item link to="/desktopapp">
             <v-list-item-icon>
               <v-icon>mdi-laptop</v-icon>
@@ -69,7 +69,14 @@ const { template } = require("lodash");
     </transition>
 
     <v-app-bar app flat :color="appBarColor">
-      <v-btn aria-label="menu" class="ma-xs-1 ma-sm-2" icon fab @click="showNavDrawer=!showNavDrawer" dark>
+      <v-btn
+        aria-label="menu"
+        class="ma-xs-1 ma-sm-2"
+        icon
+        fab
+        @click="showNavDrawer=!showNavDrawer"
+        dark
+      >
         <v-icon>mdi-menu</v-icon>
       </v-btn>
 
@@ -93,21 +100,28 @@ const { template } = require("lodash");
     </v-app-bar>
 
     <!-- Sizes your content based upon application components -->
-    <v-main :style="theme" class="mt-n15 py-0" >
+    <v-main :style="theme" class="mt-n15 py-0">
       <!-- Provides the application the proper gutter -->
       <v-container fluid :style="theme" class="pb-0">
         <!-- If using vue-router -->
-        <router-view :style="theme"></router-view>
+          <router-view :style="theme"></router-view>
       </v-container>
     </v-main>
 
-<transition name="fade" tag="div" >
-    <v-footer ref="footer" app color="blue-grey darken-4 justify-center text-caption align-center" dark v-if="footer">
-      <p class="align-center justify-center text-caption text-weight-thin" color="blue-grey lighten-4">
-        All rights reserved &copy; 2020
-      </p>
-    </v-footer>
-</transition>
+    <transition name="fade" tag="div">
+      <v-footer
+        ref="footer"
+        app
+        color="blue-grey darken-4 justify-center text-caption align-center"
+        dark
+        v-if="footer"
+      >
+        <p
+          class="align-center justify-center text-caption text-weight-thin"
+          color="blue-grey lighten-4"
+        >All rights reserved &copy; 2020</p>
+      </v-footer>
+    </transition>
   </v-app>
 </template>
 
@@ -124,7 +138,7 @@ export default {
     topButtonModel: null,
     appBarColor: "#aaaa",
     showNavDrawer: false,
-    footer: false
+    footer: false,
   }),
   computed: {
     theme: () => {
@@ -191,12 +205,19 @@ export default {
       }
       //   console.log(event.target.scrollingElement.scrollTop);
     },
-    scrollBottom(){
-      this.footer = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop) + window.innerHeight === document.documentElement.offsetHeight
+    scrollBottom() {
+      this.footer =
+        Math.max(
+          window.pageYOffset,
+          document.documentElement.scrollTop,
+          document.body.scrollTop
+        ) +
+          window.innerHeight ===
+        document.documentElement.offsetHeight;
     },
-    scrollEvent(e){
+    scrollEvent(e) {
       console.log(e);
-    }
+    },
   },
 };
 </script>

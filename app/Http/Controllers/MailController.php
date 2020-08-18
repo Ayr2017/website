@@ -99,7 +99,7 @@ class MailController extends Controller
 
         $result = mail($to, $subject, $message, $headers);
         if($result) {
-            return 'ok';
+            return $result;
         } else {
             $errorMessage = error_get_last()['message'];
             return json_encode(['error_message' => $errorMessage]);

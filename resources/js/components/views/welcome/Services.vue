@@ -1,6 +1,6 @@
 <template>
   <v-row tile>
-    <v-card class="ma-0 pt-12 grey lighten-3" width="100%"  tile>
+    <v-card class="ma-0 pt-12 grey lighten-3" width="100%" tile>
       <v-row align="center" justify="center" tile class="mx-0" :min-height="screenHeight">
         <v-theme-provider light>
           <v-col class="text-center" cols="12">
@@ -8,26 +8,49 @@
               class="display-2 font-weight-thin mb-4"
               style="color:#333"
               id="services-title"
+              v-observe-visibility="showServiceCard"
             >Услуги, которые Вы можете заказать</h2>
-            <v-row>
-              <Websites />
-              <Desktopapp />
-              <Webanimation />
-            </v-row>
+
+            <transition name="fadeDown" tag="div">
+              <v-row  v-if="serviceCardState">
+                <Websites />
+                <Desktopapp  />
+                <Webanimation />
+              </v-row>
+            </transition>
           </v-col>
         </v-theme-provider>
       </v-row>
-      <v-row class="mx-0 " align="stretch">
+      <v-row class="mx-0" align="stretch">
         <v-parallax dark src="./assets/advantage.webp" jumbotron :height="parallaxHeight">
-        
-          <v-row align="center" justify="center" tile >
-            <v-theme-provider dark >
-              <v-col class="text-center mx-0 px-0 my-10" cols="12" v-elresize @elresize="setParallaxHeightValue">
-                
-                <div class="row align-center justify-center " fluid flat tile style="background-color:#263238aa" dark dense v-observe-visibility="(isVisible, entry, n)=>showServicePoint(isVisible, entry, 1)"><p :class="[subheaderSize,'text-weight-thin '] ">В чём преимущество?</p></div>
+          <v-row align="center" justify="center" tile>
+            <v-theme-provider dark>
+              <v-col
+                class="text-center mx-0 px-0 my-10"
+                cols="12"
+                v-elresize
+                @elresize="setParallaxHeightValue"
+              >
+                <div
+                  class="row align-center justify-center"
+                  fluid
+                  flat
+                  tile
+                  style="background-color:#263238aa"
+                  dark
+                  dense
+                  v-observe-visibility="(isVisible, entry, n)=>showServicePoint(isVisible, entry, 1)"
+                >
+                  <p :class="[subheaderSize,'text-weight-thin '] ">В чём преимущество?</p>
+                </div>
                 <transition name="slideUp" tag="ul" class="list-group">
-                  
-                  <v-list three-line class="mx-0 px-0" color="#263238aa" disabled v-if="servicePoint_1">
+                  <v-list
+                    three-line
+                    class="mx-auto px-0"
+                    color="#263238aa"
+                    disabled
+                    v-if="servicePoint_1"
+                  >
                     <v-list-item-group color="primary">
                       <v-list-item class="mx-md-15 px-md-15" aria-label="reptiloids">
                         <v-list-item-avatar>
@@ -35,7 +58,9 @@
                         </v-list-item-avatar>
                         <v-list-item-content class="text-start">
                           <v-list-item-title v-html="'Контроль и размах'"></v-list-item-title>
-                          <v-list-item-subtitle v-html="'Работа выполняется потомственными рептилоидами под зорким контролем иллюминатов.'"></v-list-item-subtitle>
+                          <v-list-item-subtitle
+                            v-html="'Работа выполняется потомственными рептилоидами под зорким контролем иллюминатов.'"
+                          ></v-list-item-subtitle>
                         </v-list-item-content>
                       </v-list-item>
                       <v-list-item class="mx-md-15 px-md-15" aria-label="element">
@@ -69,8 +94,6 @@
                           ></v-list-item-subtitle>
                         </v-list-item-content>
                       </v-list-item>
-                      
-                      
                     </v-list-item-group>
                   </v-list>
                 </transition>
@@ -100,9 +123,10 @@ export default {
     servicePoint_2: false,
     servicePoint_3: false,
     parallaxHeight: 500,
+    serviceCardState: false,
   }),
   computed: {
-      ...mapGetters(["subheaderSize"]),
+    ...mapGetters(["subheaderSize"]),
     screenHeight() {
       return window.screen.height;
     },
@@ -123,9 +147,16 @@ export default {
         }
       }
     },
-    setParallaxHeightValue(event){
-      this.parallaxHeight = event.target.offsetHeight+56;
-    }
+    setParallaxHeightValue(event) {
+      this.parallaxHeight = event.target.offsetHeight + 56;
+    },
+    showServiceCard(isVisible, entry) {
+      if (isVisible) {
+        setTimeout(() => {
+          this.serviceCardState = true;
+        }, 100);
+      }
+    },
   },
 };
 </script>
@@ -141,7 +172,7 @@ export default {
 .v-list-item__subtitle {
   -webkit-line-clamp: unset !important;
 }
-.v-list-item__title{
+.v-list-item__title {
   white-space: normal !important;
 }
 </style>

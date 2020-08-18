@@ -13,7 +13,7 @@
             v-model="userfile"
             clearable
             :rules="userfile_rule"
-          ></v-file-input> -->
+          ></v-file-input>-->
           <v-textarea
             name="input-7-1"
             label="Опишите подробнее"
@@ -39,6 +39,19 @@
       </v-form>
       <v-card-actions></v-card-actions>
     </v-card>
+
+    <v-snackbar
+      v-model="snackbar"
+      :color="snackbarColor"
+      timeout="6000"
+      :top="true"
+      :vertical="true"
+    >
+      {{ text }}
+      <template v-slot:action="{ attrs }">
+        <v-btn dark text v-bind="attrs" @click="snackbar = false">Закрыть</v-btn>
+      </template>
+    </v-snackbar>
   </v-col>
 </template>
 
@@ -53,13 +66,24 @@ export default {
     userdescription: "",
     userfile: null,
     agree: true,
+    snackbar: false,
+    snackbarColor: "success",
+    text: "Ваше письмо удачно отправлено. Если прочитаю - свяжусь, возможно.",
 
-    username_rule: [(v) => v.length <= 25 && v.length > 10 || "Max 25 characters"],
-    userphone_rule: [(v) => v.length <= 11 && v.length > 10 || "Max 11 characters"],
-    useremail_rule: [(v) => v.length <= 25 && v.length > 10 || "Max 25 characters"],
-    userdescription_rule: [(v) => v.length <= 1000 && v.length > 10 || "Max 1000 characters"],
+    username_rule: [
+      (v) => (v.length <= 25 && v.length > 10) || "Max 25 characters",
+    ],
+    userphone_rule: [
+      (v) => (v.length <= 11 && v.length > 10) || "Max 11 characters",
+    ],
+    useremail_rule: [
+      (v) => (v.length <= 25 && v.length > 10) || "Max 25 characters",
+    ],
+    userdescription_rule: [
+      (v) => (v.length <= 1000 && v.length > 10) || "Max 1000 characters",
+    ],
     // userfile_rule: [(v) => (v ? true : false)],
-    
+
     buttonClass: "grey darken-4",
     buttonText: "Отправить?",
     buttonPadding: "",
@@ -91,12 +115,28 @@ export default {
       data.append("userdescription", this.userdescription);
       // data.append("userfile", this.userfile);
       axios
-        .post("./message", 
-          data,
-          config,
-        )
-        .then((response) => console.log(response))
-        .catch((e) => console.error(e));
+        .post("./message", data, config)
+        .then((response) => {
+          if (response.data == 1) {
+            this.snackbar = true;
+            this.snackbarColor = "success";
+            this.text =
+              "Ваше письмо удачно отправлено. Если прочитаю - свяжусь, возможно.";
+          } else {
+            console.error(response);
+            this.snackbar = true;
+            this.snackbarColor = "error";
+            this.text =
+              "Отправка письма потерпела неудачу. Позвоните лучше, обсудим.";
+          }
+        })
+        .catch((e) => {
+          console.error(e);
+          this.snackbar = true;
+          this.snackbarColor = "error";
+          this.text =
+            "Отправка письма потерпела неудачу. Позвоните лучше, обсудим.";
+        });
     },
   },
 };

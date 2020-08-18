@@ -2030,6 +2030,20 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -2530,6 +2544,19 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2541,6 +2568,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       userdescription: "",
       userfile: null,
       agree: true,
+      snackbar: false,
+      snackbarColor: "success",
+      text: "Ваше письмо удачно отправлено. Если прочитаю - свяжусь, возможно.",
       username_rule: [function (v) {
         return v.length <= 25 && v.length > 10 || "Max 25 characters";
       }],
@@ -2572,6 +2602,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       this.buttonPadding = "";
     },
     sendMessage: function sendMessage() {
+      var _this = this;
+
       var data = new FormData();
       var config = {
         header: {
@@ -2584,9 +2616,21 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       data.append("userdescription", this.userdescription); // data.append("userfile", this.userfile);
 
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("./message", data, config).then(function (response) {
-        return console.log(response);
+        if (response.data == 1) {
+          _this.snackbar = true;
+          _this.snackbarColor = "success";
+          _this.text = "Ваше письмо удачно отправлено. Если прочитаю - свяжусь, возможно.";
+        } else {
+          console.error(response);
+          _this.snackbar = true;
+          _this.snackbarColor = "error";
+          _this.text = "Отправка письма потерпела неудачу. Позвоните лучше, обсудим.";
+        }
       })["catch"](function (e) {
-        return console.error(e);
+        console.error(e);
+        _this.snackbar = true;
+        _this.snackbarColor = "error";
+        _this.text = "Отправка письма потерпела неудачу. Позвоните лучше, обсудим.";
       });
     }
   }
@@ -2776,6 +2820,29 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -2791,7 +2858,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       servicePoint_1: false,
       servicePoint_2: false,
       servicePoint_3: false,
-      parallaxHeight: 500
+      parallaxHeight: 500,
+      serviceCardState: false
     };
   },
   computed: _objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_3__["mapGetters"])(["subheaderSize"])), {}, {
@@ -2819,6 +2887,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
     setParallaxHeightValue: function setParallaxHeightValue(event) {
       this.parallaxHeight = event.target.offsetHeight + 56;
+    },
+    showServiceCard: function showServiceCard(isVisible, entry) {
+      var _this = this;
+
+      if (isVisible) {
+        setTimeout(function () {
+          _this.serviceCardState = true;
+        }, 100);
+      }
     }
   }
 });
@@ -3159,7 +3236,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n.v-parallax[data-v-34e4a017] {\r\n  width: 100% !important;\n}\n.elev-1[data-v-34e4a017] {\r\n  text-shadow: 2px 2px 6px rgb(68, 68, 68);\n}\n.v-list-item__subtitle[data-v-34e4a017] {\r\n  -webkit-line-clamp: unset !important;\n}\n.v-list-item__title[data-v-34e4a017]{\r\n  white-space: normal !important;\n}\r\n", ""]);
+exports.push([module.i, "\n.v-parallax[data-v-34e4a017] {\r\n  width: 100% !important;\n}\n.elev-1[data-v-34e4a017] {\r\n  text-shadow: 2px 2px 6px rgb(68, 68, 68);\n}\n.v-list-item__subtitle[data-v-34e4a017] {\r\n  -webkit-line-clamp: unset !important;\n}\n.v-list-item__title[data-v-34e4a017] {\r\n  white-space: normal !important;\n}\r\n", ""]);
 
 // exports
 
@@ -10254,7 +10331,7 @@ var render = function() {
                         "align-center justify-center text-caption text-weight-thin",
                       attrs: { color: "blue-grey lighten-4" }
                     },
-                    [_vm._v("\n        All rights reserved © 2020\n      ")]
+                    [_vm._v("All rights reserved © 2020")]
                   )
                 ]
               )
@@ -10884,6 +10961,53 @@ var render = function() {
           _c("v-card-actions")
         ],
         1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-snackbar",
+        {
+          attrs: {
+            color: _vm.snackbarColor,
+            timeout: "6000",
+            top: true,
+            vertical: true
+          },
+          scopedSlots: _vm._u([
+            {
+              key: "action",
+              fn: function(ref) {
+                var attrs = ref.attrs
+                return [
+                  _c(
+                    "v-btn",
+                    _vm._b(
+                      {
+                        attrs: { dark: "", text: "" },
+                        on: {
+                          click: function($event) {
+                            _vm.snackbar = false
+                          }
+                        }
+                      },
+                      "v-btn",
+                      attrs,
+                      false
+                    ),
+                    [_vm._v("Закрыть")]
+                  )
+                ]
+              }
+            }
+          ]),
+          model: {
+            value: _vm.snackbar,
+            callback: function($$v) {
+              _vm.snackbar = $$v
+            },
+            expression: "snackbar"
+          }
+        },
+        [_vm._v("\n    " + _vm._s(_vm.text) + "\n    ")]
       )
     ],
     1
@@ -11155,6 +11279,14 @@ var render = function() {
                       _c(
                         "h2",
                         {
+                          directives: [
+                            {
+                              name: "observe-visibility",
+                              rawName: "v-observe-visibility",
+                              value: _vm.showServiceCard,
+                              expression: "showServiceCard"
+                            }
+                          ],
                           staticClass: "display-2 font-weight-thin mb-4",
                           staticStyle: { color: "#333" },
                           attrs: { id: "services-title" }
@@ -11163,13 +11295,22 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c(
-                        "v-row",
+                        "transition",
+                        { attrs: { name: "fadeDown", tag: "div" } },
                         [
-                          _c("Websites"),
-                          _vm._v(" "),
-                          _c("Desktopapp"),
-                          _vm._v(" "),
-                          _c("Webanimation")
+                          _vm.serviceCardState
+                            ? _c(
+                                "v-row",
+                                [
+                                  _c("Websites"),
+                                  _vm._v(" "),
+                                  _c("Desktopapp"),
+                                  _vm._v(" "),
+                                  _c("Webanimation")
+                                ],
+                                1
+                              )
+                            : _vm._e()
                         ],
                         1
                       )
@@ -11185,7 +11326,7 @@ var render = function() {
           _vm._v(" "),
           _c(
             "v-row",
-            { staticClass: "mx-0 ", attrs: { align: "stretch" } },
+            { staticClass: "mx-0", attrs: { align: "stretch" } },
             [
               _c(
                 "v-parallax",
@@ -11236,7 +11377,7 @@ var render = function() {
                                     }
                                   ],
                                   staticClass:
-                                    "row align-center justify-center ",
+                                    "row align-center justify-center",
                                   staticStyle: {
                                     "background-color": "#263238aa"
                                   },
@@ -11273,7 +11414,7 @@ var render = function() {
                                     ? _c(
                                         "v-list",
                                         {
-                                          staticClass: "mx-0 px-0",
+                                          staticClass: "mx-auto px-0",
                                           attrs: {
                                             "three-line": "",
                                             color: "#263238aa",
