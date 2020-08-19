@@ -84,7 +84,7 @@ const { template } = require("lodash");
       <router-link to="/">
       <div class="display-1 font-weight-medium mx-auto v-sheet logo-text" @mouseenter="shuffleLogo" @mouseleave="sortLogo">
         <transition-group name="list-complete" tag="span">
-          <span v-for="item in items" v-bind:key="item" class="list-complete-item">{{ item }}</span>
+          <span v-for="item in items" v-bind:key="item" class="list-complete-item mx-0">{{ item }}</span>
         </transition-group>
       </div>
       </router-link>

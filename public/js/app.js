@@ -27444,7 +27444,7 @@ var render = function() {
                   _vm._l(_vm.items, function(item) {
                     return _c(
                       "span",
-                      { key: item, staticClass: "list-complete-item" },
+                      { key: item, staticClass: "list-complete-item mx-0" },
                       [_vm._v(_vm._s(item))]
                     )
                   }),
