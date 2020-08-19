@@ -2053,6 +2053,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -2144,7 +2148,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
     },
     scrollBottom: function scrollBottom() {
-      this.footer = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop) + window.innerHeight === document.documentElement.offsetHeight;
+      var maxValue = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
+      this.footer = maxValue + window.innerHeight === document.documentElement.offsetHeight || maxValue + window.innerHeight === document.documentElement.offsetHeight - 1;
     },
     scrollEvent: function scrollEvent(e) {
       console.log(e);
@@ -2153,14 +2158,23 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return Math.floor(Math.random() * this.items.length);
     },
     shuffleLogo: function shuffleLogo() {
-      this.items = lodash__WEBPACK_IMPORTED_MODULE_3___default.a.shuffle(this.items);
+      var _this = this;
+
+      this.items = ["S", "y", "s", "t", "e", "m"];
+      setTimeout(function () {
+        _this.items = lodash__WEBPACK_IMPORTED_MODULE_3___default.a.shuffle(_this.items);
+      }, 900);
     },
-    sortLogo: function sortLogo() {
-      this.items = ["C", "r", "y", "p", "t", "o"];
+    orderLogo: function orderLogo() {
+      var _this2 = this;
+
+      setTimeout(function () {
+        _this2.items = ["C", "r", "y", "p", "t", "o"];
+      }, 600);
     },
     goToHome: function goToHome() {
       this.$router.push({
-        path: '/'
+        path: "/"
       });
     }
   })
@@ -27435,7 +27449,7 @@ var render = function() {
               {
                 staticClass:
                   "display-1 font-weight-medium mx-auto v-sheet logo-text",
-                on: { mouseenter: _vm.shuffleLogo, mouseleave: _vm.sortLogo }
+                on: { mouseenter: _vm.shuffleLogo, mouseleave: _vm.orderLogo }
               },
               [
                 _c(
@@ -27629,7 +27643,7 @@ var render = function() {
         [
           _c(
             "v-col",
-            { attrs: { cols: "md-12 xs-12 sm-12 lg-12" } },
+            { attrs: { cols: "md-12 xs-12 sm-12 lg-12 mb-12" } },
             [
               _c(
                 "v-row",

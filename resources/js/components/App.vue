@@ -82,11 +82,15 @@ const { template } = require("lodash");
 
       <!-- <div class="display-1 font-weight-medium mx-auto v-sheet logo-text">Cripto</div> -->
       <router-link to="/">
-      <div class="display-1 font-weight-medium mx-auto v-sheet logo-text" @mouseenter="shuffleLogo" @mouseleave="sortLogo">
-        <transition-group name="list-complete" tag="span">
-          <span v-for="item in items" v-bind:key="item" class="list-complete-item mx-0">{{ item }}</span>
-        </transition-group>
-      </div>
+        <div
+          class="display-1 font-weight-medium mx-auto v-sheet logo-text"
+          @mouseenter="shuffleLogo"
+          @mouseleave="orderLogo"
+        >
+          <transition-group name="list-complete" tag="span">
+            <span v-for="item in items" v-bind:key="item" class="list-complete-item mx-0">{{ item }}</span>
+          </transition-group>
+        </div>
       </router-link>
       <v-spacer></v-spacer>
       <div class="row hidden-sm-and-down" group>
@@ -136,7 +140,7 @@ const { template } = require("lodash");
 import VSBtn from "./elements/VSBtn.vue";
 import { TimelineLite } from "gsap";
 import { mapState, mapGetters, mapActions, mapMutations } from "vuex";
-import _ from 'lodash';
+import _ from "lodash";
 
 export default {
   components: {
@@ -147,7 +151,7 @@ export default {
     appBarColor: "#aaaa",
     showNavDrawer: false,
     footer: false,
-    items: ["C","r","y","p","t","o"],
+    items: ["C", "r", "y", "p", "t", "o"],
   }),
   computed: {
     theme: () => {
@@ -215,14 +219,12 @@ export default {
       //   console.log(event.target.scrollingElement.scrollTop);
     },
     scrollBottom() {
-      this.footer =
-        Math.max(
-          window.pageYOffset,
-          document.documentElement.scrollTop,
-          document.body.scrollTop
-        ) +
-          window.innerHeight ===
-        document.documentElement.offsetHeight;
+      let maxValue = Math.max(
+        window.pageYOffset,
+        document.documentElement.scrollTop,
+        document.body.scrollTop
+      );
+      this.footer = maxValue + window.innerHeight === document.documentElement.offsetHeight || maxValue + window.innerHeight === document.documentElement.offsetHeight-1;
     },
     scrollEvent(e) {
       console.log(e);
@@ -231,14 +233,20 @@ export default {
       return Math.floor(Math.random() * this.items.length);
     },
     shuffleLogo: function () {
-      this.items = _.shuffle(this.items);
+      this.items = ["S", "y", "s", "t", "e", "m"];
+      setTimeout(() => {
+        this.items = _.shuffle(this.items);
+      }, 900);
+        
     },
-    sortLogo:function(){
-      this.items = ["C","r","y","p","t","o"]
+    orderLogo: function () {
+      setTimeout(() => {
+      this.items = ["C", "r", "y", "p", "t", "o"];
+      }, 600);
     },
-    goToHome(){
-      this.$router.push({ path: '/' })
-    }
+    goToHome() {
+      this.$router.push({ path: "/" });
+    },
   },
 };
 </script>

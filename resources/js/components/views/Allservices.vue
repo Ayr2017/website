@@ -1,7 +1,7 @@
 <template>
   <v-app class="pt-15 mt-15">
     <v-row>
-      <v-col cols="md-12 xs-12 sm-12 lg-12">
+      <v-col cols="md-12 xs-12 sm-12 lg-12 mb-12">
         <v-row>
             <Websites />
             <Desktopapp />
