@@ -2568,6 +2568,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(["subheaderSize", "iconsSize"])),
@@ -27785,10 +27788,11 @@ var render = function() {
         [
           _c(
             "v-col",
-            { attrs: { cols: "md-12 xs-12 sm-12 lg-12" } },
+            { attrs: { cols: "12" } },
             [
               _c(
                 "v-row",
+                { staticClass: "justify-lg-space-around" },
                 [_c("ContactInfo"), _vm._v(" "), _c("DiscussProject")],
                 1
               )
@@ -28064,7 +28068,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-col",
-    { attrs: { cols: "xs-12  sm-12 md-6 " } },
+    { attrs: { xs: "12", sm: "12", md: "6", lg: "4" } },
     [
       _c(
         "div",
@@ -28089,6 +28093,8 @@ var render = function() {
                 _vm._v("mdi-phone")
               ]),
               _vm._v("Телефон:\n      "),
+              _c("v-spacer"),
+              _vm._v(" "),
               _c(
                 "v-btn",
                 { attrs: { text: "", large: "", href: "tel:+79047165279" } },
@@ -28112,6 +28118,8 @@ var render = function() {
                 _vm._v("mdi-email")
               ]),
               _vm._v("Email:\n      "),
+              _c("v-spacer"),
+              _vm._v(" "),
               _c(
                 "v-btn",
                 {
@@ -28141,6 +28149,8 @@ var render = function() {
                 _vm._v("mdi-whatsapp")
               ]),
               _vm._v("WhatsApp:\n      "),
+              _c("v-spacer"),
+              _vm._v(" "),
               _c(
                 "v-btn",
                 {
@@ -28194,7 +28204,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-col",
-    { attrs: { cols: " xs-12 sm-12  md-6" } },
+    { attrs: { xs: "12", sm: "12", md: "6", lg: "6" } },
     [
       _c(
         "div",
