@@ -2149,7 +2149,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
     scrollBottom: function scrollBottom() {
       var maxValue = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
-      this.footer = maxValue + window.innerHeight === document.documentElement.offsetHeight || maxValue + window.innerHeight === document.documentElement.offsetHeight - 1;
+      this.footer = Math.ceil(maxValue + window.innerHeight) === document.documentElement.offsetHeight;
     },
     scrollEvent: function scrollEvent(e) {
       console.log(e);
@@ -2171,11 +2171,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       setTimeout(function () {
         _this2.items = ["C", "r", "y", "p", "t", "o"];
       }, 600);
-    },
-    goToHome: function goToHome() {
-      this.$router.push({
-        path: "/"
-      });
     }
   })
 });
@@ -2252,6 +2247,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _welcome_services_Websites_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./welcome/services/Websites.vue */ "./resources/js/components/views/welcome/services/Websites.vue");
 /* harmony import */ var _welcome_services_Desktopapp_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./welcome/services/Desktopapp.vue */ "./resources/js/components/views/welcome/services/Desktopapp.vue");
 /* harmony import */ var _welcome_services_Webanimation_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./welcome/services/Webanimation.vue */ "./resources/js/components/views/welcome/services/Webanimation.vue");
+//
+//
+//
+//
 //
 //
 //
@@ -3218,7 +3217,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.logo-text[data-v-332fccf4] {\r\n  font-family: \"Segoe UI\", Tahoma, Geneva, Verdana, sans-serif;\r\n  font-size: 2rem;\r\n  background-color: dimgrey;\r\n  color: antiquewhite;\r\n  padding: 0 10px;\n}\r\n\r\n/* Анимации появления и исчезновения могут иметь */\r\n/* различные продолжительности и динамику.       */\n.slide-fade-enter-active[data-v-332fccf4] {\r\n  transition: all 0.3s ease;\n}\n.slide-fade-leave-active[data-v-332fccf4] {\r\n  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);\n}\n.slide-fade-enter[data-v-332fccf4], .slide-fade-leave-to[data-v-332fccf4]\r\n/* .slide-fade-leave-active до версии 2.1.8 */ {\r\n  transform: translateX(10px);\r\n  opacity: 0;\n}\n.list-complete-item[data-v-332fccf4] {\r\n  transition: all 1s;\r\n  display: inline-block;\r\n  margin-right: 10px;\n}\n.list-complete-enter[data-v-332fccf4], .list-complete-leave-to[data-v-332fccf4]\r\n/* .list-complete-leave-active до версии 2.1.8 */ {\r\n  opacity: 0;\r\n  transform: translateY(30px);\n}\n.list-complete-leave-active[data-v-332fccf4] {\r\n  position: absolute;\n}\r\n", ""]);
+exports.push([module.i, "\n.logo-text[data-v-332fccf4] {\r\n  font-family: \"Segoe UI\", Tahoma, Geneva, Verdana, sans-serif;\r\n  font-size: 2rem;\r\n  background-color: dimgrey;\r\n  color: antiquewhite;\r\n  padding: 0 10px;\n}\r\n\r\n/* Анимации появления и исчезновения могут иметь */\r\n/* различные продолжительности и динамику.       */\r\n/* .slide-fade-enter-active {\r\n  transition: all 0.3s ease;\r\n}\r\n.slide-fade-leave-active {\r\n  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);\r\n}\r\n.slide-fade-enter, .slide-fade-leave-to\r\n{\r\n  transform: translateX(10px);\r\n  opacity: 0;\r\n} */\r\n/* .slide-fade-leave-active до версии 2.1.8 */\n.list-complete-item[data-v-332fccf4] {\r\n  transition: all 1s;\r\n  display: inline-block;\r\n  margin-right: 10px;\n}\n.list-complete-enter[data-v-332fccf4], .list-complete-leave-to[data-v-332fccf4]\r\n/* .list-complete-leave-active до версии 2.1.8 */ {\r\n  opacity: 0;\r\n  transform: translateY(30px);\n}\n.list-complete-leave-active[data-v-332fccf4] {\r\n  position: absolute;\n}\r\n", ""]);
 
 // exports
 
@@ -27643,8 +27642,24 @@ var render = function() {
         [
           _c(
             "v-col",
-            { attrs: { cols: "md-12 xs-12 sm-12 lg-12 mb-12" } },
+            {
+              attrs: {
+                cols: "md-12 xs-12 sm-12 lg-12 mb-12",
+                align: "center",
+                justify: "center"
+              }
+            },
             [
+              _c(
+                "h2",
+                {
+                  staticClass:
+                    "display-2 font-weight-thin mb-4 text--secondary",
+                  attrs: { id: "services-title" }
+                },
+                [_vm._v("Услуги, которые Вы можете заказать")]
+              ),
+              _vm._v(" "),
               _c(
                 "v-row",
                 [

@@ -1,11 +1,15 @@
 <template>
   <v-app class="pt-15 mt-15">
     <v-row>
-      <v-col cols="md-12 xs-12 sm-12 lg-12 mb-12">
+      <v-col cols="md-12 xs-12 sm-12 lg-12 mb-12" align="center" justify="center">
+        <h2
+          class="display-2 font-weight-thin mb-4 text--secondary"
+          id="services-title"
+        >Услуги, которые Вы можете заказать</h2>
         <v-row>
-            <Websites />
-            <Desktopapp />
-            <Webanimation />
+          <Websites />
+          <Desktopapp />
+          <Webanimation />
         </v-row>
       </v-col>
     </v-row>
@@ -13,15 +17,15 @@
 </template>
 
 <script>
-import Websites from './welcome/services/Websites.vue';
-import Desktopapp from './welcome/services/Desktopapp.vue';
-import Webanimation from './welcome/services/Webanimation.vue';
+import Websites from "./welcome/services/Websites.vue";
+import Desktopapp from "./welcome/services/Desktopapp.vue";
+import Webanimation from "./welcome/services/Webanimation.vue";
 
 export default {
   components: {
-      Websites,
-      Desktopapp,
-      Webanimation
+    Websites,
+    Desktopapp,
+    Webanimation,
   },
   computed: {},
   mounted() {

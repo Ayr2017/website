@@ -224,7 +224,7 @@ export default {
         document.documentElement.scrollTop,
         document.body.scrollTop
       );
-      this.footer = maxValue + window.innerHeight === document.documentElement.offsetHeight || maxValue + window.innerHeight === document.documentElement.offsetHeight-1;
+      this.footer = Math.ceil(maxValue + window.innerHeight) === document.documentElement.offsetHeight ;
     },
     scrollEvent(e) {
       console.log(e);
@@ -244,9 +244,6 @@ export default {
       this.items = ["C", "r", "y", "p", "t", "o"];
       }, 600);
     },
-    goToHome() {
-      this.$router.push({ path: "/" });
-    },
   },
 };
 </script>
@@ -262,17 +259,18 @@ export default {
 
 /* Анимации появления и исчезновения могут иметь */
 /* различные продолжительности и динамику.       */
-.slide-fade-enter-active {
+/* .slide-fade-enter-active {
   transition: all 0.3s ease;
 }
 .slide-fade-leave-active {
   transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
 }
 .slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active до версии 2.1.8 */ {
+{
   transform: translateX(10px);
   opacity: 0;
-}
+} */
+/* .slide-fade-leave-active до версии 2.1.8 */ 
 
 .list-complete-item {
   transition: all 1s;
