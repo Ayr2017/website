@@ -14,7 +14,6 @@
     <title>Crypto-Systems</title>
 
     <!-- Fonts -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet"> -->
 
     <link rel="stylesheet"  href="{{ asset('css/app.css') }}?v=1.2&display=swap" media="none" onload="if(media!='all')media='all'">
     <!-- <link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css"> -->

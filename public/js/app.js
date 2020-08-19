@@ -2056,7 +2056,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
 
 
 
@@ -2144,8 +2143,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         this.appBarColor = "#cac2c4";
       } else {
         this.appBarColor = "#aaaa";
-      } //   console.log(event.target.scrollingElement.scrollTop);
-
+      }
     },
     scrollBottom: function scrollBottom() {
       var maxValue = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
@@ -2160,7 +2158,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     shuffleLogo: function shuffleLogo() {
       var _this = this;
 
-      // this.items = ["y", "t", "S", "t", "m", "e"];
       this.items = lodash__WEBPACK_IMPORTED_MODULE_3___default.a.shuffle(this.items);
       setTimeout(function () {
         _this.items = ["S", "y", "s", "t", "e", "m"];
@@ -2571,12 +2568,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(["subheaderSize", "iconsSize"])),
@@ -2603,13 +2594,6 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -3282,7 +3266,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.logo-text[data-v-332fccf4] {\r\n  font-family: \"Segoe UI\", Tahoma, Geneva, Verdana, sans-serif;\r\n  font-size: 2rem;\r\n  background-color: dimgrey;\r\n  color: antiquewhite;\r\n  padding: 0 10px;\n}\r\n\r\n/* Анимации появления и исчезновения могут иметь */\r\n/* различные продолжительности и динамику.       */\r\n/* .slide-fade-enter-active {\r\n  transition: all 0.3s ease;\r\n}\r\n.slide-fade-leave-active {\r\n  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);\r\n}\r\n.slide-fade-enter, .slide-fade-leave-to\r\n{\r\n  transform: translateX(10px);\r\n  opacity: 0;\r\n} */\r\n/* .slide-fade-leave-active до версии 2.1.8 */\n.list-complete-item[data-v-332fccf4] {\r\n  transition: all 1s;\r\n  display: inline-block;\r\n  margin-right: 10px;\n}\n.list-complete-enter[data-v-332fccf4], .list-complete-leave-to[data-v-332fccf4]\r\n/* .list-complete-leave-active до версии 2.1.8 */ {\r\n  opacity: 0;\r\n  transform: translateY(30px);\n}\n.list-complete-leave-active[data-v-332fccf4] {\r\n  position: absolute;\n}\r\n", ""]);
+exports.push([module.i, "\n.logo-text[data-v-332fccf4] {\r\n  font-family: \"Segoe UI\", Tahoma, Geneva, Verdana, sans-serif;\r\n  font-size: 2rem;\r\n  background-color: dimgrey;\r\n  color: antiquewhite;\r\n  padding: 0 10px;\n}\n.list-complete-item[data-v-332fccf4] {\r\n  transition: all 1s;\r\n  display: inline-block;\r\n  margin-right: 10px;\n}\n.list-complete-enter[data-v-332fccf4], .list-complete-leave-to[data-v-332fccf4]\r\n/* .list-complete-leave-active до версии 2.1.8 */ {\r\n  opacity: 0;\r\n  transform: translateY(30px);\n}\n.list-complete-leave-active[data-v-332fccf4] {\r\n  position: absolute;\n}\r\n", ""]);
 
 // exports
 

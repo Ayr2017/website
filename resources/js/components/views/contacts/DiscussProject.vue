@@ -7,13 +7,6 @@
           <v-text-field label="Ваше имя" clearable v-model="username" :rules="username_rule"></v-text-field>
           <v-text-field label="Телефон" v-model="userphone" :rules="userphone_rule"></v-text-field>
           <v-text-field label="E-mail" v-model="useremail" :rules="useremail_rule"></v-text-field>
-          <!-- <v-file-input
-            label="Прикрепить файл"
-            prepend-icon="mdi-paperclip"
-            v-model="userfile"
-            clearable
-            :rules="userfile_rule"
-          ></v-file-input>-->
           <v-textarea
             name="input-7-1"
             label="Опишите подробнее"

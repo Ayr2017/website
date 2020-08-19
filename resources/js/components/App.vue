@@ -80,7 +80,6 @@ const { template } = require("lodash");
         <v-icon>mdi-menu</v-icon>
       </v-btn>
 
-      <!-- <div class="display-1 font-weight-medium mx-auto v-sheet logo-text">Cripto</div> -->
       <router-link to="/">
         <div
           class="display-1 font-weight-medium mx-auto v-sheet logo-text"
@@ -216,7 +215,6 @@ export default {
       } else {
         this.appBarColor = "#aaaa";
       }
-      //   console.log(event.target.scrollingElement.scrollTop);
     },
     scrollBottom() {
       let maxValue = Math.max(
@@ -235,7 +233,6 @@ export default {
       return Math.floor(Math.random() * this.items.length);
     },
     shuffleLogo: function () {
-      // this.items = ["y", "t", "S", "t", "m", "e"];
       this.items = _.shuffle(this.items);
       setTimeout(() => {
         this.items = ["S", "y", "s", "t", "e", "m"];
@@ -258,21 +255,6 @@ export default {
   color: antiquewhite;
   padding: 0 10px;
 }
-
-/* Анимации появления и исчезновения могут иметь */
-/* различные продолжительности и динамику.       */
-/* .slide-fade-enter-active {
-  transition: all 0.3s ease;
-}
-.slide-fade-leave-active {
-  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
-}
-.slide-fade-enter, .slide-fade-leave-to
-{
-  transform: translateX(10px);
-  opacity: 0;
-} */
-/* .slide-fade-leave-active до версии 2.1.8 */
 
 .list-complete-item {
   transition: all 1s;

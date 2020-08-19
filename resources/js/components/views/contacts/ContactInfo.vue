@@ -20,12 +20,6 @@
           <span class="text-md-h5 text-sm-h5 text-xs-overline">+79047165279</span>
         </v-btn>
       </v-list-item>
-
-      <!-- <v-list-item>
-                <v-list-item-content>
-                  <v-btn block tile outlined color="grey darken-4">Напишите прямо сейчас</v-btn>
-                </v-list-item-content>
-      </v-list-item>-->
       <v-card-actions></v-card-actions>
     </v-card>
   </v-col>
