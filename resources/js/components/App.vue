@@ -224,7 +224,9 @@ export default {
         document.documentElement.scrollTop,
         document.body.scrollTop
       );
-      this.footer = Math.ceil(maxValue + window.innerHeight) === document.documentElement.offsetHeight ;
+      this.footer =
+        Math.ceil(maxValue + window.innerHeight) ===
+        document.documentElement.offsetHeight;
     },
     scrollEvent(e) {
       console.log(e);
@@ -233,15 +235,15 @@ export default {
       return Math.floor(Math.random() * this.items.length);
     },
     shuffleLogo: function () {
-      this.items = ["S", "y", "s", "t", "e", "m"];
+      // this.items = ["y", "t", "S", "t", "m", "e"];
+      this.items = _.shuffle(this.items);
       setTimeout(() => {
-        this.items = _.shuffle(this.items);
+        this.items = ["S", "y", "s", "t", "e", "m"];
       }, 900);
-        
     },
     orderLogo: function () {
       setTimeout(() => {
-      this.items = ["C", "r", "y", "p", "t", "o"];
+        this.items = ["C", "r", "y", "p", "t", "o"];
       }, 600);
     },
   },
@@ -270,7 +272,7 @@ export default {
   transform: translateX(10px);
   opacity: 0;
 } */
-/* .slide-fade-leave-active до версии 2.1.8 */ 
+/* .slide-fade-leave-active до версии 2.1.8 */
 
 .list-complete-item {
   transition: all 1s;

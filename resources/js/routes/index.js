@@ -7,6 +7,8 @@ import Websites from '../components/views/Websites.vue';
 import Desktopapp from '../components/views/Desktopapp.vue';
 import Webanimation from '../components/views/Webanimation.vue';
 import Allservices from '../components/views/Allservices.vue';
+import Page404 from '../components/views/Page404.vue';
+import Allandgoodbye from '../components/views/Allandgoodbye.vue';
 
 Vue.use(VueRouter);
 
@@ -40,6 +42,16 @@ const routes = [
         path: '/contacts',
         name:'contacts',
         component: Contacts
+    },
+    {
+        path: '/all_and_good_by',
+        name:'Allandgoodbye',
+        component: Allandgoodbye
+    },
+    {
+        path: '*',
+        name:'page404',
+        component: Page404
     },
 ];
 
