@@ -9,8 +9,12 @@
         <div>
           <v-card-text
             class="text-body-1"
-          >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-          
+          >
+          <p> <span
+                class="font-weight-medium pink--text text--darken-3"
+              >Десктопные приложения </span>- специально разработанные программы, которые имеют графический интерфейс и запускаются не внутри браузера, как веб-приложения, а на компьютере. Сам браузер, является дектопным приложением. 
+          </p>
+          <p>Десктопные приложения могут работать и без подключения к интернету, и с подключением, в зависимости от заданной функциональности. Они могут работать с файлами на диске компьютера и устройствами. Важная особенность - возможность работы приложения без подключения к сети интернет - позволяет хранить данные на компьютере, что увеличивает безопасность. Также, не требуется отправлять большие массивы данных по сети, и это экономит время.</p>
           </v-card-text>
         </div>
           <v-icon  size="150" class="ma-10 ml-0 hidden-sm-and-down" color="pink lighten-1">mdi-comment-question-outline</v-icon>
@@ -26,14 +30,15 @@
         <div>
           <v-card-text
             class="text-body-1"
-          >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-          
+          >
+<p> <span
+                class="font-weight-medium indigo--text text--darken-3"
+              >Десктопные приложения </span> имеют те же этапы разработки, что и мобильные приложения. Но отличаются тем, что при внесении изменений необходимо обновить приложения на всех устройствах.  
+          </p>          
           </v-card-text>
         </div>
           <v-icon  size="150" class="ma-10 ml-0 hidden-sm-and-down" color="indigo lighten-1">mdi-altimeter</v-icon>
-          <!-- <v-avatar class="ma-3" size="125" tile>
-            <v-img src="/assets/card-sm-bg.webp"></v-img>
-          </v-avatar> -->
+          
       </div>
       <v-card-actions></v-card-actions>
     </v-card>
@@ -43,14 +48,16 @@
         <div>
           <v-card-text
             class="text-body-1"
-          >Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-          
+          >
+          <p> <span
+                class="font-weight-medium cyan--text text--darken-3"
+              ></span> 
+              Цена на десктопные приложения формируется исходя из трудозатрат и сопутствующих услуг и разрешений.  
+          </p> 
           </v-card-text>
         </div>
           <v-icon  size="150" class="ma-10 ml-0 hidden-sm-and-down" color="cyan lighten-2">mdi-cash-usd-outline</v-icon>
-          <!-- <v-avatar class="ma-3" size="125" tile>
-            <v-img src="/assets/card-sm-bg.webp"></v-img>
-          </v-avatar> -->
+
       </div>
       <v-card-actions></v-card-actions>
     </v-card>

@@ -2802,6 +2802,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(["subheaderSize", "iconsSize"])),
@@ -2826,6 +2833,20 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -28697,9 +28718,25 @@ var render = function() {
                 "div",
                 [
                   _c("v-card-text", { staticClass: "text-body-1" }, [
-                    _vm._v(
-                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\n        \n        "
-                    )
+                    _c("p", [
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "font-weight-medium pink--text text--darken-3"
+                        },
+                        [_vm._v("Десктопные приложения ")]
+                      ),
+                      _vm._v(
+                        "- специально разработанные программы, которые имеют графический интерфейс и запускаются не внутри браузера, как веб-приложения, а на компьютере. Сам браузер, является дектопным приложением. \n          "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Десктопные приложения могут работать и без подключения к интернету, и с подключением, в зависимости от заданной функциональности. Они могут работать с файлами на диске компьютера и устройствами. Важная особенность - возможность работы приложения без подключения к сети интернет - позволяет хранить данные на компьютере, что увеличивает безопасность. Также, не требуется отправлять большие массивы данных по сети, и это экономит время."
+                      )
+                    ])
                   ])
                 ],
                 1
@@ -28738,9 +28775,19 @@ var render = function() {
                 "div",
                 [
                   _c("v-card-text", { staticClass: "text-body-1" }, [
-                    _vm._v(
-                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\n        \n        "
-                    )
+                    _c("p", [
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "font-weight-medium indigo--text text--darken-3"
+                        },
+                        [_vm._v("Десктопные приложения ")]
+                      ),
+                      _vm._v(
+                        " имеют те же этапы разработки, что и мобильные приложения. Но отличаются тем, что при внесении изменений необходимо обновить приложения на всех устройствах.  \n          "
+                      )
+                    ])
                   ])
                 ],
                 1
@@ -28779,9 +28826,15 @@ var render = function() {
                 "div",
                 [
                   _c("v-card-text", { staticClass: "text-body-1" }, [
-                    _vm._v(
-                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\n        \n        "
-                    )
+                    _c("p", [
+                      _c("span", {
+                        staticClass:
+                          "font-weight-medium cyan--text text--darken-3"
+                      }),
+                      _vm._v(
+                        " \n              Цена на десктопные приложения формируется исходя из трудозатрат и сопутствующих услуг и разрешений.  \n          "
+                      )
+                    ])
                   ])
                 ],
                 1
@@ -28860,9 +28913,32 @@ var render = function() {
                 "div",
                 [
                   _c("v-card-text", { staticClass: "text-body-1" }, [
-                    _vm._v(
-                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\n        \n        "
-                    )
+                    _c("p", [
+                      _vm._v(
+                        "\n              Раньше все сайты были статичны. Потом научились делать мигающую бегущую строку, которая вскоре начинала всех раздражать. После поняли, что просто текст не привлекателен и начали добавлять GIF-файлы, где можно было усмотреть анимацию. Со временем появился Flash, на котором можно было делать целые мультфильмы и игры. Но и он устарел, на данный момент стандартом является\n              "
+                      ),
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "font-weight-medium purple--text text--darken-3"
+                        },
+                        [_vm._v("HTML5-анимация")]
+                      ),
+                      _vm._v("\n              .\n            ")
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Основная цель анимации на сайте - повышение привлекательности, далее улучшение интуитивной понятности. Наличие хорошей анимации на сайте располагает к себе клиента. Благодаря анимации пользователь задерживается на сайте на большее время."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "Зачастую, анимация является необходимостью. Например постоянное изменение графика при поступлении новых данных."
+                      )
+                    ])
                   ])
                 ],
                 1
@@ -28892,7 +28968,7 @@ var render = function() {
           _c(
             "v-card-title",
             { staticClass: "deep-orange--text text--darken-3" },
-            [_vm._v("Этапы разработки ")]
+            [_vm._v("Этапы разработки")]
           ),
           _vm._v(" "),
           _c(
@@ -28904,7 +28980,7 @@ var render = function() {
                 [
                   _c("v-card-text", { staticClass: "text-body-1" }, [
                     _vm._v(
-                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\n        \n        "
+                      "\n          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
                     )
                   ])
                 ],
@@ -28946,9 +29022,11 @@ var render = function() {
                 "div",
                 [
                   _c("v-card-text", { staticClass: "text-body-1" }, [
-                    _vm._v(
-                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\n        \n        "
-                    )
+                    _c("p", [
+                      _vm._v(
+                        "Стоимость анимации зависит от сложности работы. Начинается от 5000 рублей, куда не входит стоимость интеграции."
+                      )
+                    ])
                   ])
                 ],
                 1
