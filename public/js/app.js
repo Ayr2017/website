@@ -2968,6 +2968,76 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(["subheaderSize", "iconsSize"])),
@@ -28927,9 +28997,99 @@ var render = function() {
                 "div",
                 [
                   _c("v-card-text", { staticClass: "text-body-1" }, [
-                    _vm._v(
-                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\n        \n        "
-                    )
+                    _c("p", [
+                      _vm._v(
+                        "\n              Сайт - это обобщенное название ресурса в интернете, куда можно получить доступ используя браузер. Цели создания сайтов могут быть различные, как и сами сайты. Некоторые сайты предназначены для того, чтобы ознакомить потенциального покупателя с продаваемым товаром или услугой, и сделать этого покупателя уже реальным реальным. Обычно, такие сайты состоят из одной страницы и называются\n              "
+                      ),
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "font-weight-medium blue--text text--darken-3"
+                        },
+                        [_vm._v("landing-page")]
+                      ),
+                      _vm._v(
+                        "\n              (посадочная страница) или\n              "
+                      ),
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "font-weight-medium blue--text text--darken-3"
+                        },
+                        [_vm._v("целевая страница")]
+                      ),
+                      _vm._v(
+                        " . Такие страницы имеют яркий дизайн и, обычно, имеют одну единственную страницу.\n            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n              Другая разновидность сайтов - это\n              "
+                      ),
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "font-weight-medium blue--text text--darken-3"
+                        },
+                        [_vm._v("корпоративные сайты")]
+                      ),
+                      _vm._v(
+                        ". Их задача, показать что организация вполне себе серьезная, имеет определенные успехи в своей отрасле или, хотя бы, большие планы, и готовы в ближайшее время вытеснить, нахрен, всех конкурентов и стать первыми и единственными. Здесь, могут/должны быть указаны все нужные контакты для сотрудничества, ключевые сотрудники, адреса, описание продукции и цены.\n            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "font-weight-medium blue--text text--darken-3"
+                        },
+                        [_vm._v("Интернет магазины")]
+                      ),
+                      _vm._v(",\n              "),
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "font-weight-medium blue--text text--darken-3"
+                        },
+                        [_vm._v("социальные сети")]
+                      ),
+                      _vm._v(",\n              "),
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "font-weight-medium blue--text text--darken-3"
+                        },
+                        [_vm._v("онлайн-конструкторы")]
+                      ),
+                      _vm._v(
+                        ", и прочее - это уже совсем другой уровень сайтов, их называют\n              "
+                      ),
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "font-weight-medium blue--text text--darken-3"
+                        },
+                        [_vm._v("веб-приложениями")]
+                      ),
+                      _vm._v(
+                        ".\n              Такие сайты имеют изощрённую бизнес-логику, обязательно, базу-данных, и высокую степень защиты. Так как, здесь, информация стоит денег.\n            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "На сегодняшний день, сайт - способ связи с миром и нужен каждому бизнесу или проекту."
+                      )
+                    ])
                   ])
                 ],
                 1
@@ -28968,9 +29128,123 @@ var render = function() {
                 "div",
                 [
                   _c("v-card-text", { staticClass: "text-body-1" }, [
-                    _vm._v(
-                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\n        \n        "
-                    )
+                    _c("p", [
+                      _vm._v(
+                        "\n              Разработка сайтов включает в себя несколько этапов. Первое\n              "
+                      ),
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "font-weight-medium teal--text text--darken-3"
+                        },
+                        [
+                          _vm._v(
+                            "- анализ потребностей и формирование технического задания"
+                          )
+                        ]
+                      ),
+                      _vm._v(
+                        ".\n              На данном этапе формируется вся концепция, структура, логика, инструменты. Техническое задание полностью отражает потребности клиента и формирует подробное описание функционала.\n            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v("\n              Третье\n              "),
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "font-weight-medium teal--text text--darken-3"
+                        },
+                        [_vm._v("- верстка и программирование")]
+                      ),
+                      _vm._v(
+                        ".\n              Верстка, это сборка макета и придание определенных стилей. Программирование, это когда задается функциональность. Необходимо понимать, что сайт состоит из двух основных частей -\n              "
+                      ),
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "font-weight-medium teal--text text--darken-3"
+                        },
+                        [_vm._v("фронтенд и бекенд")]
+                      ),
+                      _vm._v(
+                        ". Фронтенд - это видимая часть. Бекенд - невидимая, и находится по ту сторону сети, на сервере.\n            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v("\n              Третье\n              "),
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "font-weight-medium teal--text text--darken-3"
+                        },
+                        [_vm._v("- верстка и программирование")]
+                      ),
+                      _vm._v(
+                        ".\n              Верстка, это сборка макета и придание определенных стилей. Программирование, это когда задается функциональность. Необходимо понимать, что сайт состоит из двух основных частей -\n              "
+                      ),
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "font-weight-medium teal--text text--darken-3"
+                        },
+                        [_vm._v("фронтенд и бекенд")]
+                      ),
+                      _vm._v(
+                        ". Фронтенд - это видимая часть. Бекенд - невидимая, и находится по ту сторону сети, на сервере.\n            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v("\n              Четвертое\n              "),
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "font-weight-medium teal--text text--darken-3"
+                        },
+                        [_vm._v(" - заполнение контентом. ")]
+                      ),
+                      _vm._v(
+                        ".\nСюда входят приобретение и обработка фотографий, аудио-видео материалов, написание статей и просто любых тектов."
+                      ),
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "font-weight-medium teal--text text--darken-3"
+                        },
+                        [_vm._v("фронтенд и бекенд")]
+                      ),
+                      _vm._v(
+                        ". Фронтенд - это видимая часть. Бекенд - невидимая, и находится по ту сторону сети, на сервере.\n            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v("\n              Пятое\n              "),
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "font-weight-medium teal--text text--darken-3"
+                        },
+                        [
+                          _vm._v(
+                            " - пуско-наладочные работы и конечное тестирование. "
+                          )
+                        ]
+                      ),
+                      _vm._v(
+                        ".\nСайт выводится на сервер, приобретается доменное имя и привязывается к сайту. Происходит полное тестирование всего функционала, сверяется с техническим задаение. После этого этапа работа считается завершенной и передается клиенту.            "
+                      )
+                    ])
                   ])
                 ],
                 1
@@ -29009,9 +29283,22 @@ var render = function() {
                 "div",
                 [
                   _c("v-card-text", { staticClass: "text-body-1" }, [
-                    _vm._v(
-                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\n        \n        "
-                    )
+                    _c("p", [
+                      _vm._v(
+                        "\n              Стоимость сайта складывается из многих параметров. Но в основном, связаны с трудозатратами. \n              "
+                      ),
+                      _c(
+                        "span",
+                        {
+                          staticClass:
+                            "font-weight-medium teal--text text--darken-3"
+                        },
+                        [_vm._v("Трудозатраты")]
+                      ),
+                      _vm._v(
+                        ".\n- значит, время необходимое для реализации проекта. Но это еще не всё. Сайт можно сделать используя разные инструменты. Некоторые - платные, используя некоторые можно сделать быстро. Можно даже сделать два одинаково выглядящих сайта с большой разницей в стоимости. Они будут отличаться в легкости поддержки или изменения. Также, можно сделать или шаблонный сайт, или создавать уникальный дизайн или функционал. \n            "
+                      )
+                    ])
                   ])
                 ],
                 1
