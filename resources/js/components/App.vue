@@ -224,7 +224,8 @@ export default {
       );
       this.footer =
         Math.ceil(maxValue + window.innerHeight) ===
-        document.documentElement.offsetHeight;
+        document.documentElement.offsetHeight || Math.ceil(maxValue + window.innerHeight) ===
+        document.documentElement.offsetHeight-1;
     },
     scrollEvent(e) {
       console.log(e);

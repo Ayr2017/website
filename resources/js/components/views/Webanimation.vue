@@ -3,7 +3,7 @@
     <v-row>
       <v-col cols="md-12 xs-12">
         <v-row>
-          Пока ничего нет, наслаждайтесь буквами. Они прекрасны!
+          <Webanimation/>
         </v-row>
       </v-col>
     </v-row>
@@ -11,10 +11,10 @@
 </template>
 
 <script>
-import Websitetypes from './websites/Websitetypes.vue'
+import Webanimation from './webanimation/Webanimation.vue'
 export default {
   components:{
-      Websitetypes
+      Webanimation
   },
   computed: {},
   mounted() {

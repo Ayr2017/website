@@ -3,7 +3,7 @@
     <v-row>
       <v-col cols="md-12 xs-12">
         <v-row>
-          Зачем сюда зашёл? Видишь же, ёще не готово!!
+          <Desktopapp/>
         </v-row>
       </v-col>
     </v-row>
@@ -11,10 +11,10 @@
 </template>
 
 <script>
-import Websitetypes from './websites/Websitetypes.vue'
+import Desktopapp from './desktopapp/Desktopapp.vue'
 export default {
   components:{
-      Websitetypes
+      Desktopapp
   },
   computed: {},
   mounted() {

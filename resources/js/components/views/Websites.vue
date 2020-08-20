@@ -3,7 +3,6 @@
     <v-row>
       <v-col cols="md-12 xs-12">
         <v-row>
-          Зачем сюда зашёл? Видишь же, ёще не готово!!
           <Websitetypes/>
         </v-row>
       </v-col>

@@ -2147,7 +2147,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     },
     scrollBottom: function scrollBottom() {
       var maxValue = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop);
-      this.footer = Math.ceil(maxValue + window.innerHeight) === document.documentElement.offsetHeight;
+      this.footer = Math.ceil(maxValue + window.innerHeight) === document.documentElement.offsetHeight || Math.ceil(maxValue + window.innerHeight) === document.documentElement.offsetHeight - 1;
     },
     scrollEvent: function scrollEvent(e) {
       console.log(e);
@@ -2328,7 +2328,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _websites_Websitetypes_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./websites/Websitetypes.vue */ "./resources/js/components/views/websites/Websitetypes.vue");
+/* harmony import */ var _desktopapp_Desktopapp_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./desktopapp/Desktopapp.vue */ "./resources/js/components/views/desktopapp/Desktopapp.vue");
 //
 //
 //
@@ -2344,7 +2344,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    Websitetypes: _websites_Websitetypes_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    Desktopapp: _desktopapp_Desktopapp_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   computed: {},
   mounted: function mounted() {
@@ -2427,7 +2427,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _websites_Websitetypes_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./websites/Websitetypes.vue */ "./resources/js/components/views/websites/Websitetypes.vue");
+/* harmony import */ var _webanimation_Webanimation_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./webanimation/Webanimation.vue */ "./resources/js/components/views/webanimation/Webanimation.vue");
 //
 //
 //
@@ -2443,7 +2443,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    Websitetypes: _websites_Websitetypes_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    Webanimation: _webanimation_Webanimation_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   computed: {},
   mounted: function mounted() {
@@ -2463,7 +2463,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _websites_Websitetypes_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./websites/Websitetypes.vue */ "./resources/js/components/views/websites/Websitetypes.vue");
-//
 //
 //
 //
@@ -2728,6 +2727,172 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/views/desktopapp/Desktopapp.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/views/desktopapp/Desktopapp.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(["subheaderSize", "iconsSize"])),
+  mounted: function mounted() {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/views/webanimation/Webanimation.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/views/webanimation/Webanimation.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(["subheaderSize", "iconsSize"])),
+  mounted: function mounted() {}
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/views/websites/Websitetypes.vue?vue&type=script&lang=js&":
 /*!**************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/views/websites/Websitetypes.vue?vue&type=script&lang=js& ***!
@@ -2744,6 +2909,11 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
+//
+//
 //
 //
 //
@@ -27838,13 +28008,7 @@ var render = function() {
           _c(
             "v-col",
             { attrs: { cols: "md-12 xs-12" } },
-            [
-              _c("v-row", [
-                _vm._v(
-                  "\n        Зачем сюда зашёл? Видишь же, ёще не готово!!\n      "
-                )
-              ])
-            ],
+            [_c("v-row", [_c("Desktopapp")], 1)],
             1
           )
         ],
@@ -27951,13 +28115,7 @@ var render = function() {
           _c(
             "v-col",
             { attrs: { cols: "md-12 xs-12" } },
-            [
-              _c("v-row", [
-                _vm._v(
-                  "\n        Пока ничего нет, наслаждайтесь буквами. Они прекрасны!\n      "
-                )
-              ])
-            ],
+            [_c("v-row", [_c("Webanimation")], 1)],
             1
           )
         ],
@@ -27999,18 +28157,7 @@ var render = function() {
           _c(
             "v-col",
             { attrs: { cols: "md-12 xs-12" } },
-            [
-              _c(
-                "v-row",
-                [
-                  _vm._v(
-                    "\n        Зачем сюда зашёл? Видишь же, ёще не готово!!\n        "
-                  ),
-                  _c("Websitetypes")
-                ],
-                1
-              )
-            ],
+            [_c("v-row", [_c("Websitetypes")], 1)],
             1
           )
         ],
@@ -28404,6 +28551,336 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/views/desktopapp/Desktopapp.vue?vue&type=template&id=a043bcda&":
+/*!******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/views/desktopapp/Desktopapp.vue?vue&type=template&id=a043bcda& ***!
+  \******************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-col",
+    { staticClass: "mx-auto mb-5", attrs: { cols: "12", lg: "6", md: "8" } },
+    [
+      _c(
+        "div",
+        {
+          class: [
+            _vm.subheaderSize,
+            "font-weight-thin mb-xs-2 mb-sm-5 mb-md-10 elev-1 text--secondary mb-1"
+          ]
+        },
+        [_vm._v("Разработка десктопных приложений")]
+      ),
+      _vm._v(" "),
+      _c(
+        "v-card",
+        { staticClass: "my-2", attrs: { outlined: "", color: "#fff5" } },
+        [
+          _c("v-card-title", { staticClass: "pink--text text--darken-3" }, [
+            _vm._v("Для чего нужно приложение?")
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "d-flex flex-no-wrap justify-space-between" },
+            [
+              _c(
+                "div",
+                [
+                  _c("v-card-text", { staticClass: "text-body-1" }, [
+                    _vm._v(
+                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\n        \n        "
+                    )
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-icon",
+                {
+                  staticClass: "ma-10 ml-0 hidden-sm-and-down",
+                  attrs: { size: "150", color: "pink lighten-1" }
+                },
+                [_vm._v("mdi-comment-question-outline")]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("v-card-actions")
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-card",
+        { staticClass: "my-2", attrs: { outlined: "", color: "#fff5" } },
+        [
+          _c("v-card-title", { staticClass: "indigo--text text--darken-3" }, [
+            _vm._v("Этапы разработки приложения")
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "d-flex flex-no-wrap justify-space-between" },
+            [
+              _c(
+                "div",
+                [
+                  _c("v-card-text", { staticClass: "text-body-1" }, [
+                    _vm._v(
+                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\n        \n        "
+                    )
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-icon",
+                {
+                  staticClass: "ma-10 ml-0 hidden-sm-and-down",
+                  attrs: { size: "150", color: "indigo lighten-1" }
+                },
+                [_vm._v("mdi-altimeter")]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("v-card-actions")
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-card",
+        { staticClass: "my-2", attrs: { outlined: "", color: "#fff5" } },
+        [
+          _c("v-card-title", { staticClass: "cyan--text text--darken-3" }, [
+            _vm._v("Стоимость приложения")
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "d-flex flex-no-wrap justify-space-between" },
+            [
+              _c(
+                "div",
+                [
+                  _c("v-card-text", { staticClass: "text-body-1" }, [
+                    _vm._v(
+                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\n        \n        "
+                    )
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-icon",
+                {
+                  staticClass: "ma-10 ml-0 hidden-sm-and-down",
+                  attrs: { size: "150", color: "cyan lighten-2" }
+                },
+                [_vm._v("mdi-cash-usd-outline")]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("v-card-actions")
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/views/webanimation/Webanimation.vue?vue&type=template&id=433756f3&":
+/*!**********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/views/webanimation/Webanimation.vue?vue&type=template&id=433756f3& ***!
+  \**********************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "v-col",
+    { staticClass: "mx-auto mb-5", attrs: { cols: "12", lg: "6", md: "8" } },
+    [
+      _c(
+        "div",
+        {
+          class: [
+            _vm.subheaderSize,
+            "font-weight-thin mb-xs-2 mb-sm-5 mb-md-10 elev-1 text--secondary mb-1"
+          ]
+        },
+        [_vm._v("Разработка web-анимации")]
+      ),
+      _vm._v(" "),
+      _c(
+        "v-card",
+        { staticClass: "my-2", attrs: { outlined: "", color: "#fff5" } },
+        [
+          _c("v-card-title", { staticClass: "purple--text text--darken-3" }, [
+            _vm._v("Для чего нужена анимация?")
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "d-flex flex-no-wrap justify-space-between" },
+            [
+              _c(
+                "div",
+                [
+                  _c("v-card-text", { staticClass: "text-body-1" }, [
+                    _vm._v(
+                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\n        \n        "
+                    )
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-icon",
+                {
+                  staticClass: "ma-10 ml-0 hidden-sm-and-down",
+                  attrs: { size: "150", color: "purple lighten-1" }
+                },
+                [_vm._v("mdi-comment-question-outline")]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("v-card-actions")
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-card",
+        { staticClass: "my-2", attrs: { outlined: "", color: "#fff5" } },
+        [
+          _c(
+            "v-card-title",
+            { staticClass: "deep-orange--text text--darken-3" },
+            [_vm._v("Этапы разработки ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "d-flex flex-no-wrap justify-space-between" },
+            [
+              _c(
+                "div",
+                [
+                  _c("v-card-text", { staticClass: "text-body-1" }, [
+                    _vm._v(
+                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\n        \n        "
+                    )
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-icon",
+                {
+                  staticClass: "ma-10 ml-0 hidden-sm-and-down",
+                  attrs: { size: "150", color: "deep-orange lighten-1" }
+                },
+                [_vm._v("mdi-altimeter")]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("v-card-actions")
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-card",
+        { staticClass: "my-2", attrs: { outlined: "", color: "#fff5" } },
+        [
+          _c(
+            "v-card-title",
+            { staticClass: "light-blue--text text--darken-3" },
+            [_vm._v("Стоимость анимации")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "d-flex flex-no-wrap justify-space-between" },
+            [
+              _c(
+                "div",
+                [
+                  _c("v-card-text", { staticClass: "text-body-1" }, [
+                    _vm._v(
+                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\n        \n        "
+                    )
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-icon",
+                {
+                  staticClass: "ma-10 ml-0 hidden-sm-and-down",
+                  attrs: { size: "150", color: "light-blue lighten-2" }
+                },
+                [_vm._v("mdi-cash-usd-outline")]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("v-card-actions")
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/views/websites/Websitetypes.vue?vue&type=template&id=3646d70e&":
 /*!******************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/views/websites/Websitetypes.vue?vue&type=template&id=3646d70e& ***!
@@ -28421,179 +28898,132 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-col",
-    { attrs: { cols: "md-12  sm-12 xs-12" } },
+    { staticClass: "mx-auto mb-5", attrs: { cols: "12", lg: "6", md: "8" } },
     [
       _c(
         "div",
         {
           class: [
             _vm.subheaderSize,
-            "font-weight-thin mb-xs-2 mb-sm-5 mb-md-10 elev-1 text--secondary"
+            "font-weight-thin mb-xs-2 mb-sm-5 mb-md-10 elev-1 text--secondary mb-1"
           ]
         },
-        [_vm._v("Какие бывают сайты?")]
+        [_vm._v("Разработка сайтов")]
       ),
       _vm._v(" "),
       _c(
         "v-card",
-        { attrs: { outlined: "", color: "#fff5" } },
+        { staticClass: "my-2", attrs: { outlined: "", color: "#fff5" } },
         [
+          _c("v-card-title", { staticClass: "blue--text text--darken-3" }, [
+            _vm._v("Для чего нужен сайт?")
+          ]),
+          _vm._v(" "),
           _c(
-            "v-list-item",
-            { attrs: { "three-line": "" } },
+            "div",
+            { staticClass: "d-flex flex-no-wrap justify-space-between" },
             [
               _c(
-                "v-list-item-content",
+                "div",
                 [
-                  _c("v-list-item-title", { staticClass: "headline mb-1" }, [
-                    _vm._v("1. Сайт-визитка")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "text-body-1 text--secondary" }, [
+                  _c("v-card-text", { staticClass: "text-body-1" }, [
                     _vm._v(
-                      "Простой, одностраничный сайт, содержащий в себе информацию о компании. Сайт-визитка не требует к себе особого внимания, создается «один раз и навсегда». Обычно включает в себя общую информацию о владельце и контакты для связи, не вдаваясь в подробности."
+                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\n        \n        "
                     )
                   ])
                 ],
                 1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-icon",
+                {
+                  staticClass: "ma-10 ml-0 hidden-sm-and-down",
+                  attrs: { size: "150", color: "blue lighten-1" }
+                },
+                [_vm._v("mdi-comment-question-outline")]
               )
             ],
             1
           ),
           _vm._v(" "),
+          _c("v-card-actions")
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-card",
+        { staticClass: "my-2", attrs: { outlined: "", color: "#fff5" } },
+        [
+          _c("v-card-title", { staticClass: "teal--text text--darken-3" }, [
+            _vm._v("Этапы разработки сайта")
+          ]),
+          _vm._v(" "),
           _c(
-            "v-list-item",
-            { attrs: { "three-line": "" } },
+            "div",
+            { staticClass: "d-flex flex-no-wrap justify-space-between" },
             [
               _c(
-                "v-list-item-content",
+                "div",
                 [
-                  _c("v-list-item-title", { staticClass: "headline mb-1" }, [
-                    _vm._v("2. Сайт компании.")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "text-body-1 text--secondary" }, [
+                  _c("v-card-text", { staticClass: "text-body-1" }, [
                     _vm._v(
-                      "Более серьезный подход для создания сайта. Обычно, это многостраничный сайт, рассказывающий подробнее об услугах, истории и контактах компании. Информирует посетителей о стоимости услуг и по факту выполняет функции офиса компании в режиме онлайн."
+                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\n        \n        "
                     )
                   ])
                 ],
                 1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-icon",
+                {
+                  staticClass: "ma-10 ml-0 hidden-sm-and-down",
+                  attrs: { size: "150", color: "teal lighten-1" }
+                },
+                [_vm._v("mdi-altimeter")]
               )
             ],
             1
           ),
           _vm._v(" "),
-          _c(
-            "v-list-item",
-            { attrs: { "three-line": "" } },
-            [
-              _c(
-                "v-list-item-content",
-                [
-                  _c("v-list-item-title", { staticClass: "headline mb-1" }, [
-                    _vm._v("3. Промо-сайт.")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "text-body-1 text--secondary" }, [
-                    _vm._v(
-                      "Промо-сайты используются для быстрой раскрутки какой-либо рекламной акции компании, а также для быстрого продвижения услуг, товаров и брендов."
-                    )
-                  ])
-                ],
-                1
-              )
-            ],
-            1
-          ),
+          _c("v-card-actions")
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-card",
+        { staticClass: "my-2", attrs: { outlined: "", color: "#fff5" } },
+        [
+          _c("v-card-title", { staticClass: "green--text text--darken-3" }, [
+            _vm._v("Стоимость сайта")
+          ]),
           _vm._v(" "),
           _c(
-            "v-list-item",
-            { attrs: { "three-line": "" } },
+            "div",
+            { staticClass: "d-flex flex-no-wrap justify-space-between" },
             [
               _c(
-                "v-list-item-content",
+                "div",
                 [
-                  _c("v-list-item-title", { staticClass: "headline mb-1" }, [
-                    _vm._v("4. Интернет-магазин.")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "text-body-1 text--secondary" }, [
+                  _c("v-card-text", { staticClass: "text-body-1" }, [
                     _vm._v(
-                      "Ресурсы, на которых можно размещать информацию различного характера. Более продвинутый функционал, чем у блога. Чаще всего – это новостные сайты."
+                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?\n        \n        "
                     )
                   ])
                 ],
                 1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "v-list-item",
-            { attrs: { "three-line": "" } },
-            [
+              ),
+              _vm._v(" "),
               _c(
-                "v-list-item-content",
-                [
-                  _c("v-list-item-title", { staticClass: "headline mb-1" }, [
-                    _vm._v("5. Порталы.")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "text-body-1 text--secondary" }, [
-                    _vm._v(
-                      "Подходит для онлайн торговли. Может быть создан с возможностью заказа и оплаты товара через интернет, бронирования услуги и т.п. Также может быть создан в качестве онлайн витрины, без возможности оформления заказа."
-                    )
-                  ])
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "v-list-item",
-            { attrs: { "three-line": "" } },
-            [
-              _c(
-                "v-list-item-content",
-                [
-                  _c("v-list-item-title", { staticClass: "headline mb-1" }, [
-                    _vm._v("6. Доски объявлений.")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "text-body-1 text--secondary" }, [
-                    _vm._v(
-                      "Сайт, где можно размещать информацию о покупке или продаже товаров, услуг, информационные объявления и прочее."
-                    )
-                  ])
-                ],
-                1
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "v-list-item",
-            { attrs: { "three-line": "" } },
-            [
-              _c(
-                "v-list-item-content",
-                [
-                  _c("v-list-item-title", { staticClass: "headline mb-1" }, [
-                    _vm._v("7. Блог.")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "text-body-1 text--secondary" }, [
-                    _vm._v(
-                      "Любите писать интересный контент? Тогда без блога не обойтись. Делитесь текстами, медиа и ссылками. Наполняйте сайт самостоятельно, рассказывайте людям о том, что интересно вам и вашей аудитории."
-                    )
-                  ])
-                ],
-                1
+                "v-icon",
+                {
+                  staticClass: "ma-10 ml-0 hidden-sm-and-down",
+                  attrs: { size: "150", color: "green lighten-2" }
+                },
+                [_vm._v("mdi-cash-usd-outline")]
               )
             ],
             1
@@ -91079,6 +91509,144 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DiscussProject_vue_vue_type_template_id_6c0ed8ce___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DiscussProject_vue_vue_type_template_id_6c0ed8ce___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/views/desktopapp/Desktopapp.vue":
+/*!*****************************************************************!*\
+  !*** ./resources/js/components/views/desktopapp/Desktopapp.vue ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Desktopapp_vue_vue_type_template_id_a043bcda___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Desktopapp.vue?vue&type=template&id=a043bcda& */ "./resources/js/components/views/desktopapp/Desktopapp.vue?vue&type=template&id=a043bcda&");
+/* harmony import */ var _Desktopapp_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Desktopapp.vue?vue&type=script&lang=js& */ "./resources/js/components/views/desktopapp/Desktopapp.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Desktopapp_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Desktopapp_vue_vue_type_template_id_a043bcda___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Desktopapp_vue_vue_type_template_id_a043bcda___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/views/desktopapp/Desktopapp.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/views/desktopapp/Desktopapp.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/components/views/desktopapp/Desktopapp.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Desktopapp_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Desktopapp.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/views/desktopapp/Desktopapp.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Desktopapp_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/views/desktopapp/Desktopapp.vue?vue&type=template&id=a043bcda&":
+/*!************************************************************************************************!*\
+  !*** ./resources/js/components/views/desktopapp/Desktopapp.vue?vue&type=template&id=a043bcda& ***!
+  \************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Desktopapp_vue_vue_type_template_id_a043bcda___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Desktopapp.vue?vue&type=template&id=a043bcda& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/views/desktopapp/Desktopapp.vue?vue&type=template&id=a043bcda&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Desktopapp_vue_vue_type_template_id_a043bcda___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Desktopapp_vue_vue_type_template_id_a043bcda___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/views/webanimation/Webanimation.vue":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/views/webanimation/Webanimation.vue ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Webanimation_vue_vue_type_template_id_433756f3___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Webanimation.vue?vue&type=template&id=433756f3& */ "./resources/js/components/views/webanimation/Webanimation.vue?vue&type=template&id=433756f3&");
+/* harmony import */ var _Webanimation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Webanimation.vue?vue&type=script&lang=js& */ "./resources/js/components/views/webanimation/Webanimation.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Webanimation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Webanimation_vue_vue_type_template_id_433756f3___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Webanimation_vue_vue_type_template_id_433756f3___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/views/webanimation/Webanimation.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/views/webanimation/Webanimation.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/views/webanimation/Webanimation.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Webanimation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Webanimation.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/views/webanimation/Webanimation.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Webanimation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/views/webanimation/Webanimation.vue?vue&type=template&id=433756f3&":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/components/views/webanimation/Webanimation.vue?vue&type=template&id=433756f3& ***!
+  \****************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Webanimation_vue_vue_type_template_id_433756f3___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Webanimation.vue?vue&type=template&id=433756f3& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/views/webanimation/Webanimation.vue?vue&type=template&id=433756f3&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Webanimation_vue_vue_type_template_id_433756f3___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Webanimation_vue_vue_type_template_id_433756f3___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

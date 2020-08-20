@@ -2,9 +2,9 @@
   <v-col cols="12" lg="6" md="8" class="mx-auto mb-5">
     <div
       :class="[subheaderSize, 'font-weight-thin mb-xs-2 mb-sm-5 mb-md-10 elev-1 text--secondary mb-1'] "
-    >Разработка сайтов</div>
+    >Разработка web-анимации</div>
     <v-card class="my-2" outlined color="#fff5">
-          <v-card-title class="blue--text text--darken-3">Для чего нужен сайт?</v-card-title>
+          <v-card-title class="purple--text text--darken-3">Для чего нужена анимация?</v-card-title>
       <div class="d-flex flex-no-wrap justify-space-between">
         <div>
           <v-card-text
@@ -13,7 +13,7 @@
           
           </v-card-text>
         </div>
-          <v-icon  size="150" class="ma-10 ml-0 hidden-sm-and-down" color="blue lighten-1">mdi-comment-question-outline</v-icon>
+          <v-icon  size="150" class="ma-10 ml-0 hidden-sm-and-down" color="purple lighten-1">mdi-comment-question-outline</v-icon>
           <!-- <v-avatar class="ma-3" size="125" tile>
             <v-img src="/assets/card-sm-bg.webp"></v-img>
           </v-avatar> -->
@@ -21,7 +21,7 @@
       <v-card-actions></v-card-actions>
     </v-card>
     <v-card class="my-2" outlined color="#fff5">
-          <v-card-title class="teal--text text--darken-3">Этапы разработки сайта</v-card-title>
+          <v-card-title class="deep-orange--text text--darken-3">Этапы разработки </v-card-title>
       <div class="d-flex flex-no-wrap justify-space-between">
         <div>
           <v-card-text
@@ -30,7 +30,7 @@
           
           </v-card-text>
         </div>
-          <v-icon  size="150" class="ma-10 ml-0 hidden-sm-and-down" color="teal lighten-1">mdi-altimeter</v-icon>
+          <v-icon  size="150" class="ma-10 ml-0 hidden-sm-and-down" color="deep-orange lighten-1">mdi-altimeter</v-icon>
           <!-- <v-avatar class="ma-3" size="125" tile>
             <v-img src="/assets/card-sm-bg.webp"></v-img>
           </v-avatar> -->
@@ -38,7 +38,7 @@
       <v-card-actions></v-card-actions>
     </v-card>
     <v-card class="my-2" outlined color="#fff5">
-          <v-card-title class="green--text text--darken-3">Стоимость сайта</v-card-title>
+          <v-card-title class="light-blue--text text--darken-3">Стоимость анимации</v-card-title>
       <div class="d-flex flex-no-wrap justify-space-between">
         <div>
           <v-card-text
@@ -47,7 +47,7 @@
           
           </v-card-text>
         </div>
-          <v-icon  size="150" class="ma-10 ml-0 hidden-sm-and-down" color="green lighten-2">mdi-cash-usd-outline</v-icon>
+          <v-icon  size="150" class="ma-10 ml-0 hidden-sm-and-down" color="light-blue lighten-2">mdi-cash-usd-outline</v-icon>
           <!-- <v-avatar class="ma-3" size="125" tile>
             <v-img src="/assets/card-sm-bg.webp"></v-img>
           </v-avatar> -->
