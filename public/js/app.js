@@ -2705,7 +2705,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       data.append("userdescription", this.userdescription); // data.append("userfile", this.userfile);
 
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("./message", data, config).then(function (response) {
-        if (response.data == 1) {
+        if (response.status == 200) {
           _this.snackbar = true;
           _this.snackbarColor = "success";
           _this.text = "Ваше письмо удачно отправлено. Если прочитаю - свяжусь, возможно.";
@@ -2833,9 +2833,6 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-//
-//
-//
 //
 //
 //

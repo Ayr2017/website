@@ -110,7 +110,7 @@ export default {
       axios
         .post("./message", data, config)
         .then((response) => {
-          if (response.data == 1) {
+          if (response.status == 200) {
             this.snackbar = true;
             this.snackbarColor = "success";
             this.text =

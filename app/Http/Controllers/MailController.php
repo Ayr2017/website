@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\Email;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -105,5 +106,13 @@ class MailController extends Controller
             return json_encode(['error_message' => $errorMessage]);
         }
         
+    }
+    public function sendMail(Request $request){
+        $name = $request->username;
+        $phone = $request->userphone;
+        $email = $request->useremail;
+        $description = $request->userdescription;
+
+        Mail::to('ayrat.2013@ya.ru')->send(new Email($name, $phone, $email, $description));
     }
 }

@@ -11,12 +11,13 @@
       padding: 0;
       display: flex;
       flex-direction: column;
+      font-family: 'Segoe UI', sans-serif;
     }
     main{
       min-height: 100%;
     }
     .container {
-      background-color: #0123;
+      background-color: #012;
       margin: 10px auto;
       padding:10px;
       width:500px;

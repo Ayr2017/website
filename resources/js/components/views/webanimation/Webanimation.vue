@@ -41,9 +41,6 @@
           class="ma-10 ml-0 hidden-sm-and-down"
           color="deep-orange lighten-1"
         >mdi-altimeter</v-icon>
-        <!-- <v-avatar class="ma-3" size="125" tile>
-            <v-img src="/assets/card-sm-bg.webp"></v-img>
-        </v-avatar>-->
       </div>
       <v-card-actions></v-card-actions>
     </v-card>

@@ -17,4 +17,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/{path?}', function () {
     return view('welcome');
 });
-Route::post('/message', 'MailController@send');
+Route::post('/message', 'MailController@sendMail');
