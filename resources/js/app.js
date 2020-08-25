@@ -14,12 +14,15 @@ import store from './store';
 import gsap from "gsap";
 import VueObserveVisibility from 'vue-observe-visibility';
 import * as ElResize from 'vue-element-resize-event';
+import Vuelidate from 'vuelidate'
+
 
 
 
 Vue.use(Vuetify);
 Vue.use(VueObserveVisibility)
 Vue.use(ElResize)
+Vue.use(Vuelidate)
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
