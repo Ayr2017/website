@@ -21,11 +21,12 @@
             <v-btn
               tile
               outlined
+              :loading="discussBtnLoading"
               :color="buttonClass"
               :class="[buttonPadding,'mx-auto']"
               @mouseenter="activateButton"
               @mouseleave="passivateButton(this)"
-              @click="sendMessage"
+              @click="sendMessageToAdmin"
               :disabled="!validForm"
             >{{buttonText}}</v-btn>
           </v-flex>
@@ -36,13 +37,13 @@
     </v-card>
     <!-- Появляется бар с сообщением о статусе отправки сообщения админу -->
     <v-snackbar
-      v-model="snackbar"
+      v-model="snackbarState"
       :color="snackbarColor"
       timeout="6000"
       :top="true"
       :vertical="true"
     >
-      {{ text }}
+      {{ snackbarText }}
       <template v-slot:action="{ attrs }">
         <v-btn dark text v-bind="attrs" @click="snackbar = false">Закрыть</v-btn>
       </template>
@@ -63,9 +64,6 @@ export default {
     userdescription: "",
     userfile: null,
     agree: true,
-    snackbar: false,
-    snackbarColor: "success",
-    text: "Ваше письмо удачно отправлено. Если прочитаю - свяжусь, возможно.",
 
     username_rule: [
       (v) => (v.length <= 30 && v.length >= 2) || "Не более 30 символов, не менее двух",
@@ -87,7 +85,7 @@ export default {
     buttonPadding: "",
   }),
   computed: {
-    ...mapGetters(["subheaderSize"]),
+    ...mapGetters(["subheaderSize","discussBtnLoading","snackbarState","snackbarColor","snackbarText"]),
     validForm(){
       return (this.$v.username.$invalid==false && this.$v.userdescription.$invalid==false && (this.$v.userphone.$invalid==false || this.$v.useremail.$invalid==false) && this.agree);
     }
@@ -95,6 +93,7 @@ export default {
   mounted() {},
 
   methods: {
+    ...mapActions(["sendMessage"]),
     activateButton() {
       this.buttonClass = "green darken-4 ";
       this.buttonText = "Да!!!";
@@ -104,7 +103,7 @@ export default {
       (this.buttonClass = "grey darken-4"), (this.buttonText = "Отправить?");
       this.buttonPadding = "";
     },
-    sendMessage() {
+    sendMessageToAdmin(){
       let data = new FormData();
       let config = {
         header: {
@@ -116,30 +115,8 @@ export default {
       data.append("useremail", this.useremail);
       data.append("userdescription", this.userdescription);
       // data.append("userfile", this.userfile);
-      axios
-        .post("./message", data, config)
-        .then((response) => {
-          if (response.status == 200) {
-            this.snackbar = true;
-            this.snackbarColor = "success";
-            this.text =
-              "Ваше письмо удачно отправлено. Если прочитаю - свяжусь, возможно.";
-          } else {
-            console.error(response);
-            this.snackbar = true;
-            this.snackbarColor = "error";
-            this.text =
-              "Отправка письма потерпела неудачу. Позвоните лучше, обсудим.";
-          }
-        })
-        .catch((e) => {
-          console.error(e);
-          this.snackbar = true;
-          this.snackbarColor = "error";
-          this.text =
-            "Отправка письма потерпела неудачу. Позвоните лучше, обсудим.";
-        });
-    },
+      this.sendMessage({data,config});
+    }
   },
   validations: {
     username: {

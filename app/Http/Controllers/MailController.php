@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\Email;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
 class MailController extends Controller
@@ -114,5 +115,17 @@ class MailController extends Controller
         $description = $request->userdescription;
 
         Mail::to('ayrat.2013@ya.ru')->send(new Email($name, $phone, $email, $description));
+        if( count(Mail::failures()) > 0 ) {
+
+            return ['status'=>500];
+         
+            foreach(Mail::failures() as $error) {
+                Log::error(" - $error ");
+             }
+         
+         } else {
+            return ['status'=>200];
+         }
+        
     }
 }

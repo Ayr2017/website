@@ -2651,6 +2651,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 
 
@@ -2663,9 +2664,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       userdescription: "",
       userfile: null,
       agree: true,
-      snackbar: false,
-      snackbarColor: "success",
-      text: "Ваше письмо удачно отправлено. Если прочитаю - свяжусь, возможно.",
       username_rule: [function (v) {
         return v.length <= 30 && v.length >= 2 || "Не более 30 символов, не менее двух";
       }],
@@ -2686,13 +2684,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       buttonPadding: ""
     };
   },
-  computed: _objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapGetters"])(["subheaderSize"])), {}, {
+  computed: _objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapGetters"])(["subheaderSize", "discussBtnLoading", "snackbarState", "snackbarColor", "snackbarText"])), {}, {
     validForm: function validForm() {
       return this.$v.username.$invalid == false && this.$v.userdescription.$invalid == false && (this.$v.userphone.$invalid == false || this.$v.useremail.$invalid == false) && this.agree;
     }
   }),
   mounted: function mounted() {},
-  methods: {
+  methods: _objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapActions"])(["sendMessage"])), {}, {
     activateButton: function activateButton() {
       this.buttonClass = "green darken-4 ";
       this.buttonText = "Да!!!";
@@ -2702,9 +2700,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       this.buttonClass = "grey darken-4", this.buttonText = "Отправить?";
       this.buttonPadding = "";
     },
-    sendMessage: function sendMessage() {
-      var _this = this;
-
+    sendMessageToAdmin: function sendMessageToAdmin() {
       var data = new FormData();
       var config = {
         header: {
@@ -2716,25 +2712,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       data.append("useremail", this.useremail);
       data.append("userdescription", this.userdescription); // data.append("userfile", this.userfile);
 
-      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("./message", data, config).then(function (response) {
-        if (response.status == 200) {
-          _this.snackbar = true;
-          _this.snackbarColor = "success";
-          _this.text = "Ваше письмо удачно отправлено. Если прочитаю - свяжусь, возможно.";
-        } else {
-          console.error(response);
-          _this.snackbar = true;
-          _this.snackbarColor = "error";
-          _this.text = "Отправка письма потерпела неудачу. Позвоните лучше, обсудим.";
-        }
-      })["catch"](function (e) {
-        console.error(e);
-        _this.snackbar = true;
-        _this.snackbarColor = "error";
-        _this.text = "Отправка письма потерпела неудачу. Позвоните лучше, обсудим.";
+      this.sendMessage({
+        data: data,
+        config: config
       });
     }
-  },
+  }),
   validations: {
     username: {
       required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__["required"],
@@ -28641,6 +28624,7 @@ var render = function() {
                           attrs: {
                             tile: "",
                             outlined: "",
+                            loading: _vm.discussBtnLoading,
                             color: _vm.buttonClass,
                             disabled: !_vm.validForm
                           },
@@ -28649,7 +28633,7 @@ var render = function() {
                             mouseleave: function($event) {
                               return _vm.passivateButton(this)
                             },
-                            click: _vm.sendMessage
+                            click: _vm.sendMessageToAdmin
                           }
                         },
                         [_vm._v(_vm._s(_vm.buttonText))]
@@ -28710,14 +28694,14 @@ var render = function() {
             }
           ]),
           model: {
-            value: _vm.snackbar,
+            value: _vm.snackbarState,
             callback: function($$v) {
-              _vm.snackbar = $$v
+              _vm.snackbarState = $$v
             },
-            expression: "snackbar"
+            expression: "snackbarState"
           }
         },
-        [_vm._v("\n    " + _vm._s(_vm.text) + "\n    ")]
+        [_vm._v("\n    " + _vm._s(_vm.snackbarText) + "\n    ")]
       )
     ],
     1
@@ -94690,15 +94674,121 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 /* harmony import */ var _modules_global__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/global */ "./resources/js/store/modules/global.js");
+/* harmony import */ var _modules_contacts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/contacts */ "./resources/js/store/modules/contacts.js");
+
 
 
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__["default"]);
 /* harmony default export */ __webpack_exports__["default"] = (new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
   modules: {
-    global: _modules_global__WEBPACK_IMPORTED_MODULE_2__["default"]
+    global: _modules_global__WEBPACK_IMPORTED_MODULE_2__["default"],
+    contacts: _modules_contacts__WEBPACK_IMPORTED_MODULE_3__["default"]
   }
 }));
+
+/***/ }),
+
+/***/ "./resources/js/store/modules/contacts.js":
+/*!************************************************!*\
+  !*** ./resources/js/store/modules/contacts.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  state: {
+    sendMessageBtnLoading: false,
+    snackbar: false,
+    snackbarColor: 'warning',
+    snackbarText: ''
+  },
+  getters: {
+    discussBtnLoading: function discussBtnLoading(state) {
+      return state.sendMessageBtnLoading;
+    },
+    snackbarState: function snackbarState(state) {
+      return state.snackbar;
+    },
+    snackbarColor: function snackbarColor(state) {
+      return state.snackbarColor;
+    },
+    snackbarText: function snackbarText(state) {
+      return state.snackbarText;
+    }
+  },
+  actions: {
+    sendMessage: function sendMessage(_ref, ctx) {
+      var _this = this;
+
+      var commit = _ref.commit,
+          state = _ref.state;
+      console.log('formData', ctx.data);
+      console.log('config', ctx.config);
+      this.commit('sendMessageBtnLoadingTrue');
+      axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("./message", ctx.data, ctx.config).then(function (response) {
+        console.log(response);
+
+        if (response.status == 200) {
+          _this.commit('showSnackbar');
+
+          _this.commit('successSnackbar');
+
+          _this.commit('snackbarTextSuccess');
+        } else {
+          console.error(response);
+
+          _this.commit('showSnackbar');
+
+          _this.commit('errorSnackbar');
+
+          _this.commit('snackbarTextError');
+        }
+      })["catch"](function (e) {
+        console.error(e);
+
+        _this.commit('showSnackbar');
+
+        _this.commit('errorSnackbar');
+
+        _this.commit('snackbarTextError');
+      })["finally"](function () {
+        _this.commit('sendMessageBtnLoadingFalse');
+      });
+    }
+  },
+  mutations: {
+    sendMessageBtnLoadingTrue: function sendMessageBtnLoadingTrue(state) {
+      state.sendMessageBtnLoading = true;
+    },
+    sendMessageBtnLoadingFalse: function sendMessageBtnLoadingFalse(state) {
+      state.sendMessageBtnLoading = false;
+    },
+    showSnackbar: function showSnackbar(state) {
+      state.snackbar = true;
+    },
+    hideSnackbar: function hideSnackbar(state) {
+      state.snackbar = false;
+    },
+    successSnackbar: function successSnackbar(state) {
+      state.snackbarColor = 'success';
+    },
+    errorSnackbar: function errorSnackbar(state) {
+      state.snackbarColor = 'error';
+    },
+    snackbarTextSuccess: function snackbarTextSuccess(state) {
+      state.snackbarText = 'Ваше письмо удачно отправлено. Если прочитаю - свяжусь, возможно.';
+    },
+    snackbarTextErrror: function snackbarTextErrror(state) {
+      state.snackbarText = 'Отправка письма потерпела неудачу. Позвоните лучше, обсудим.';
+    }
+  }
+});
 
 /***/ }),
 
