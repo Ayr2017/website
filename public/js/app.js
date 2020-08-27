@@ -2652,6 +2652,23 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -2687,10 +2704,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   computed: _objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapGetters"])(["subheaderSize", "discussBtnLoading", "snackbarState", "snackbarColor", "snackbarText"])), {}, {
     validForm: function validForm() {
       return this.$v.username.$invalid == false && this.$v.userdescription.$invalid == false && (this.$v.userphone.$invalid == false || this.$v.useremail.$invalid == false) && this.agree;
+    },
+    snackbarState_: {
+      get: function get() {
+        return this.snackbarState;
+      },
+      set: function set(newState) {}
     }
   }),
   mounted: function mounted() {},
-  methods: _objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapActions"])(["sendMessage"])), {}, {
+  methods: _objectSpread(_objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapActions"])(["sendMessage"])), Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapMutations"])(["hideSnackbar"])), {}, {
     activateButton: function activateButton() {
       this.buttonClass = "green darken-4 ";
       this.buttonText = "Да!!!";
@@ -2721,13 +2744,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   validations: {
     username: {
       required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__["required"],
-      alpha: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__["helpers"].regex('alpha', /^[а-яА-ЯёЁa-zA-Z\s]*$/),
+      alpha: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__["helpers"].regex("alpha", /^[а-яА-ЯёЁa-zA-Z\s]*$/),
       minLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__["minLength"])(2),
       maxLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__["maxLength"])(30)
     },
     userphone: {
       required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__["required"],
-      alpha: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__["helpers"].regex('alpha', /^\+7\d{10}$/)
+      alpha: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__["helpers"].regex("alpha", /^\+7\d{10}$/)
     },
     useremail: {
       required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__["required"],
@@ -28677,11 +28700,7 @@ var render = function() {
                     _vm._b(
                       {
                         attrs: { dark: "", text: "" },
-                        on: {
-                          click: function($event) {
-                            _vm.snackbar = false
-                          }
-                        }
+                        on: { click: _vm.hideSnackbar }
                       },
                       "v-btn",
                       attrs,
@@ -28694,11 +28713,11 @@ var render = function() {
             }
           ]),
           model: {
-            value: _vm.snackbarState,
+            value: _vm.snackbarState_,
             callback: function($$v) {
-              _vm.snackbarState = $$v
+              _vm.snackbarState_ = $$v
             },
-            expression: "snackbarState"
+            expression: "snackbarState_"
           }
         },
         [_vm._v("\n    " + _vm._s(_vm.snackbarText) + "\n    ")]
@@ -94728,12 +94747,8 @@ __webpack_require__.r(__webpack_exports__);
 
       var commit = _ref.commit,
           state = _ref.state;
-      console.log('formData', ctx.data);
-      console.log('config', ctx.config);
       this.commit('sendMessageBtnLoadingTrue');
       axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("./message", ctx.data, ctx.config).then(function (response) {
-        console.log(response);
-
         if (response.status == 200) {
           _this.commit('showSnackbar');
 

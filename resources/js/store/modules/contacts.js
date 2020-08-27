@@ -22,13 +22,10 @@ export default {
     },
     actions: {
         sendMessage({ commit, state },ctx) {
-            console.log('formData',ctx.data);
-            console.log('config',ctx.config);
             this.commit('sendMessageBtnLoadingTrue');
             axios
                 .post("./message", ctx.data, ctx.config)
                 .then((response) => {
-                    console.log(response)
                     if (response.status == 200) {
                         this.commit('showSnackbar')
                         this.commit('successSnackbar');
