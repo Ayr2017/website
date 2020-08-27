@@ -70,7 +70,7 @@ export default {
         snackbarTextSuccess(state) {
             state.snackbarText = 'Ваше письмо удачно отправлено. Если прочитаю - свяжусь, возможно.'
         },
-        snackbarTextErrror(state) {
+        snackbarTextError(state) {
             state.snackbarText = 'Отправка письма потерпела неудачу. Позвоните лучше, обсудим.'
         }
     }

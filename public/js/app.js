@@ -94799,7 +94799,7 @@ __webpack_require__.r(__webpack_exports__);
     snackbarTextSuccess: function snackbarTextSuccess(state) {
       state.snackbarText = 'Ваше письмо удачно отправлено. Если прочитаю - свяжусь, возможно.';
     },
-    snackbarTextErrror: function snackbarTextErrror(state) {
+    snackbarTextError: function snackbarTextError(state) {
       state.snackbarText = 'Отправка письма потерпела неудачу. Позвоните лучше, обсудим.';
     }
   }
