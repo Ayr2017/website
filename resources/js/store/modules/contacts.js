@@ -59,7 +59,9 @@ export default {
             state.snackbar = true;
         },
         hideSnackbar(state) {
+            console.log(state.snackbar);
             state.snackbar = false;
+            console.log(state.snackbar);
         },
         successSnackbar(state) {
             state.snackbarColor = 'success';

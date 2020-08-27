@@ -2739,6 +2739,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         data: data,
         config: config
       });
+    },
+    startCloseTimeout: function startCloseTimeout() {
+      var _this = this;
+
+      setTimeout(function () {
+        _this.hideSnackbar();
+      }, 6000);
     }
   }),
   validations: {
@@ -28683,12 +28690,8 @@ var render = function() {
       _c(
         "v-snackbar",
         {
-          attrs: {
-            color: _vm.snackbarColor,
-            timeout: "6000",
-            top: true,
-            vertical: true
-          },
+          attrs: { color: _vm.snackbarColor, top: true, vertical: true },
+          on: { input: _vm.startCloseTimeout },
           scopedSlots: _vm._u([
             {
               key: "action",
@@ -94788,7 +94791,9 @@ __webpack_require__.r(__webpack_exports__);
       state.snackbar = true;
     },
     hideSnackbar: function hideSnackbar(state) {
+      console.log(state.snackbar);
       state.snackbar = false;
+      console.log(state.snackbar);
     },
     successSnackbar: function successSnackbar(state) {
       state.snackbarColor = 'success';

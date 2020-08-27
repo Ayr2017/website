@@ -56,9 +56,9 @@
     <v-snackbar
       v-model="snackbarState_"
       :color="snackbarColor"
-      timeout="6000"
       :top="true"
       :vertical="true"
+      @input="startCloseTimeout"
     >
       {{ snackbarText }}
       <template v-slot:action="{ attrs }">
@@ -168,6 +168,11 @@ export default {
       // data.append("userfile", this.userfile);
       this.sendMessage({ data, config });
     },
+    startCloseTimeout(){
+      setTimeout(() => {
+        this.hideSnackbar();
+      }, 6000);
+    }
   },
   validations: {
     username: {
