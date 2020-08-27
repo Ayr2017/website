@@ -2669,6 +2669,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 
 
@@ -2695,7 +2696,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       userdescription_rule: [function (v) {
         return v.length <= 1000 && v.length > 10 || "Не более 1000 символов";
       }],
-      // userfile_rule: [(v) => (v ? true : false)],
+      userfile_rule: [function (v) {
+        return !v || v.size < 6e+6 || 'Файл должен быть меньше 6 МБ';
+      }],
       buttonClass: "grey darken-4",
       buttonText: "Отправить?",
       buttonPadding: ""
@@ -2733,8 +2736,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       data.append("username", this.username);
       data.append("userphone", this.userphone);
       data.append("useremail", this.useremail);
-      data.append("userdescription", this.userdescription); // data.append("userfile", this.userfile);
-
+      data.append("userdescription", this.userdescription);
+      data.append("userfile", this.userfile);
       this.sendMessage({
         data: data,
         config: config
@@ -28628,6 +28631,22 @@ var render = function() {
                           typeof $$v === "string" ? $$v.trim() : $$v
                       },
                       expression: "userdescription"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("v-file-input", {
+                    attrs: {
+                      "show-size": "",
+                      label: "Выберите файл",
+                      "prepend-icon": "mdi-paperclip",
+                      rules: _vm.userfile_rule
+                    },
+                    model: {
+                      value: _vm.userfile,
+                      callback: function($$v) {
+                        _vm.userfile = $$v
+                      },
+                      expression: "userfile"
                     }
                   }),
                   _vm._v(" "),

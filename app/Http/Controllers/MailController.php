@@ -113,8 +113,9 @@ class MailController extends Controller
         $phone = $request->userphone;
         $email = $request->useremail;
         $description = $request->userdescription;
+        $userfile = $request->file('userfile');
 
-        Mail::to('ayrat.2013@ya.ru')->send(new Email($name, $phone, $email, $description));
+        Mail::to('ayrat.2013@ya.ru')->send(new Email(['name'=>$name, 'phone'=>$phone, 'email'=>$email, 'description'=>$description, 'userfile'=>$userfile]));
         if( count(Mail::failures()) > 0 ) {
 
             return ['status'=>500];

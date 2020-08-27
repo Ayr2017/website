@@ -33,6 +33,7 @@
             :counter="1000"
             @input="$v.userdescription.$touch()"
           ></v-textarea>
+          <v-file-input show-size label="Выберите файл" v-model="userfile" prepend-icon="mdi-paperclip" :rules="userfile_rule"></v-file-input>
           <v-switch v-model="agree" class="ma-2" label="На всё согласен"></v-switch>
           <v-flex class="text-center">
             <v-btn
@@ -110,7 +111,7 @@ export default {
     userdescription_rule: [
       (v) => (v.length <= 1000 && v.length > 10) || "Не более 1000 символов",
     ],
-    // userfile_rule: [(v) => (v ? true : false)],
+    userfile_rule: [ v => !v || v.size < 6e+6 || 'Файл должен быть меньше 6 МБ'],
 
     buttonClass: "grey darken-4",
     buttonText: "Отправить?",
@@ -165,7 +166,7 @@ export default {
       data.append("userphone", this.userphone);
       data.append("useremail", this.useremail);
       data.append("userdescription", this.userdescription);
-      // data.append("userfile", this.userfile);
+      data.append("userfile", this.userfile);
       this.sendMessage({ data, config });
     },
     startCloseTimeout(){

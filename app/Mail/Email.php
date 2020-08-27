@@ -18,12 +18,9 @@ class Email extends Mailable
      *
      * @return void
      */
-    public function __construct($name, $phone, $email, $description)
+    public function __construct($data = [])
     {
-        $this->name = $name;
-        $this->phone = $phone;
-        $this->email = $email;
-        $this->description = $description;
+        $this->data = $data;
     }
 
     /**
@@ -33,14 +30,19 @@ class Email extends Mailable
      */
     public function build()
     {
+        $data = $this->data;
         return $this->view('emails.contact-mail')
         ->with([
-            'name'=>$this->name,
-            'phone'=>$this->phone,
-            'email'=>$this->email,
-            'description'=>$this->description,
+            'name'=>$data['name'],
+            'phone'=>$data['phone'],
+            'email'=>$data['email'],
+            'description'=>$data['description'],
         ])
         ->from('user@bombilas.ru')
-        ->subject('New Contact Message!'); 
+        ->subject('New Contact Message!')
+        ->attach($data['userfile']->getRealPath(), [
+            'as' => $data['userfile']->getClientOriginalName(), 
+            'mime' => $data['userfile']->getMimeType()
+        ]);
     }
 }
