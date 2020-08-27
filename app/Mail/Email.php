@@ -40,7 +40,7 @@ class Email extends Mailable
             'email'=>$this->email,
             'description'=>$this->description,
         ])
-        ->from('norepy@cs.ru')
+        ->from('user@bombilas.ru')
         ->subject('New Contact Message!'); 
     }
 }
