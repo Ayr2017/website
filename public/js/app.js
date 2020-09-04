@@ -93105,7 +93105,7 @@ var app = new Vue({
   store: _store__WEBPACK_IMPORTED_MODULE_2__["default"],
   gsap: gsap__WEBPACK_IMPORTED_MODULE_3__["default"],
   ElResize: vue_element_resize_event__WEBPACK_IMPORTED_MODULE_5__,
-  VueObserveVisibility: vue_observe_visibility__WEBPACK_IMPORTED_MODULE_4__["default"] // render: h => h(App),    
+  VueObserveVisibility: vue_observe_visibility__WEBPACK_IMPORTED_MODULE_4__["default"] // render: h => h(App),   
 
 });
 

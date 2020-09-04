@@ -57,5 +57,6 @@ const app = new Vue({
     gsap,
     ElResize,
     VueObserveVisibility,
-    // render: h => h(App),    
+    // render: h => h(App),   
+    
 });
