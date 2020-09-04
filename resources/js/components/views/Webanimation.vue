@@ -11,7 +11,8 @@
 </template>
 
 <script>
-import Webanimation from './webanimation/Webanimation.vue'
+// import Webanimation from './webanimation/Webanimation.vue'
+const Webanimation = () => import('./webanimation/Webanimation.vue');
 export default {
   components:{
       Webanimation

@@ -11,7 +11,8 @@
 </template>
 
 <script>
-import Desktopapp from './desktopapp/Desktopapp.vue'
+// import Desktopapp from './desktopapp/Desktopapp.vue'
+const Desktopapp = () => import('./desktopapp/Desktopapp.vue');
 export default {
   components:{
       Desktopapp

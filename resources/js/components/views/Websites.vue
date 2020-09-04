@@ -11,7 +11,8 @@
 </template>
 
 <script>
-import Websitetypes from './websites/Websitetypes.vue'
+// import Websitetypes from './websites/Websitetypes.vue'
+const Websitetypes  =() => import('./websites/Websitetypes.vue');
 export default {
   components:{
       Websitetypes

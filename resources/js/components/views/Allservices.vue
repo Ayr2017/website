@@ -17,9 +17,12 @@
 </template>
 
 <script>
-import Websites from "./welcome/services/Websites.vue";
-import Desktopapp from "./welcome/services/Desktopapp.vue";
-import Webanimation from "./welcome/services/Webanimation.vue";
+// import Websites from "./welcome/services/Websites.vue";
+// import Desktopapp from "./welcome/services/Desktopapp.vue";
+// import Webanimation from "./welcome/services/Webanimation.vue";
+const Websites = () => import("./welcome/services/Websites.vue");
+const Desktopapp = () => import("./welcome/services/Desktopapp.vue");
+const Webanimation = () => import("./welcome/services/Webanimation.vue");
 
 export default {
   components: {

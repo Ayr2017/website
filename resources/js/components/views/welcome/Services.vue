@@ -107,9 +107,12 @@
 </template>
 
 <script>
-import Websites from "./services/Websites.vue";
-import Desktopapp from "./services/Desktopapp.vue";
-import Webanimation from "./services/Webanimation.vue";
+// import Websites from "./services/Websites.vue";
+// import Desktopapp from "./services/Desktopapp.vue";
+// import Webanimation from "./services/Webanimation.vue";
+const Websites = () => import("./services/Websites.vue");
+const Desktopapp = () => import("./services/Desktopapp.vue");
+const Webanimation = () => import("./services/Webanimation.vue");
 
 import { mapState, mapGetters, mapActions, mapMutations } from "vuex";
 export default {

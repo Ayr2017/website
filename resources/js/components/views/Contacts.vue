@@ -12,8 +12,10 @@
 </template>
 
 <script>
-import ContactInfo from './contacts/ContactInfo.vue'
-import DiscussProject from "./contacts/DiscussProject.vue";
+// import ContactInfo from './contacts/ContactInfo.vue'
+// import DiscussProject from "./contacts/DiscussProject.vue";
+const ContactInfo =()=> import('./contacts/ContactInfo.vue');
+const DiscussProject =()=> import("./contacts/DiscussProject.vue");
 export default {
   components:{
     ContactInfo,

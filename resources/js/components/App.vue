@@ -136,7 +136,8 @@ const { template } = require("lodash");
 </template>
 
 <script>
-import VSBtn from "./elements/VSBtn.vue";
+// import VSBtn from "./elements/VSBtn.vue";
+const VSBtn = () => import('./elements/VSBtn.vue');
 import { TimelineLite } from "gsap";
 import { mapState, mapGetters, mapActions, mapMutations } from "vuex";
 import _ from "lodash";
