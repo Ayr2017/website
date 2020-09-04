@@ -28225,7 +28225,9 @@ var render = function() {
           { staticClass: "subheading blue-grey--text text--lighten-1" },
           [
             _vm._v("\n        Вернитесь на\n        "),
-            _c("router-link", { attrs: { to: "/" } }, [_vm._v("главную")]),
+            _c("router-link", { attrs: { to: "/" } }, [
+              _vm._v("главную страницу")
+            ]),
             _vm._v(".\n      ")
           ],
           1
@@ -94887,8 +94889,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Jesus\OSPanel\domains\ppage\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Jesus\OSPanel\domains\ppage\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Jesus\OSPanel\domains\website\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Jesus\OSPanel\domains\website\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

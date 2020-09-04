@@ -9,7 +9,7 @@
         </p>
         <p class="subheading blue-grey--text text--lighten-1">
           Вернитесь на
-          <router-link to="/">главную</router-link>.
+          <router-link to="/">главную страницу</router-link>.
         </p>
     </v-col>
     <v-col
