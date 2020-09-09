@@ -14,7 +14,8 @@ import store from './store';
 import gsap from "gsap";
 import VueObserveVisibility from 'vue-observe-visibility';
 import * as ElResize from 'vue-element-resize-event';
-import Vuelidate from 'vuelidate'
+import Vuelidate from 'vuelidate';
+import './ml';
 
 
 

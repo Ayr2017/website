@@ -5,8 +5,8 @@
         <v-row align="center" justify="center">
           <v-theme-provider dark>
             <v-col class="text-center" cols="12">
-              <h1 class="display-4 font-weight-thin mb-4">Вам нужен сайт?</h1>
-              <p class="subheading text-h6 font-weight-light">Вы зашли туда, куда надо!</p>
+              <h1 class="display-4 font-weight-thin mb-4">{{this.$ml.get('welcome.title')}}</h1>
+              <p class="subheading text-h6 font-weight-light">{{this.$ml.get('welcome.answer')}}</p>
               <v-btn
                 aria-label="services"
                 class="align-self-end mt-10"

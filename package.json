@@ -30,6 +30,7 @@
         "animate.css": "^4.1.0",
         "gsap": "^3.4.2",
         "vue-element-resize-event": "^0.1.0",
+        "vue-multilanguage": "^4.0.10",
         "vue-observe-visibility": "^0.4.6",
         "vue-router": "^3.4.2",
         "vue2-animate": "^2.1.3",

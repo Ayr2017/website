@@ -9,7 +9,7 @@
               style="color:#333"
               id="services-title"
               v-observe-visibility="showServiceCard"
-            >Услуги, которые Вы можете заказать</h2>
+            >{{this.$ml.get('services.title')}}</h2>
 
             <transition name="fadeDown" tag="div">
               <v-row  v-if="serviceCardState">
@@ -41,7 +41,7 @@
                   dense
                   v-observe-visibility="(isVisible, entry, n)=>showServicePoint(isVisible, entry, 1)"
                 >
-                  <p :class="[subheaderSize,'text-weight-thin '] ">В чём преимущество?</p>
+                  <p :class="[subheaderSize,'text-weight-thin '] ">{{this.$ml.get('services.advantage.title')}}</p>
                 </div>
                 <transition name="slideUp" tag="ul" class="list-group">
                   <v-list

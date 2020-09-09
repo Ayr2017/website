@@ -11,6 +11,7 @@
           <Desktopapp />
           <Webanimation />
         </v-row>
+        
       </v-col>
     </v-row>
   </v-app>
@@ -29,10 +30,6 @@ export default {
     Websites,
     Desktopapp,
     Webanimation,
-  },
-  computed: {},
-  mounted() {
-    console.log("Contacts mounted");
   },
 };
 </script>

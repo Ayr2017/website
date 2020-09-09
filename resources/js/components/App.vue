@@ -85,10 +85,14 @@ const { template } = require("lodash");
           class="display-1 font-weight-medium mx-auto v-sheet logo-text"
           @mouseenter="shuffleLogo"
           @mouseleave="orderLogo"
+          v-if="$vuetify.breakpoint.name !=='xs'"
         >
           <transition-group name="list-complete" tag="span">
             <span v-for="item in items" v-bind:key="item" class="list-complete-item mx-0">{{ item }}</span>
           </transition-group>
+        </div>
+        <div v-if="$vuetify.breakpoint.name ==='xs'" class="display-1 font-weight-medium mx-auto v-sheet logo-text">
+          <span  class="list-complete-item mx-0">CS</span>
         </div>
       </router-link>
       <v-spacer></v-spacer>
@@ -97,6 +101,20 @@ const { template } = require("lodash");
         <!-- <VSBtn :title="'Продвижение'" :dark="true"></VSBtn> -->
         <VSBtn :title="'Все услуги'" :dark="true" to="/allservices"></VSBtn>
       </div>
+      <v-spacer></v-spacer>
+      <v-menu>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn color="black" dark v-bind="attrs" text v-on="on">{{myLocal==='english' ? 'en' : myLocal}}</v-btn>
+        </template>
+        <v-list class="py-0">
+          <v-list-item class="pa-0" @click="selectLang('RU')">
+              <v-btn class="ma-0 pa-0" color="black" dark text>{{ 'RU' }}</v-btn>
+          </v-list-item>
+          <v-list-item class="pa-0" @click="selectLang('EN')">
+              <v-btn class="ma-0 pa-0" color="black" dark text>{{ 'EN' }}</v-btn>
+          </v-list-item>
+        </v-list>
+      </v-menu>
       <v-spacer></v-spacer>
       <v-btn
         dark
@@ -137,9 +155,10 @@ const { template } = require("lodash");
 
 <script>
 // import VSBtn from "./elements/VSBtn.vue";
-const VSBtn = () => import('./elements/VSBtn.vue');
+const VSBtn = () => import("./elements/VSBtn.vue");
 import { TimelineLite } from "gsap";
 import { mapState, mapGetters, mapActions, mapMutations } from "vuex";
+import { MLBuilder } from "vue-multilanguage";
 import _ from "lodash";
 
 export default {
@@ -154,6 +173,7 @@ export default {
     items: ["C", "r", "y", "p", "t", "o"],
   }),
   computed: {
+    ...mapGetters(["myLocal"]),
     theme: () => {
       return { background: "#ebedec" };
     },
@@ -199,6 +219,7 @@ export default {
   },
   mounted() {
     console.log("App");
+    this.getLocaleFromBrouser().then(this.$ml.change(this.myLocal));
   },
   created() {
     window.addEventListener("scroll", this.handleScroll);
@@ -208,6 +229,12 @@ export default {
   },
   methods: {
     ...mapMutations(["setSubheaderSize", "setIconsSize"]),
+    ...mapActions(["getLocaleFromBrouser","setLocale"]),
+    selectLang(arg){
+      let lang = arg==='RU'?'ru':'english';
+      this.setLocale(lang)
+      this.$ml.change(lang)
+    },
     handleScroll(event) {
       this.scrollBottom();
       let scrollTop = event.target.scrollingElement.scrollTop;
@@ -225,8 +252,9 @@ export default {
       );
       this.footer =
         Math.ceil(maxValue + window.innerHeight) ===
-        document.documentElement.offsetHeight || Math.ceil(maxValue + window.innerHeight) ===
-        document.documentElement.offsetHeight-1;
+          document.documentElement.offsetHeight ||
+        Math.ceil(maxValue + window.innerHeight) ===
+          document.documentElement.offsetHeight - 1;
     },
     scrollEvent(e) {
       console.log(e);
