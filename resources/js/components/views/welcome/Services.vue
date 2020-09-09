@@ -11,7 +11,7 @@
               v-observe-visibility="showServiceCard"
             >{{this.$ml.get('services.title')}}</h2>
 
-            <transition name="fadeDown" tag="div">
+            <transition name="fadeRight" tag="div">
               <v-row  v-if="serviceCardState">
                 <Websites />
                 <Desktopapp  />

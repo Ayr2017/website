@@ -26345,7 +26345,7 @@ var render = function() {
                   _c(
                     "v-list-item",
                     {
-                      staticClass: "pa-0",
+                      staticClass: "pa-0 flag-russian",
                       on: {
                         click: function($event) {
                           return _vm.selectLang("RU")

@@ -310,7 +310,7 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "transition",
-                        { attrs: { name: "fadeDown", tag: "div" } },
+                        { attrs: { name: "fadeRight", tag: "div" } },
                         [
                           _vm.serviceCardState
                             ? _c(

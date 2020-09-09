@@ -107,7 +107,7 @@ const { template } = require("lodash");
           <v-btn color="black" dark v-bind="attrs" text v-on="on">{{myLocal==='english' ? 'en' : myLocal}}</v-btn>
         </template>
         <v-list class="py-0">
-          <v-list-item class="pa-0" @click="selectLang('RU')">
+          <v-list-item class="pa-0 flag-russian" @click="selectLang('RU')">
               <v-btn class="ma-0 pa-0" color="black" dark text>{{ 'RU' }}</v-btn>
           </v-list-item>
           <v-list-item class="pa-0" @click="selectLang('EN')">

@@ -89,7 +89,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n.subheading[data-v-24a861dc] {\r\n  letter-spacing: 2px !important;\n}\r\n", ""]);
+exports.push([module.i, "\n.subheading[data-v-24a861dc] {\r\n  letter-spacing: 2px !important;\n}\n.shadow-1[data-v-24a861dc] {\r\n  text-shadow: 0 6px 15px #555;\n}\r\n", ""]);
 
 // exports
 
@@ -172,7 +172,10 @@ var render = function() {
                         [
                           _c(
                             "h1",
-                            { staticClass: "display-4 font-weight-thin mb-4" },
+                            {
+                              staticClass:
+                                "display-4 font-weight-thin mb-4 shadow-1"
+                            },
                             [_vm._v(_vm._s(this.$ml.get("welcome.title")))]
                           ),
                           _vm._v(" "),

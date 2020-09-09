@@ -5,7 +5,7 @@
         <v-row align="center" justify="center">
           <v-theme-provider dark>
             <v-col class="text-center" cols="12">
-              <h1 class="display-4 font-weight-thin mb-4">{{this.$ml.get('welcome.title')}}</h1>
+              <h1 class="display-4 font-weight-thin mb-4 shadow-1">{{this.$ml.get('welcome.title')}}</h1>
               <p class="subheading text-h6 font-weight-light">{{this.$ml.get('welcome.answer')}}</p>
               <v-btn
                 aria-label="services"
@@ -59,5 +59,8 @@ export default {
 <style scoped>
 .subheading {
   letter-spacing: 2px !important;
+}
+.shadow-1 {
+  text-shadow: 0 6px 15px #555;
 }
 </style>
