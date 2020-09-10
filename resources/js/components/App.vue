@@ -11,7 +11,7 @@ const { template } = require("lodash");
             </v-list-item-icon>
 
             <v-list-item-content>
-              <v-list-item-title>Главная</v-list-item-title>
+              <v-list-item-title>{{this.$ml.get('menu.home')}}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
           <!-- Все услуги -->
@@ -21,7 +21,7 @@ const { template } = require("lodash");
             </v-list-item-icon>
 
             <v-list-item-content>
-              <v-list-item-title>Все услуги</v-list-item-title>
+              <v-list-item-title>{{this.$ml.get('menu.allservices')}}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
 
@@ -32,7 +32,7 @@ const { template } = require("lodash");
             </v-list-item-icon>
 
             <v-list-item-content>
-              <v-list-item-title>Веб-сайты</v-list-item-title>
+              <v-list-item-title>{{this.$ml.get('menu.websites')}}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
 
@@ -42,7 +42,7 @@ const { template } = require("lodash");
             </v-list-item-icon>
 
             <v-list-item-content>
-              <v-list-item-title>Десктопные приложения</v-list-item-title>
+              <v-list-item-title>{{this.$ml.get('menu.desktopapp')}}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
           <v-list-item link to="/webanimation">
@@ -51,7 +51,7 @@ const { template } = require("lodash");
             </v-list-item-icon>
 
             <v-list-item-content>
-              <v-list-item-title>HTML5-анимация</v-list-item-title>
+              <v-list-item-title>{{this.$ml.get('menu.htmlanimation')}}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
           <!-- Обсудить проект -->
@@ -61,7 +61,7 @@ const { template } = require("lodash");
             </v-list-item-icon>
 
             <v-list-item-content>
-              <v-list-item-title>Обсудить / Контакты</v-list-item-title>
+              <v-list-item-title>{{this.$ml.get('menu.contacts')}}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list>
@@ -97,14 +97,14 @@ const { template } = require("lodash");
       </router-link>
       <v-spacer></v-spacer>
       <div class="row hidden-sm-and-down" group>
-        <VSBtn :title="'Разработка сайтов'" :dark="true" to="/websites"></VSBtn>
+        <VSBtn :title="$ml.get('header.websitedev')" :dark="true" to="/websites"></VSBtn>
         <!-- <VSBtn :title="'Продвижение'" :dark="true"></VSBtn> -->
-        <VSBtn :title="'Все услуги'" :dark="true" to="/allservices"></VSBtn>
+        <VSBtn :title="$ml.get('header.allservices')" :dark="true" to="/allservices"></VSBtn>
       </div>
       <v-spacer></v-spacer>
       <v-menu>
         <template v-slot:activator="{ on, attrs }">
-          <v-btn color="black" dark v-bind="attrs" text v-on="on">{{myLocal==='english' ? 'en' : myLocal}}</v-btn>
+          <v-btn color="black" dark v-bind="attrs" text v-on="on">{{myLocal}}</v-btn>
         </template>
         <v-list class="py-0">
           <v-list-item class="pa-0 flag-russian" @click="selectLang('RU')">
@@ -124,7 +124,7 @@ const { template } = require("lodash");
         href="tel:+79047165279"
       >+79047165279</v-btn>
 
-      <VSBtn :title="'Обсудить проект'" class="hidden-sm-and-down" :dark="true" to="/contacts"></VSBtn>
+      <VSBtn :title="$ml.get('header.discussproject')" class="hidden-sm-and-down" :dark="true" to="/contacts"></VSBtn>
     </v-app-bar>
 
     <!-- Sizes your content based upon application components -->
@@ -231,9 +231,10 @@ export default {
     ...mapMutations(["setSubheaderSize", "setIconsSize"]),
     ...mapActions(["getLocaleFromBrouser","setLocale"]),
     selectLang(arg){
-      let lang = arg==='RU'?'ru':'english';
+      let lang = arg==='RU'?'ru':'en';
       this.setLocale(lang)
-      this.$ml.change(lang)
+      .then(this.$ml.change(lang));
+      
     },
     handleScroll(event) {
       this.scrollBottom();

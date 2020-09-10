@@ -2276,9 +2276,8 @@ var VSBtn = function VSBtn() {
   },
   methods: _objectSpread(_objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapMutations"])(["setSubheaderSize", "setIconsSize"])), Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapActions"])(["getLocaleFromBrouser", "setLocale"])), {}, {
     selectLang: function selectLang(arg) {
-      var lang = arg === 'RU' ? 'ru' : 'english';
-      this.setLocale(lang);
-      this.$ml.change(lang);
+      var lang = arg === 'RU' ? 'ru' : 'en';
+      this.setLocale(lang).then(this.$ml.change(lang));
     },
     handleScroll: function handleScroll(event) {
       this.scrollBottom();
@@ -26082,7 +26081,11 @@ var render = function() {
                           _vm._v(" "),
                           _c(
                             "v-list-item-content",
-                            [_c("v-list-item-title", [_vm._v("Главная")])],
+                            [
+                              _c("v-list-item-title", [
+                                _vm._v(_vm._s(this.$ml.get("menu.home")))
+                              ])
+                            ],
                             1
                           )
                         ],
@@ -26105,7 +26108,11 @@ var render = function() {
                           _vm._v(" "),
                           _c(
                             "v-list-item-content",
-                            [_c("v-list-item-title", [_vm._v("Все услуги")])],
+                            [
+                              _c("v-list-item-title", [
+                                _vm._v(_vm._s(this.$ml.get("menu.allservices")))
+                              ])
+                            ],
                             1
                           )
                         ],
@@ -26124,7 +26131,11 @@ var render = function() {
                           _vm._v(" "),
                           _c(
                             "v-list-item-content",
-                            [_c("v-list-item-title", [_vm._v("Веб-сайты")])],
+                            [
+                              _c("v-list-item-title", [
+                                _vm._v(_vm._s(this.$ml.get("menu.websites")))
+                              ])
+                            ],
                             1
                           )
                         ],
@@ -26145,7 +26156,7 @@ var render = function() {
                             "v-list-item-content",
                             [
                               _c("v-list-item-title", [
-                                _vm._v("Десктопные приложения")
+                                _vm._v(_vm._s(this.$ml.get("menu.desktopapp")))
                               ])
                             ],
                             1
@@ -26168,7 +26179,9 @@ var render = function() {
                             "v-list-item-content",
                             [
                               _c("v-list-item-title", [
-                                _vm._v("HTML5-анимация")
+                                _vm._v(
+                                  _vm._s(this.$ml.get("menu.htmlanimation"))
+                                )
                               ])
                             ],
                             1
@@ -26195,7 +26208,7 @@ var render = function() {
                             "v-list-item-content",
                             [
                               _c("v-list-item-title", [
-                                _vm._v("Обсудить / Контакты")
+                                _vm._v(_vm._s(this.$ml.get("menu.contacts")))
                               ])
                             ],
                             1
@@ -26287,14 +26300,18 @@ var render = function() {
             [
               _c("VSBtn", {
                 attrs: {
-                  title: "Разработка сайтов",
+                  title: _vm.$ml.get("header.websitedev"),
                   dark: true,
                   to: "/websites"
                 }
               }),
               _vm._v(" "),
               _c("VSBtn", {
-                attrs: { title: "Все услуги", dark: true, to: "/allservices" }
+                attrs: {
+                  title: _vm.$ml.get("header.allservices"),
+                  dark: true,
+                  to: "/allservices"
+                }
               })
             ],
             1
@@ -26323,13 +26340,7 @@ var render = function() {
                           ),
                           on
                         ),
-                        [
-                          _vm._v(
-                            _vm._s(
-                              _vm.myLocal === "english" ? "en" : _vm.myLocal
-                            )
-                          )
-                        ]
+                        [_vm._v(_vm._s(_vm.myLocal))]
                       )
                     ]
                   }
@@ -26412,7 +26423,11 @@ var render = function() {
           _vm._v(" "),
           _c("VSBtn", {
             staticClass: "hidden-sm-and-down",
-            attrs: { title: "Обсудить проект", dark: true, to: "/contacts" }
+            attrs: {
+              title: _vm.$ml.get("header.discussproject"),
+              dark: true,
+              to: "/contacts"
+            }
           })
         ],
         1
@@ -88697,9 +88712,9 @@ __webpack_require__.r(__webpack_exports__);
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_multilanguage__WEBPACK_IMPORTED_MODULE_1__["MLInstaller"]);
 /* harmony default export */ __webpack_exports__["default"] = (new vue_multilanguage__WEBPACK_IMPORTED_MODULE_1__["MLCreate"]({
-  initial: 'english',
+  initial: 'en',
   save: "development" === 'production',
-  languages: [new vue_multilanguage__WEBPACK_IMPORTED_MODULE_1__["MLanguage"]('english').create({
+  languages: [new vue_multilanguage__WEBPACK_IMPORTED_MODULE_1__["MLanguage"]('en').create({
     welcome: {
       title: 'Do you need a website?',
       answer: 'You went to the right place!'
@@ -88709,6 +88724,19 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_multilanguage__WEBPACK_IMPORT
       advantage: {
         title: 'What is the advantage?'
       }
+    },
+    menu: {
+      home: 'Home',
+      allservices: 'All services',
+      websites: 'Web-sites',
+      desktopapp: 'Desktop apps',
+      htmlanimation: 'HTML5-animation',
+      contacts: 'Discuss/Contacts'
+    },
+    header: {
+      websitedev: 'Web-sites',
+      allservices: 'All services',
+      discussproject: 'Discuss project'
     },
     msg: 'You have {f} friends and {l} likes'
   }), new vue_multilanguage__WEBPACK_IMPORTED_MODULE_1__["MLanguage"]('ru').create({
@@ -88721,6 +88749,19 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_multilanguage__WEBPACK_IMPORT
       advantage: {
         title: 'В чём преимущество?'
       }
+    },
+    menu: {
+      home: 'Главная',
+      allservices: 'Все услуги',
+      websites: 'Веб-сайты',
+      desktopapp: 'Десктопные приложения',
+      htmlanimation: 'HTML5-анимация',
+      contacts: 'Обсудить проект/Контакты'
+    },
+    header: {
+      websitedev: 'Разработка сайтов',
+      allservices: 'Все услуги',
+      discussproject: 'Обсудить проект'
     },
     msg: 'У вас {f} друзей и {l} лайков'
   })]
@@ -89031,19 +89072,18 @@ __webpack_require__.r(__webpack_exports__);
           state = _ref.state;
       var localStorage = window.localStorage;
       var localLang = localStorage.getItem('lang');
-      console.log(localLang);
 
       if (localLang === null) {
         localLang = navigator.language.split('-')[0];
         localStorage.setItem('lang', localLang);
       }
 
-      if (localLang === 'ru') this.commit('setRussianLocale');else if (localLang === 'en' || localLang === 'english') this.commit('setEnglishLocale');else this.commit('setRussianLocale');
+      if (localLang === 'ru') this.commit('setRussianLocale');else if (localLang === 'en') this.commit('setEnglishLocale');else this.commit('setRussianLocale');
     },
     setLocale: function setLocale(_ref2, ctx) {
       var commit = _ref2.commit,
           state = _ref2.state;
-      if (ctx === 'ru') this.commit('setRussianLocale');else if (ctx === 'english') this.commit('setEnglishLocale');else this.commit('setRussianLocale');
+      if (ctx === 'ru') this.commit('setRussianLocale');else if (ctx === 'en') this.commit('setEnglishLocale');else this.commit('setRussianLocale');
       localStorage.setItem('lang', ctx);
     }
   },
@@ -89052,7 +89092,7 @@ __webpack_require__.r(__webpack_exports__);
       state.locale = 'ru';
     },
     setEnglishLocale: function setEnglishLocale(state) {
-      state.locale = 'english';
+      state.locale = 'en';
     }
   }
 });

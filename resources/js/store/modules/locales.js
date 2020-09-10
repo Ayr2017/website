@@ -12,18 +12,17 @@ export default {
         getLocaleFromBrouser({ commit, state }) {
             let localStorage = window.localStorage;
             let localLang = localStorage.getItem('lang');
-            console.log(localLang);
             if(localLang === null){
                 localLang = ((navigator.language).split('-'))[0];
                 localStorage.setItem('lang',localLang);
             }
             if(localLang === 'ru') this.commit('setRussianLocale');
-            else if(localLang === 'en' || localLang === 'english') this.commit('setEnglishLocale');
+            else if(localLang === 'en') this.commit('setEnglishLocale');
             else this.commit('setRussianLocale');
         },
         setLocale({ commit, state }, ctx){
             if(ctx === 'ru') this.commit('setRussianLocale');
-            else if(ctx === 'english') this.commit('setEnglishLocale');
+            else if(ctx === 'en') this.commit('setEnglishLocale');
             else this.commit('setRussianLocale');
             localStorage.setItem('lang',ctx);
         }
@@ -33,7 +32,7 @@ export default {
             state.locale = 'ru';
         },
         setEnglishLocale(state) {
-            state.locale = 'english';
+            state.locale = 'en';
         },
 
     }
