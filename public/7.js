@@ -168,7 +168,10 @@ var render = function() {
                     [
                       _c(
                         "v-col",
-                        { staticClass: "text-center", attrs: { cols: "12" } },
+                        {
+                          staticClass: "text-center pt-13",
+                          attrs: { cols: "12" }
+                        },
                         [
                           _c(
                             "h1",
