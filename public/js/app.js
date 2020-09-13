@@ -88761,6 +88761,45 @@ var ar = {
 
 /***/ }),
 
+/***/ "./resources/js/ml/en/index.js":
+/*!*************************************!*\
+  !*** ./resources/js/ml/en/index.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var en = {
+  welcome: {
+    title: 'Do you need a website?',
+    answer: 'You went to the right place!'
+  },
+  services: {
+    title: 'Services that you can order',
+    advantage: {
+      title: 'What is the advantage?'
+    }
+  },
+  menu: {
+    home: 'Home',
+    allservices: 'All services',
+    websites: 'Web-sites',
+    desktopapp: 'Desktop apps',
+    htmlanimation: 'HTML5-animation',
+    contacts: 'Discuss/Contacts'
+  },
+  header: {
+    websitedev: 'Web-sites',
+    allservices: 'All services',
+    discussproject: 'Discuss project'
+  },
+  msg: 'You have {f} friends and {l} likes'
+};
+/* harmony default export */ __webpack_exports__["default"] = (en);
+
+/***/ }),
+
 /***/ "./resources/js/ml/index.js":
 /*!**********************************!*\
   !*** ./resources/js/ml/index.js ***!
@@ -88775,6 +88814,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_multilanguage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-multilanguage */ "./node_modules/vue-multilanguage/dist/index.js");
 /* harmony import */ var vue_multilanguage__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_multilanguage__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _ar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ar */ "./resources/js/ml/ar/index.js");
+/* harmony import */ var _ru__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ru */ "./resources/js/ml/ru/index.js");
+/* harmony import */ var _en__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./en */ "./resources/js/ml/en/index.js");
+
+
 
 
 
@@ -88782,58 +88825,47 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_multilanguage__WEBPACK_IMPORT
 /* harmony default export */ __webpack_exports__["default"] = (new vue_multilanguage__WEBPACK_IMPORTED_MODULE_1__["MLCreate"]({
   initial: 'ru',
   save: "development" === 'production',
-  languages: [new vue_multilanguage__WEBPACK_IMPORTED_MODULE_1__["MLanguage"]('en').create({
-    welcome: {
-      title: 'Do you need a website?',
-      answer: 'You went to the right place!'
-    },
-    services: {
-      title: 'Services that you can order',
-      advantage: {
-        title: 'What is the advantage?'
-      }
-    },
-    menu: {
-      home: 'Home',
-      allservices: 'All services',
-      websites: 'Web-sites',
-      desktopapp: 'Desktop apps',
-      htmlanimation: 'HTML5-animation',
-      contacts: 'Discuss/Contacts'
-    },
-    header: {
-      websitedev: 'Web-sites',
-      allservices: 'All services',
-      discussproject: 'Discuss project'
-    },
-    msg: 'You have {f} friends and {l} likes'
-  }), new vue_multilanguage__WEBPACK_IMPORTED_MODULE_1__["MLanguage"]('ru').create({
-    welcome: {
-      title: 'Вам нужен сайт?',
-      answer: 'Вы зашли туда, куда надо!'
-    },
-    services: {
-      title: 'Услуги, которые Вы можете заказать',
-      advantage: {
-        title: 'В чём преимущество?'
-      }
-    },
-    menu: {
-      home: 'Главная',
-      allservices: 'Все услуги',
-      websites: 'Веб-сайты',
-      desktopapp: 'Десктопные приложения',
-      htmlanimation: 'HTML5-анимация',
-      contacts: 'Обсудить проект/Контакты'
-    },
-    header: {
-      websitedev: 'Разработка сайтов',
-      allservices: 'Все услуги',
-      discussproject: 'Обсудить проект'
-    },
-    msg: 'У вас {f} друзей и {l} лайков'
-  }), new vue_multilanguage__WEBPACK_IMPORTED_MODULE_1__["MLanguage"]('ar').create(_ar__WEBPACK_IMPORTED_MODULE_2__["default"])]
+  languages: [new vue_multilanguage__WEBPACK_IMPORTED_MODULE_1__["MLanguage"]('en').create(_en__WEBPACK_IMPORTED_MODULE_4__["default"]), new vue_multilanguage__WEBPACK_IMPORTED_MODULE_1__["MLanguage"]('ru').create(_ru__WEBPACK_IMPORTED_MODULE_3__["default"]), new vue_multilanguage__WEBPACK_IMPORTED_MODULE_1__["MLanguage"]('ar').create(_ar__WEBPACK_IMPORTED_MODULE_2__["default"])]
 }));
+
+/***/ }),
+
+/***/ "./resources/js/ml/ru/index.js":
+/*!*************************************!*\
+  !*** ./resources/js/ml/ru/index.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var ru = {
+  welcome: {
+    title: 'Вам нужен сайт?',
+    answer: 'Вы зашли туда, куда надо!'
+  },
+  services: {
+    title: 'Услуги, которые Вы можете заказать',
+    advantage: {
+      title: 'В чём преимущество?'
+    }
+  },
+  menu: {
+    home: 'Главная',
+    allservices: 'Все услуги',
+    websites: 'Веб-сайты',
+    desktopapp: 'Десктопные приложения',
+    htmlanimation: 'HTML5-анимация',
+    contacts: 'Обсудить проект/Контакты'
+  },
+  header: {
+    websitedev: 'Разработка сайтов',
+    allservices: 'Все услуги',
+    discussproject: 'Обсудить проект'
+  },
+  msg: 'У вас {f} друзей и {l} лайков'
+};
+/* harmony default export */ __webpack_exports__["default"] = (ru);
 
 /***/ }),
 
