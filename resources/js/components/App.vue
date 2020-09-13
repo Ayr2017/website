@@ -163,7 +163,6 @@ import { TimelineLite } from "gsap";
 import { mapState, mapGetters, mapActions, mapMutations } from "vuex";
 import { MLBuilder } from "vue-multilanguage";
 import _ from "lodash";
-
 export default {
   components: {
     VSBtn,
@@ -181,7 +180,6 @@ export default {
       return { background: "#ebedec" };
     },
     headerType() {
-      // console.log(this.$vuetify.breakpoint.name);
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
           this.setSubheaderSize("display-1");

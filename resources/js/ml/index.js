@@ -3,7 +3,6 @@ import { MLInstaller, MLCreate, MLanguage } from 'vue-multilanguage';
 import ar from './ar';
 import ru from './ru';
 import en from './en';
-
 Vue.use(MLInstaller)
 
 export default new MLCreate({

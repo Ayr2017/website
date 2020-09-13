@@ -1,3 +1,4 @@
+import {default as discuss} from "./discuss";
 const en = {
     welcome: {
         title: 'Do you need a website?',
@@ -22,6 +23,7 @@ const en = {
         allservices:'All services',
         discussproject:'Discuss project',
     },
+    discuss,
     msg: 'You have {f} friends and {l} likes'
 }
 

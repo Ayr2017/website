@@ -1,5 +1,5 @@
+import {default as discuss} from "./discuss";
 var ar = {
-
     welcome: {
         title: 'هل تحتاج لموقع انترنت؟',
         answer: 'لقد ذهبت إلى المكان الصحيح'
@@ -23,6 +23,7 @@ var ar = {
         allservices:'جميع الخدمات',
         discussproject:'ناقش المشروع',
     },
+    discuss,
     msg: 'You have {f} friends and {l} likes'
 
 }

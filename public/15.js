@@ -9,11 +9,15 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
-/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var vue_multilanguage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-multilanguage */ "./node_modules/vue-multilanguage/dist/index.js");
+/* harmony import */ var vue_multilanguage__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_multilanguage__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuelidate/lib/validators */ "./node_modules/vuelidate/lib/validators/index.js");
+/* harmony import */ var vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__);
+var _objectSpread2;
+
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -92,6 +96,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -104,29 +117,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       userdescription: "",
       userfile: null,
       agree: true,
-      username_rule: [function (v) {
-        return v.length <= 30 && v.length >= 2 || "Не более 30 символов, не менее двух";
-      }],
-      userphone_rule: [function (v) {
-        return v.length <= 12 && v.length > 10 && /^\+7\d{10}$/.test(v) || "Не совпадает с форматом";
-      }],
-      useremail_rule: [function (v) {
-        return v.length <= 30 && v.length > 8 || "Не более 30 символов, не менее 8";
-      }, function (v) {
-        return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(v) || "Не совпадает с форматом email";
-      }],
-      userdescription_rule: [function (v) {
-        return v.length <= 1000 && v.length > 10 || "Не более 1000 символов";
-      }],
-      userfile_rule: [function (v) {
-        return !v || v.size < 6e+6 || 'Файл должен быть меньше 6 МБ';
-      }],
       buttonClass: "grey darken-4",
-      buttonText: "Отправить?",
-      buttonPadding: ""
+      buttonText: "",
+      buttonPadding: "",
+      first: ""
     };
   },
-  computed: _objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapGetters"])(["subheaderSize", "discussBtnLoading", "snackbarState", "snackbarColor", "snackbarText"])), {}, {
+  computed: _objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_2__["mapGetters"])(["subheaderSize", "discussBtnLoading", "snackbarState", "snackbarColor", "snackbarText"])), {}, (_objectSpread2 = {
     validForm: function validForm() {
       return this.$v.username.$invalid == false && this.$v.userdescription.$invalid == false && (this.$v.userphone.$invalid == false || this.$v.useremail.$invalid == false) && this.agree;
     },
@@ -135,17 +132,62 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         return this.snackbarState;
       },
       set: function set(newState) {}
+    },
+    mlClose: function mlClose() {
+      return this.$ml.get("discuss.close");
+    },
+    mlbuttonTextYes: function mlbuttonTextYes() {
+      return this.$ml.get("discuss.yes");
+    },
+    mlbuttonTextDoSend: function mlbuttonTextDoSend() {
+      return this.$ml.get("discuss.dosend");
     }
-  }),
-  mounted: function mounted() {},
-  methods: _objectSpread(_objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapActions"])(["sendMessage"])), Object(vuex__WEBPACK_IMPORTED_MODULE_1__["mapMutations"])(["hideSnackbar"])), {}, {
+  }, _defineProperty(_objectSpread2, "mlClose", function mlClose() {
+    return this.$ml.get("discuss.close");
+  }), _defineProperty(_objectSpread2, "username_rule", function username_rule() {
+    var _this = this;
+
+    return [function (v) {
+      return v.length <= 30 && v.length >= 2 || _this.$ml.get("discuss.rules.nameruletext");
+    }];
+  }), _defineProperty(_objectSpread2, "userphone_rule", function userphone_rule() {
+    var _this2 = this;
+
+    return [function (v) {
+      return v.length <= 12 && v.length > 10 && /^\+7\d{10}$/.test(v) || _this2.$ml.get("discuss.rules.phoneruleformat");
+    }];
+  }), _defineProperty(_objectSpread2, "useremail_rule", function useremail_rule() {
+    var _this3 = this;
+
+    return [function (v) {
+      return v.length <= 30 && v.length > 8 || _this3.$ml.get("discuss.rules.emailrulelength");
+    }, function (v) {
+      return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(v) || _this3.$ml.get("discuss.rules.emailruleformat");
+    }];
+  }), _defineProperty(_objectSpread2, "userdescription_rule", function userdescription_rule() {
+    var _this4 = this;
+
+    return [function (v) {
+      return v.length <= 1000 && v.length > 10 || _this4.$ml.get("discuss.rules.descriptionlength");
+    }];
+  }), _defineProperty(_objectSpread2, "userfile_rule", function userfile_rule() {
+    var _this5 = this;
+
+    return [function (v) {
+      return !v || v.size < 6e6 || _this5.$ml.get("discuss.rules.filesize");
+    }];
+  }), _objectSpread2)),
+  mounted: function mounted() {
+    this.buttonText = this.mlbuttonTextDoSend;
+  },
+  methods: _objectSpread(_objectSpread(_objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_2__["mapActions"])(["sendMessage"])), Object(vuex__WEBPACK_IMPORTED_MODULE_2__["mapMutations"])(["hideSnackbar"])), {}, {
     activateButton: function activateButton() {
       this.buttonClass = "green darken-4 ";
-      this.buttonText = "Да!!!";
+      this.buttonText = this.mlbuttonTextYes;
       this.buttonPadding = "px-12";
     },
     passivateButton: function passivateButton(that) {
-      this.buttonClass = "grey darken-4", this.buttonText = "Отправить?";
+      this.buttonClass = "grey darken-4", this.buttonText = this.mlbuttonTextDoSend;
       this.buttonPadding = "";
     },
     sendMessageToAdmin: function sendMessageToAdmin() {
@@ -166,32 +208,32 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       });
     },
     startCloseTimeout: function startCloseTimeout() {
-      var _this = this;
+      var _this6 = this;
 
       setTimeout(function () {
-        _this.hideSnackbar();
+        _this6.hideSnackbar();
       }, 6000);
     }
   }),
   validations: {
     username: {
-      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__["required"],
-      alpha: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__["helpers"].regex("alpha", /^[а-яА-ЯёЁa-zA-Z\s]*$/),
-      minLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__["minLength"])(2),
-      maxLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__["maxLength"])(30)
+      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__["required"],
+      alpha: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__["helpers"].regex("alpha", /^[а-яА-ЯёЁa-zA-Z\s]*$/),
+      minLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__["minLength"])(2),
+      maxLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__["maxLength"])(30)
     },
     userphone: {
-      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__["required"],
-      alpha: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__["helpers"].regex("alpha", /^\+7\d{10}$/)
+      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__["required"],
+      alpha: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__["helpers"].regex("alpha", /^\+7\d{10}$/)
     },
     useremail: {
-      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__["required"],
-      email: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__["email"],
-      minLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__["minLength"])(8),
-      maxLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__["maxLength"])(30)
+      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__["required"],
+      email: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__["email"],
+      minLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__["minLength"])(8),
+      maxLength: Object(vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__["maxLength"])(30)
     },
     userdescription: {
-      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_2__["required"]
+      required: vuelidate_lib_validators__WEBPACK_IMPORTED_MODULE_3__["required"]
     }
   }
 });
@@ -225,7 +267,7 @@ var render = function() {
             "font-weight-thin mb-10 elev-1 text--secondary"
           ]
         },
-        [_vm._v("Обсудить проект")]
+        [_vm._v(_vm._s(this.$ml.get("discuss.discussproject")))]
       ),
       _vm._v(" "),
       _c(
@@ -252,7 +294,7 @@ var render = function() {
                 [
                   _c("v-text-field", {
                     attrs: {
-                      label: "Ваше имя",
+                      label: _vm.$ml.get("discuss.yourane"),
                       clearable: "",
                       rules: _vm.username_rule
                     },
@@ -275,7 +317,10 @@ var render = function() {
                   }),
                   _vm._v(" "),
                   _c("v-text-field", {
-                    attrs: { label: "Телефон", rules: _vm.userphone_rule },
+                    attrs: {
+                      label: _vm.$ml.get("discuss.yourphone"),
+                      rules: _vm.userphone_rule
+                    },
                     on: {
                       input: function($event) {
                         return _vm.$v.userphone.$touch()
@@ -311,8 +356,8 @@ var render = function() {
                   _c("v-textarea", {
                     attrs: {
                       name: "input-7-1",
-                      label: "Опишите подробнее",
-                      hint: "Всё что поможет лучшему пониманию",
+                      label: _vm.$ml.get("discuss.discribe"),
+                      hint: _vm.$ml.get("discuss.discribehint"),
                       clearable: "",
                       counter: 1000
                     },
@@ -334,7 +379,7 @@ var render = function() {
                   _c("v-file-input", {
                     attrs: {
                       "show-size": "",
-                      label: "Выберите файл",
+                      label: _vm.$ml.get("discuss.selectfile"),
                       "prepend-icon": "mdi-paperclip",
                       rules: _vm.userfile_rule
                     },
@@ -349,7 +394,7 @@ var render = function() {
                   _vm._v(" "),
                   _c("v-switch", {
                     staticClass: "ma-2",
-                    attrs: { label: "На всё согласен" },
+                    attrs: { label: _vm.$ml.get("discuss.apply") },
                     model: {
                       value: _vm.agree,
                       callback: function($$v) {
@@ -425,7 +470,7 @@ var render = function() {
                       attrs,
                       false
                     ),
-                    [_vm._v("Закрыть")]
+                    [_vm._v(_vm._s(_vm.mlClose))]
                   )
                 ]
               }

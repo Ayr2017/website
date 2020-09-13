@@ -1,3 +1,5 @@
+import {default as discuss} from "./discuss";
+
 const ru =  {
     welcome: {
         title: 'Вам нужен сайт?',
@@ -22,6 +24,7 @@ const ru =  {
         allservices:'Все услуги',
         discussproject:'Обсудить проект',
     },
+    discuss,
     msg: 'У вас {f} друзей и {l} лайков'
 }
 export default ru;

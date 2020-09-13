@@ -15,7 +15,6 @@ import gsap from "gsap";
 import VueObserveVisibility from 'vue-observe-visibility';
 import * as ElResize from 'vue-element-resize-event';
 import Vuelidate from 'vuelidate';
-import './ml';
 
 
 
@@ -45,7 +44,6 @@ Vue.component('app', require('./components/App.vue').default);
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-
 const app = new Vue({
     el: '#app',
     vuetify: new Vuetify({

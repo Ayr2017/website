@@ -2222,7 +2222,6 @@ var VSBtn = function VSBtn() {
       };
     },
     headerType: function headerType() {
-      // console.log(this.$vuetify.breakpoint.name);
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
           this.setSubheaderSize("display-1");
@@ -88577,7 +88576,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_element_resize_event__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(vue_element_resize_event__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var vuelidate__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vuelidate */ "./node_modules/vuelidate/lib/index.js");
 /* harmony import */ var vuelidate__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(vuelidate__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _ml__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./ml */ "./resources/js/ml/index.js");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -88587,7 +88585,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__(/*! vue2-animate/dist/vue2-animate.min.css */ "./node_modules/vue2-animate/dist/vue2-animate.min.css");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-
 
 
 
@@ -88722,6 +88719,39 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/ml/ar/discuss/index.js":
+/*!*********************************************!*\
+  !*** ./resources/js/ml/ar/discuss/index.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  discussproject: 'Обсудить проект',
+  yourane: 'Ваше имя',
+  yourphone: 'Телефон',
+  youemail: 'E-mail',
+  discribe: 'Опишите подробнее',
+  discribehint: 'Всё что поможет лучшему пониманию',
+  selectfile: 'Выберите файл',
+  apply: 'На всё согласен',
+  dosend: 'Отправить?',
+  yes: 'Да!!!',
+  close: 'Закрыть',
+  rules: {
+    nameruletext: 'Не более 30 символов, не менее двух.',
+    phoneruleformat: 'Не совпадает с форматом',
+    emailrulelength: 'Не более 30 символов, не менее 8',
+    emailruleformat: 'Не совпадает с форматом e-mail',
+    descriptionlength: "Не более 1000 символов",
+    filesize: "Файл должен быть меньше 6 МБ"
+  }
+});
+
+/***/ }),
+
 /***/ "./resources/js/ml/ar/index.js":
 /*!*************************************!*\
   !*** ./resources/js/ml/ar/index.js ***!
@@ -88731,6 +88761,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _discuss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./discuss */ "./resources/js/ml/ar/discuss/index.js");
+
 var ar = {
   welcome: {
     title: 'هل تحتاج لموقع انترنت؟',
@@ -88755,9 +88787,43 @@ var ar = {
     allservices: 'جميع الخدمات',
     discussproject: 'ناقش المشروع'
   },
+  discuss: _discuss__WEBPACK_IMPORTED_MODULE_0__["default"],
   msg: 'You have {f} friends and {l} likes'
 };
 /* harmony default export */ __webpack_exports__["default"] = (ar);
+
+/***/ }),
+
+/***/ "./resources/js/ml/en/discuss/index.js":
+/*!*********************************************!*\
+  !*** ./resources/js/ml/en/discuss/index.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  discussproject: 'Обсудить проект',
+  yourane: 'Ваше имя',
+  yourphone: 'Телефон',
+  youemail: 'E-mail',
+  discribe: 'Опишите подробнее',
+  discribehint: 'Всё что поможет лучшему пониманию',
+  selectfile: 'Выберите файл',
+  apply: 'На всё согласен',
+  dosend: 'Отправить?',
+  yes: 'Да!!!',
+  close: 'Закрыть',
+  rules: {
+    nameruletext: 'Не более 30 символов, не менее двух.',
+    phoneruleformat: 'Не совпадает с форматом',
+    emailrulelength: 'Не более 30 символов, не менее 8',
+    emailruleformat: 'Не совпадает с форматом e-mail',
+    descriptionlength: "Не более 1000 символов",
+    filesize: "Файл должен быть меньше 6 МБ"
+  }
+});
 
 /***/ }),
 
@@ -88770,6 +88836,8 @@ var ar = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _discuss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./discuss */ "./resources/js/ml/en/discuss/index.js");
+
 var en = {
   welcome: {
     title: 'Do you need a website?',
@@ -88794,6 +88862,7 @@ var en = {
     allservices: 'All services',
     discussproject: 'Discuss project'
   },
+  discuss: _discuss__WEBPACK_IMPORTED_MODULE_0__["default"],
   msg: 'You have {f} friends and {l} likes'
 };
 /* harmony default export */ __webpack_exports__["default"] = (en);
@@ -88830,6 +88899,39 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_multilanguage__WEBPACK_IMPORT
 
 /***/ }),
 
+/***/ "./resources/js/ml/ru/discuss/index.js":
+/*!*********************************************!*\
+  !*** ./resources/js/ml/ru/discuss/index.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  discussproject: 'Обсудить проект',
+  yourane: 'Ваше имя',
+  yourphone: 'Телефон',
+  youemail: 'E-mail',
+  discribe: 'Опишите подробнее',
+  discribehint: 'Всё что поможет лучшему пониманию',
+  selectfile: 'Выберите файл',
+  apply: 'На всё согласен',
+  dosend: 'Отправить?',
+  yes: 'Да!!!',
+  close: 'Закрыть',
+  rules: {
+    nameruletext: 'Не более 30 символов, не менее двух.',
+    phoneruleformat: 'Не совпадает с форматом',
+    emailrulelength: 'Не более 30 символов, не менее 8',
+    emailruleformat: 'Не совпадает с форматом e-mail',
+    descriptionlength: "Не более 1000 символов",
+    filesize: "Файл должен быть меньше 6 МБ"
+  }
+});
+
+/***/ }),
+
 /***/ "./resources/js/ml/ru/index.js":
 /*!*************************************!*\
   !*** ./resources/js/ml/ru/index.js ***!
@@ -88839,6 +88941,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_multilanguage__WEBPACK_IMPORT
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _discuss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./discuss */ "./resources/js/ml/ru/discuss/index.js");
+
 var ru = {
   welcome: {
     title: 'Вам нужен сайт?',
@@ -88863,6 +88967,7 @@ var ru = {
     allservices: 'Все услуги',
     discussproject: 'Обсудить проект'
   },
+  discuss: _discuss__WEBPACK_IMPORTED_MODULE_0__["default"],
   msg: 'У вас {f} друзей и {l} лайков'
 };
 /* harmony default export */ __webpack_exports__["default"] = (ru);

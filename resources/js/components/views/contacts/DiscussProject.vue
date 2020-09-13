@@ -1,11 +1,13 @@
 <template>
   <v-col xs="12" sm="12" md="6" lg="6">
-    <div :class="[subheaderSize, 'font-weight-thin mb-10 elev-1 text--secondary'] ">Обсудить проект</div>
+    <div
+      :class="[subheaderSize, 'font-weight-thin mb-10 elev-1 text--secondary'] "
+    >{{this.$ml.get('discuss.discussproject')}}</div>
     <v-card outlined color="#fff5">
       <v-form ref="form" @submit.prevent="submit">
         <v-col cols="12" xs="12" sm="12" md="12" lg="12">
           <v-text-field
-            label="Ваше имя"
+            :label="$ml.get('discuss.yourane')"
             clearable
             v-model.trim="username"
             :rules="username_rule"
@@ -13,7 +15,7 @@
             @blur="$v.username.$touch()"
           ></v-text-field>
           <v-text-field
-            label="Телефон"
+            :label="$ml.get('discuss.yourphone')"
             v-model.trim="userphone"
             :rules="userphone_rule"
             @input="$v.userphone.$touch()"
@@ -26,15 +28,21 @@
           ></v-text-field>
           <v-textarea
             name="input-7-1"
-            label="Опишите подробнее"
-            hint="Всё что поможет лучшему пониманию"
+            :label="$ml.get('discuss.discribe')"
+            :hint="$ml.get('discuss.discribehint')"
             v-model.trim="userdescription"
             clearable
             :counter="1000"
             @input="$v.userdescription.$touch()"
           ></v-textarea>
-          <v-file-input show-size label="Выберите файл" v-model="userfile" prepend-icon="mdi-paperclip" :rules="userfile_rule"></v-file-input>
-          <v-switch v-model="agree" class="ma-2" label="На всё согласен"></v-switch>
+          <v-file-input
+            show-size
+            :label="$ml.get('discuss.selectfile')"
+            v-model="userfile"
+            prepend-icon="mdi-paperclip"
+            :rules="userfile_rule"
+          ></v-file-input>
+          <v-switch v-model="agree" class="ma-2" :label="$ml.get('discuss.apply')"></v-switch>
           <v-flex class="text-center">
             <v-btn
               tile
@@ -63,7 +71,7 @@
     >
       {{ snackbarText }}
       <template v-slot:action="{ attrs }">
-        <v-btn dark text v-bind="attrs" @click="hideSnackbar">Закрыть</v-btn>
+        <v-btn dark text v-bind="attrs" @click="hideSnackbar">{{mlClose}}</v-btn>
       </template>
     </v-snackbar>
     <!-- конец бара -->
@@ -71,6 +79,7 @@
 </template>
 
 <script>
+import { MLBuilder } from "vue-multilanguage";
 import axios from "axios";
 import { mapState, mapGetters, mapActions, mapMutations } from "vuex";
 import {
@@ -90,32 +99,10 @@ export default {
     userfile: null,
     agree: true,
 
-    username_rule: [
-      (v) =>
-        (v.length <= 30 && v.length >= 2) ||
-        "Не более 30 символов, не менее двух",
-    ],
-    userphone_rule: [
-      (v) =>
-        (v.length <= 12 && v.length > 10 && /^\+7\d{10}$/.test(v)) ||
-        "Не совпадает с форматом",
-    ],
-    useremail_rule: [
-      (v) =>
-        (v.length <= 30 && v.length > 8) || "Не более 30 символов, не менее 8",
-      (v) =>
-        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-          v
-        ) || "Не совпадает с форматом email",
-    ],
-    userdescription_rule: [
-      (v) => (v.length <= 1000 && v.length > 10) || "Не более 1000 символов",
-    ],
-    userfile_rule: [ v => !v || v.size < 6e+6 || 'Файл должен быть меньше 6 МБ'],
-
     buttonClass: "grey darken-4",
-    buttonText: "Отправить?",
+    buttonText: "",
     buttonPadding: "",
+    first: "",
   }),
   computed: {
     ...mapGetters([
@@ -140,19 +127,65 @@ export default {
       },
       set(newState) {},
     },
+    mlClose() {
+      return this.$ml.get("discuss.close");
+    },
+
+    mlbuttonTextYes() {
+      return this.$ml.get("discuss.yes");
+    },
+    mlbuttonTextDoSend() {
+      return this.$ml.get("discuss.dosend");
+    },
+    mlClose() {
+      return this.$ml.get("discuss.close");
+    },
+    username_rule() {
+      return [
+        (v) =>
+          (v.length <= 30 && v.length >= 2) ||
+          this.$ml.get("discuss.rules.nameruletext"),
+      ];
+    },
+    userphone_rule(){
+      return [
+      (v) =>
+        (v.length <= 12 && v.length > 10 && /^\+7\d{10}$/.test(v)) ||
+        this.$ml.get("discuss.rules.phoneruleformat"),
+    ]},
+    useremail_rule(){
+      return [
+      (v) =>
+        (v.length <= 30 && v.length > 8) || this.$ml.get("discuss.rules.emailrulelength"),
+      (v) =>
+        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+          v
+        ) || this.$ml.get("discuss.rules.emailruleformat"),
+    ]},
+    userdescription_rule(){
+      return [
+      (v) => (v.length <= 1000 && v.length > 10) || this.$ml.get("discuss.rules.descriptionlength"),
+    ]},
+     userfile_rule(){
+       return [
+      (v) => !v || v.size < 6e6 || this.$ml.get("discuss.rules.filesize"),
+    ]},
   },
-  mounted() {},
+  mounted() {
+    this.buttonText = this.mlbuttonTextDoSend;
+  },
 
   methods: {
     ...mapActions(["sendMessage"]),
     ...mapMutations(["hideSnackbar"]),
     activateButton() {
       this.buttonClass = "green darken-4 ";
-      this.buttonText = "Да!!!";
+      this.buttonText = this.mlbuttonTextYes;
       this.buttonPadding = "px-12";
     },
     passivateButton(that) {
-      (this.buttonClass = "grey darken-4"), (this.buttonText = "Отправить?");
+      (this.buttonClass = "grey darken-4"),
+        (this.buttonText = this.mlbuttonTextDoSend);
       this.buttonPadding = "";
     },
     sendMessageToAdmin() {
@@ -169,11 +202,11 @@ export default {
       data.append("userfile", this.userfile);
       this.sendMessage({ data, config });
     },
-    startCloseTimeout(){
+    startCloseTimeout() {
       setTimeout(() => {
         this.hideSnackbar();
       }, 6000);
-    }
+    },
   },
   validations: {
     username: {
