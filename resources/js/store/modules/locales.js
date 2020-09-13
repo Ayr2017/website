@@ -18,11 +18,13 @@ export default {
             }
             if(localLang === 'ru') this.commit('setRussianLocale');
             else if(localLang === 'en') this.commit('setEnglishLocale');
+            else if(localLang === 'ar') this.commit('setArabicLocale');
             else this.commit('setRussianLocale');
         },
         setLocale({ commit, state }, ctx){
             if(ctx === 'ru') this.commit('setRussianLocale');
             else if(ctx === 'en') this.commit('setEnglishLocale');
+            else if(ctx === 'ar') this.commit('setArabicLocale');
             else this.commit('setRussianLocale');
             localStorage.setItem('lang',ctx);
         }
@@ -33,6 +35,9 @@ export default {
         },
         setEnglishLocale(state) {
             state.locale = 'en';
+        },
+        setArabicLocale(state) {
+            state.locale = 'ar';
         },
 
     }

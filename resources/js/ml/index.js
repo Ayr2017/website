@@ -1,5 +1,6 @@
 import Vue from 'vue'
-import { MLInstaller, MLCreate, MLanguage } from 'vue-multilanguage'
+import { MLInstaller, MLCreate, MLanguage } from 'vue-multilanguage';
+import ar from './ar'
 
 Vue.use(MLInstaller)
 
@@ -59,6 +60,8 @@ export default new MLCreate({
                 discussproject:'Обсудить проект',
             },
             msg: 'У вас {f} друзей и {l} лайков'
-        })
+        }),
+
+        new MLanguage('ar').create(ar),
     ]
 })

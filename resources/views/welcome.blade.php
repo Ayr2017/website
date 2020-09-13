@@ -15,7 +15,7 @@
 
     <!-- Fonts -->
 
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}?v=1.2&display=swap" media="none"
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}?v=1.3&display=swap" media="none"
         onload="if(media!='all')media='all'">
     <!-- <link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css"> -->
 

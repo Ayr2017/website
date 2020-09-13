@@ -113,6 +113,9 @@ const { template } = require("lodash");
           <v-list-item class="pa-0" @click="selectLang('EN')">
               <v-btn class="ma-0 pa-0" color="black" dark text>{{ 'EN' }}</v-btn>
           </v-list-item>
+          <v-list-item class="pa-0" @click="selectLang('AR')">
+              <v-btn class="ma-0 pa-0" color="black" dark text>{{ 'AR' }}</v-btn>
+          </v-list-item>
         </v-list>
       </v-menu>
       <v-spacer></v-spacer>
@@ -231,7 +234,8 @@ export default {
     ...mapMutations(["setSubheaderSize", "setIconsSize"]),
     ...mapActions(["getLocaleFromBrouser","setLocale"]),
     selectLang(arg){
-      let lang = arg==='RU'?'ru':'en';
+      let lang = arg?arg.toLowerCase():'ru';      
+      // let lang = arg==='RU'?'ru':'en';
       this.setLocale(lang)
       .then(this.$ml.change(lang));
       
