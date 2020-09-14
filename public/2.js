@@ -135,11 +135,7 @@ var render = function() {
         { staticClass: "mx-auto", attrs: { "max-width": "344" } },
         [
           _c("v-img", {
-            attrs: {
-              src:
-                "https://images.unsplash.com/photo-1416339442236-8ceb164046f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1892&q=80",
-              height: "200px"
-            }
+            attrs: { src: "./assets/html5.webp", height: "200px" }
           }),
           _vm._v(" "),
           _c("v-card-title", [_vm._v("HTML5-анимация:")]),

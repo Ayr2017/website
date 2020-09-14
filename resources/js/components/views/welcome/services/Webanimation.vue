@@ -2,7 +2,7 @@
   <v-col>
     <v-card class="mx-auto" max-width="344">
       <v-img
-        src="https://images.unsplash.com/photo-1416339442236-8ceb164046f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1892&q=80"
+        src="./assets/html5.webp"
         height="200px"
       >
       <!-- <v-row align="center" class="lightbox white--text pa-2 fill-height">
