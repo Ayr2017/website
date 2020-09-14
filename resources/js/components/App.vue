@@ -91,8 +91,11 @@ const { template } = require("lodash");
             <span v-for="item in items" v-bind:key="item" class="list-complete-item mx-0">{{ item }}</span>
           </transition-group>
         </div>
-        <div v-if="$vuetify.breakpoint.name ==='xs'" class="display-1 font-weight-medium mx-auto v-sheet logo-text">
-          <span  class="list-complete-item mx-0">CS</span>
+        <div
+          v-if="$vuetify.breakpoint.name ==='xs'"
+          class="display-1 font-weight-medium mx-auto v-sheet logo-text"
+        >
+          <span class="list-complete-item mx-0">CS</span>
         </div>
       </router-link>
       <v-spacer></v-spacer>
@@ -108,17 +111,26 @@ const { template } = require("lodash");
         </template>
         <v-list class="py-0">
           <v-list-item class="pa-0 flag-russian" @click="selectLang('RU')">
-              <v-btn class="ma-0 pa-0" color="black" dark text>{{ 'RU' }}</v-btn>
+            <v-btn class="ma-0 pa-0" color="black" dark text>{{ 'RU' }}</v-btn>
           </v-list-item>
           <v-list-item class="pa-0" @click="selectLang('EN')">
-              <v-btn class="ma-0 pa-0" color="black" dark text>{{ 'EN' }}</v-btn>
+            <v-btn class="ma-0 pa-0" color="black" dark text>{{ 'EN' }}</v-btn>
           </v-list-item>
           <v-list-item class="pa-0" @click="selectLang('AR')">
-              <v-btn class="ma-0 pa-0" color="black" dark text>{{ 'AR' }}</v-btn>
+            <v-btn class="ma-0 pa-0" color="black" dark text>{{ 'AR' }}</v-btn>
           </v-list-item>
         </v-list>
       </v-menu>
       <v-spacer></v-spacer>
+      <div v-if="false">
+        <span @click="setLocalei18n('en')">
+          <flag iso="us"></flag>
+        </span>
+        <span @click="setLocalei18n('ru')">
+          <flag iso="ru"></flag>
+        </span>
+        {{$t('welc')}}
+      </div>
       <v-btn
         dark
         tile
@@ -127,7 +139,12 @@ const { template } = require("lodash");
         href="tel:+79047165279"
       >+79047165279</v-btn>
 
-      <VSBtn :title="$ml.get('header.discussproject')" class="hidden-sm-and-down" :dark="true" to="/contacts"></VSBtn>
+      <VSBtn
+        :title="$ml.get('header.discussproject')"
+        class="hidden-sm-and-down"
+        :dark="true"
+        to="/contacts"
+      ></VSBtn>
     </v-app-bar>
 
     <!-- Sizes your content based upon application components -->
@@ -230,13 +247,11 @@ export default {
   },
   methods: {
     ...mapMutations(["setSubheaderSize", "setIconsSize"]),
-    ...mapActions(["getLocaleFromBrouser","setLocale"]),
-    selectLang(arg){
-      let lang = arg?arg.toLowerCase():'ru';      
+    ...mapActions(["getLocaleFromBrouser", "setLocale"]),
+    selectLang(arg) {
+      let lang = arg ? arg.toLowerCase() : "ru";
       // let lang = arg==='RU'?'ru':'en';
-      this.setLocale(lang)
-      .then(this.$ml.change(lang));
-      
+      this.setLocale(lang).then(console.log(this), this.$ml.change(lang));
     },
     handleScroll(event) {
       this.scrollBottom();
@@ -275,6 +290,10 @@ export default {
       setTimeout(() => {
         this.items = ["C", "r", "y", "p", "t", "o"];
       }, 600);
+    },
+    setLocalei18n(locale) {
+      console.log(locale);
+      this.$i18n.locale = locale;
     },
   },
 };

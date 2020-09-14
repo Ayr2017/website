@@ -15,14 +15,17 @@ import gsap from "gsap";
 import VueObserveVisibility from 'vue-observe-visibility';
 import * as ElResize from 'vue-element-resize-event';
 import Vuelidate from 'vuelidate';
+import i18n from './i18n';
+import VueFlag from 'vue-flag-icon';
 
 
 
 
 Vue.use(Vuetify);
-Vue.use(VueObserveVisibility)
-Vue.use(ElResize)
-Vue.use(Vuelidate)
+Vue.use(VueObserveVisibility);
+Vue.use(ElResize);
+Vue.use(Vuelidate);
+Vue.use(VueFlag);
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -56,6 +59,7 @@ const app = new Vue({
     gsap,
     ElResize,
     VueObserveVisibility,
+    i18n
     // render: h => h(App),   
     
 });
