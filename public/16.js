@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[16],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/views/desktopapp/Desktopapp.vue?vue&type=script&lang=js&":
-/*!**************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/views/desktopapp/Desktopapp.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/views/webanimation/Webanimation.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/views/webanimation/Webanimation.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -82,6 +82,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])(["subheaderSize", "iconsSize"])),
@@ -90,10 +94,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/views/desktopapp/Desktopapp.vue?vue&type=template&id=a043bcda&":
-/*!******************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/views/desktopapp/Desktopapp.vue?vue&type=template&id=a043bcda& ***!
-  \******************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/views/webanimation/Webanimation.vue?vue&type=template&id=433756f3&":
+/*!**********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/views/webanimation/Webanimation.vue?vue&type=template&id=433756f3& ***!
+  \**********************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -117,15 +121,15 @@ var render = function() {
             "font-weight-thin mb-xs-2 mb-sm-5 mb-md-10 elev-1 text--secondary mb-1"
           ]
         },
-        [_vm._v("Разработка десктопных приложений")]
+        [_vm._v("Разработка web-анимации")]
       ),
       _vm._v(" "),
       _c(
         "v-card",
         { staticClass: "my-2", attrs: { outlined: "", color: "#fff5" } },
         [
-          _c("v-card-title", { staticClass: "pink--text text--darken-3" }, [
-            _vm._v("Для чего нужно приложение?")
+          _c("v-card-title", { staticClass: "purple--text text--darken-3" }, [
+            _vm._v("Для чего нужена анимация?")
           ]),
           _vm._v(" "),
           _c(
@@ -137,22 +141,29 @@ var render = function() {
                 [
                   _c("v-card-text", { staticClass: "text-body-1" }, [
                     _c("p", [
+                      _vm._v(
+                        "\n              Раньше все сайты были статичны. Потом научились делать мигающую бегущую строку, которая вскоре начинала всех раздражать. После поняли, что просто текст не привлекателен и начали добавлять GIF-файлы, где можно было усмотреть анимацию. Со временем появился Flash, на котором можно было делать целые мультфильмы и игры. Но и он устарел, на данный момент стандартом является\n              "
+                      ),
                       _c(
                         "span",
                         {
                           staticClass:
-                            "font-weight-medium pink--text text--darken-3"
+                            "font-weight-medium purple--text text--darken-3"
                         },
-                        [_vm._v("Десктопные приложения ")]
+                        [_vm._v("HTML5-анимация")]
                       ),
+                      _vm._v("\n              .\n            ")
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
                       _vm._v(
-                        "- специально разработанные программы, которые имеют графический интерфейс и запускаются не внутри браузера, как веб-приложения, а на компьютере. Сам браузер, является дектопным приложением. \n          "
+                        "Основная цель анимации на сайте - повышение привлекательности, далее улучшение интуитивной понятности. Наличие хорошей анимации на сайте располагает к себе клиента. Благодаря анимации пользователь задерживается на сайте на большее время."
                       )
                     ]),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "Десктопные приложения могут работать и без подключения к интернету, и с подключением, в зависимости от заданной функциональности. Они могут работать с файлами на диске компьютера и устройствами. Важная особенность - возможность работы приложения без подключения к сети интернет - позволяет хранить данные на компьютере, что увеличивает безопасность. Также, не требуется отправлять большие массивы данных по сети, и это экономит время."
+                        "Зачастую, анимация является необходимостью. Например постоянное изменение графика при поступлении новых данных."
                       )
                     ])
                   ])
@@ -164,7 +175,7 @@ var render = function() {
                 "v-icon",
                 {
                   staticClass: "ma-10 ml-0 hidden-sm-and-down",
-                  attrs: { size: "150", color: "pink lighten-1" }
+                  attrs: { size: "150", color: "purple lighten-1" }
                 },
                 [_vm._v("mdi-comment-question-outline")]
               )
@@ -181,9 +192,11 @@ var render = function() {
         "v-card",
         { staticClass: "my-2", attrs: { outlined: "", color: "#fff5" } },
         [
-          _c("v-card-title", { staticClass: "indigo--text text--darken-3" }, [
-            _vm._v("Этапы разработки приложения")
-          ]),
+          _c(
+            "v-card-title",
+            { staticClass: "deep-orange--text text--darken-3" },
+            [_vm._v("Этапы разработки")]
+          ),
           _vm._v(" "),
           _c(
             "div",
@@ -193,19 +206,9 @@ var render = function() {
                 "div",
                 [
                   _c("v-card-text", { staticClass: "text-body-1" }, [
-                    _c("p", [
-                      _c(
-                        "span",
-                        {
-                          staticClass:
-                            "font-weight-medium indigo--text text--darken-3"
-                        },
-                        [_vm._v("Десктопные приложения ")]
-                      ),
-                      _vm._v(
-                        " имеют те же этапы разработки, что и мобильные приложения. Но отличаются тем, что при внесении изменений необходимо обновить приложения на всех устройствах.  \n          "
-                      )
-                    ])
+                    _vm._v(
+                      "\n          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                    )
                   ])
                 ],
                 1
@@ -215,7 +218,7 @@ var render = function() {
                 "v-icon",
                 {
                   staticClass: "ma-10 ml-0 hidden-sm-and-down",
-                  attrs: { size: "150", color: "indigo lighten-1" }
+                  attrs: { size: "150", color: "deep-orange lighten-1" }
                 },
                 [_vm._v("mdi-altimeter")]
               )
@@ -232,9 +235,11 @@ var render = function() {
         "v-card",
         { staticClass: "my-2", attrs: { outlined: "", color: "#fff5" } },
         [
-          _c("v-card-title", { staticClass: "cyan--text text--darken-3" }, [
-            _vm._v("Стоимость приложения")
-          ]),
+          _c(
+            "v-card-title",
+            { staticClass: "light-blue--text text--darken-3" },
+            [_vm._v("Стоимость анимации")]
+          ),
           _vm._v(" "),
           _c(
             "div",
@@ -245,12 +250,8 @@ var render = function() {
                 [
                   _c("v-card-text", { staticClass: "text-body-1" }, [
                     _c("p", [
-                      _c("span", {
-                        staticClass:
-                          "font-weight-medium cyan--text text--darken-3"
-                      }),
                       _vm._v(
-                        " \n              Цена на десктопные приложения формируется исходя из трудозатрат и сопутствующих услуг и разрешений.  \n          "
+                        "Стоимость анимации зависит от сложности работы. Начинается от 5000 рублей, куда не входит стоимость интеграции."
                       )
                     ])
                   ])
@@ -262,7 +263,7 @@ var render = function() {
                 "v-icon",
                 {
                   staticClass: "ma-10 ml-0 hidden-sm-and-down",
-                  attrs: { size: "150", color: "cyan lighten-2" }
+                  attrs: { size: "150", color: "light-blue lighten-2" }
                 },
                 [_vm._v("mdi-cash-usd-outline")]
               )
@@ -285,17 +286,17 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./resources/js/components/views/desktopapp/Desktopapp.vue":
-/*!*****************************************************************!*\
-  !*** ./resources/js/components/views/desktopapp/Desktopapp.vue ***!
-  \*****************************************************************/
+/***/ "./resources/js/components/views/webanimation/Webanimation.vue":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/views/webanimation/Webanimation.vue ***!
+  \*********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Desktopapp_vue_vue_type_template_id_a043bcda___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Desktopapp.vue?vue&type=template&id=a043bcda& */ "./resources/js/components/views/desktopapp/Desktopapp.vue?vue&type=template&id=a043bcda&");
-/* harmony import */ var _Desktopapp_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Desktopapp.vue?vue&type=script&lang=js& */ "./resources/js/components/views/desktopapp/Desktopapp.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Webanimation_vue_vue_type_template_id_433756f3___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Webanimation.vue?vue&type=template&id=433756f3& */ "./resources/js/components/views/webanimation/Webanimation.vue?vue&type=template&id=433756f3&");
+/* harmony import */ var _Webanimation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Webanimation.vue?vue&type=script&lang=js& */ "./resources/js/components/views/webanimation/Webanimation.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -305,9 +306,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _Desktopapp_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Desktopapp_vue_vue_type_template_id_a043bcda___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _Desktopapp_vue_vue_type_template_id_a043bcda___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _Webanimation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Webanimation_vue_vue_type_template_id_433756f3___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Webanimation_vue_vue_type_template_id_433756f3___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -317,38 +318,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/components/views/desktopapp/Desktopapp.vue"
+component.options.__file = "resources/js/components/views/webanimation/Webanimation.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/components/views/desktopapp/Desktopapp.vue?vue&type=script&lang=js&":
-/*!******************************************************************************************!*\
-  !*** ./resources/js/components/views/desktopapp/Desktopapp.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************/
+/***/ "./resources/js/components/views/webanimation/Webanimation.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/views/webanimation/Webanimation.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Desktopapp_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Desktopapp.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/views/desktopapp/Desktopapp.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Desktopapp_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Webanimation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Webanimation.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/views/webanimation/Webanimation.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Webanimation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/components/views/desktopapp/Desktopapp.vue?vue&type=template&id=a043bcda&":
-/*!************************************************************************************************!*\
-  !*** ./resources/js/components/views/desktopapp/Desktopapp.vue?vue&type=template&id=a043bcda& ***!
-  \************************************************************************************************/
+/***/ "./resources/js/components/views/webanimation/Webanimation.vue?vue&type=template&id=433756f3&":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/components/views/webanimation/Webanimation.vue?vue&type=template&id=433756f3& ***!
+  \****************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Desktopapp_vue_vue_type_template_id_a043bcda___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Desktopapp.vue?vue&type=template&id=a043bcda& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/views/desktopapp/Desktopapp.vue?vue&type=template&id=a043bcda&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Desktopapp_vue_vue_type_template_id_a043bcda___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Webanimation_vue_vue_type_template_id_433756f3___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Webanimation.vue?vue&type=template&id=433756f3& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/views/webanimation/Webanimation.vue?vue&type=template&id=433756f3&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Webanimation_vue_vue_type_template_id_433756f3___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Desktopapp_vue_vue_type_template_id_a043bcda___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Webanimation_vue_vue_type_template_id_433756f3___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

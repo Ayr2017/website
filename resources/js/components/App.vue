@@ -174,8 +174,8 @@ const { template } = require("lodash");
 </template>
 
 <script>
-// import VSBtn from "./elements/VSBtn.vue";
-const VSBtn = () => import("./elements/VSBtn.vue");
+import VSBtn from "./elements/VSBtn.vue";
+// const VSBtn = () => import("./elements/VSBtn.vue");
 import { TimelineLite } from "gsap";
 import { mapState, mapGetters, mapActions, mapMutations } from "vuex";
 import { MLBuilder } from "vue-multilanguage";
@@ -236,7 +236,7 @@ export default {
     iconsResize() {},
   },
   mounted() {
-    console.log("App");
+    console.log("App", this.$router);
     this.getLocaleFromBrouser().then(this.$ml.change(this.myLocal));
   },
   created() {
