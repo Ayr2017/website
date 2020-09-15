@@ -2073,6 +2073,48 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -37787,7 +37829,7 @@ var render = function() {
                       "div",
                       {
                         staticClass: "card mb-3",
-                        staticStyle: { "max-width": "540px" }
+                        staticStyle: { "max-width": "800px" }
                       },
                       [
                         _c("div", { staticClass: "row no-gutters" }, [
@@ -37884,27 +37926,143 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "container" }, [
+    _c("h1", [_vm._v("Edit post")]),
+    _vm._v(" "),
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "row" }, [
+      _c(
+        "form",
+        {
+          staticClass: "col-sm-12 col-md-12 col-lg-8",
+          attrs: { method: "POST" }
+        },
+        [
+          _vm._m(1),
+          _vm._v(" "),
+          _vm._m(2),
+          _vm._v(" "),
+          _vm._m(3),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "d-flex" },
+            [
+              _c(
+                "router-link",
+                { staticClass: "ml-auto", attrs: { to: "/admin/blog" } },
+                [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-danger ",
+                      attrs: { type: "submit" }
+                    },
+                    [_vm._v("Отменить")]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-primary ml-3",
+                  attrs: { type: "submit" }
+                },
+                [_vm._v("Сохранить")]
+              )
+            ],
+            1
+          )
+        ]
+      )
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("h1", [_vm._v("Edit post")]),
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-sm-12 col-lg-6 col-md-6" }, [
+        _vm._v("\n      One of three columns\n      "),
+        _c("img", {
+          staticClass: "img-thumbnail",
+          attrs: {
+            src: __webpack_require__(/*! ../../../../../public/assets/welcome-top.webp */ "./public/assets/welcome-top.webp"),
+            alt: "..."
+          }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group my-3" }, [
+      _c("div", { staticClass: "custom-file" }, [
+        _c("input", {
+          staticClass: "custom-file-input",
+          attrs: {
+            type: "file",
+            id: "inputGroupFile01",
+            "aria-describedby": "inputGroupFileAddon01"
+          }
+        }),
+        _vm._v(" "),
+        _c(
+          "label",
+          {
+            staticClass: "custom-file-label",
+            attrs: { for: "inputGroupFile01" }
+          },
+          [_vm._v("Выберите файл")]
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "my-3" }, [
+      _c("label", { attrs: { for: "validationTextarea" } }, [
+        _vm._v("Заголовок")
+      ]),
       _vm._v(" "),
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-sm" }, [
-          _vm._v("\n      One of three columns\n      "),
-          _c("img", {
-            staticClass: "img-thumbnail",
-            attrs: {
-              src: __webpack_require__(/*! ../../../../../public/assets/welcome-top.webp */ "./public/assets/welcome-top.webp"),
-              alt: "..."
-            }
-          })
-        ])
+      _c("input", {
+        staticClass: "form-control",
+        attrs: {
+          type: "text",
+          placeholder: "Введите название заголовка",
+          "aria-label": "Recipient's username with two button addons",
+          "aria-describedby": "button-addon4"
+        }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "my-3" }, [
+      _c("label", { attrs: { for: "validationTextarea" } }, [_vm._v("Текст")]),
+      _vm._v(" "),
+      _c("textarea", {
+        staticClass: "form-control",
+        staticStyle: { "min-height": "200px" },
+        attrs: {
+          id: "validationTextarea",
+          placeholder: "Введите текст поста",
+          required: ""
+        }
+      }),
+      _vm._v(" "),
+      _c("div", { staticClass: "invalid-feedback" }, [
+        _vm._v("Please enter a message in the textarea.")
       ])
     ])
   }

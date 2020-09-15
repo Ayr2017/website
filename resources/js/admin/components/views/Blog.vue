@@ -23,7 +23,7 @@
           data-parent="#accordionExample"
         >
           <div class="card-body">
-            <div class="card mb-3" style="max-width: 540px;">
+            <div class="card mb-3" style="max-width: 800px;">
               <div class="row no-gutters">
                 <div class="col-md-4 d-flex flex-column justify-content-center">
                   <img
